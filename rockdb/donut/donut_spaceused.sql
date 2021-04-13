@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='bar_tablespace_'
 DEFINE vtitlethispage='Tablespace'
 DEFINE viconthispage='tablespace.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
  
@@ -80,4 +80,4 @@ PRO   <body>
 PRO     <div id="chart_div" style="width: 900px; height: 900px;"></div>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

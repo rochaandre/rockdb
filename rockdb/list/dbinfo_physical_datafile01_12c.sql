@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbinfo_physical_datafile01_'
 DEFINE vtitlethispage='Datafile for this database'
 DEFINE viconthispage='datafile.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -65,4 +65,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

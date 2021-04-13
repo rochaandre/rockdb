@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_memory01_'
 DEFINE vtitlethispage='Memory configuration'
 DEFINE viconthispage='segmented-nav.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -143,4 +143,4 @@ PRO     </tbody>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

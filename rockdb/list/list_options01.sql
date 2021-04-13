@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_options01_'
 DEFINE vtitlethispage='List of options'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -52,4 +52,4 @@ PRO     <div id="table_divlistoptions01" style="width: 900px; height: 550px;"></
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

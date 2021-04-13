@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/bar_tablespace_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/bar_tablespace_XE12.html
 - PRO -- Purpose:     Tablespace
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/table.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(Tablespace)</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="Z:\report\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {
 packages: ['corechart', 'bar']
@@ -52,13 +52,13 @@ google.charts.setOnLoadCallback(drawStacked)
 function drawStacked() {
 var data = google.visualization.arrayToDataTable([
 ['Tablespaces', 'Utilizado', 'Livre']
-,['XE SANKHYA',9858,7753]
+,['XE SANKHYA',9858,7882]
 ,['XE SANKIND',1200,865]
 ,['XE SANKLOB',10,0]
 ,['XE SYSAUX',2610,2476]
 ,['XE SYSTEM',960,841]
 ,['XE TOAD',10,1]
-,['XE UNDOTBS1',3000,32]
+,['XE UNDOTBS1',3000,41]
 ,['XE USERS',338,0]
 ])
 var options = {
@@ -66,7 +66,7 @@ var options = {
 colors: ['red', 'green'],
 isStacked: true,
 hAxis: {
-title: 'Container - Z:\report\output\XE12aldebarancenturytelecomnetbr/bar_tablespace_XE12.html',
+title: 'Container - Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/bar_tablespace_XE12.html',
 minValue: 0,
 },
 vAxis: {
@@ -82,13 +82,13 @@ chart.draw(data, options)
 <body>
 <div id="chart_div" style="width: 900px; height: 900px;"></div>
 <PRE>
-XE SANKHYA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    9858                 7753                78.64 xe
+XE SANKHYA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    9858                 7882                79.95 xe
 XE SANKIND                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    1200                  865                72.12 xe
 XE SANKLOB                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      10                    0                    0 xe
 XE SYSAUX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     2610                 2476                94.86 xe
 XE SYSTEM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      960                  841                87.58 xe
 XE TOAD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         10                    1                 8.75 xe
-XE UNDOTBS1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   3000                   32                 1.08 xe
+XE UNDOTBS1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   3000                   41                 1.38 xe
 XE USERS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       338                    0                  .13 xe
 
 
@@ -98,5 +98,5 @@ XE USERS                                                                        
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

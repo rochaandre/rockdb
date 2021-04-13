@@ -2,8 +2,8 @@ DEFINE vhtmlpage='script_stats_db01_'
 DEFINE vtitlethispage='Script statistics'
 DEFINE viconthispage='icon.gif'
 
-@report/sql/headerhtmlspool.sql
-@report/sql/page_label "&vtitlethispage"
+@rockdb/sql/headerhtmlspool.sql
+@rockdb/sql/page_label "&vtitlethispage"
 
 
 PRO <PRE>
@@ -14,7 +14,7 @@ PRO execute DBMS_STATS.GATHER_DICTIONARY_STATS;;
 PRO execute DBMS_STATS.GATHER_FIXED_OBJECTS_STATS;;
 PRO
 PRO
-@report/sql/page_label "Individual SCHEMAS"
+@rockdb/sql/page_label "Individual SCHEMAS"
 PRO
 SELECT DISTINCT 'EXEC DBMS_STATS.GATHER_SCHEMA_STATS('||''''|| OWNER||''''||','||  'CASCADE=>TRUE'  || ');'
 FROM dba_tables
@@ -50,4 +50,4 @@ PRO </PRE>
 PRO
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

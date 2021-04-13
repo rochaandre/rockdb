@@ -8,7 +8,7 @@ COLUMN privilege FORMAT A20
 
 
 SPO &var_outputfolder/duplicate_rman_standby01_&var_namefile..txt
-@report/sql/headertxt.sql "duplicate_rman_standby01_" "&var_outputfolder/duplicate_rman_standby01_&var_namefile..txt"
+@rockdb/sql/headertxt.sql "duplicate_rman_standby01_" "&var_outputfolder/duplicate_rman_standby01_&var_namefile..txt"
 
 
 PRO
@@ -80,4 +80,4 @@ where start_time>=sysdate-10
 and input_type='DB INCR'
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

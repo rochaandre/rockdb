@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_nls_characters01_'
 DEFINE vtitlethispage='List nls characters'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -45,4 +45,4 @@ PRO     <div id="table_divparam" style="width: 900px; height: 100%;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

@@ -28,7 +28,7 @@ SET  ORACLE_HOME=/Users/andre/instantclient_19_8
 SET  ORACLE_SID=XE
 SET  ORACLE_PDB_SID=
 REM directory where is running script:
-SET  VDIRROCKDB=z:\report
+SET  VDIRROCKDB=z:\rockdb
 SET  VDIRROCKDB=%cd%\output
 SET  VDIRROCKDBCONFIG=%cd%
 SET  EXPDPD=DIREXPDP

@@ -8,4 +8,4 @@ SELECT ' find '||a.DIRECTORY_PATH||'/ -name "*'
 FROM DBA_DIRECTORIES a, v$instance x
 WHERE a.DIRECTORY_NAME ='$1'
 /
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

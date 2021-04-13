@@ -1,7 +1,7 @@
 SET LONG 20000 LONGCHUNKSIZE 20000 PAGESIZE 0 LINESIZE 1000 FEEDBACK OFF VERIFY OFF TRIMSPOOL ON
 SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 32000 LONGC 2000 WRA ON TRIMS ON TRIM ON TI OFF TIMI OFF ARRAY 100 NUM 20 SQLBL ON BLO . RECSEP OFF;
 SPO &var_outputfolder/report_rman_backup01_&var_namefile..txt
-@report/sql/headertxt.sql "report_rman_backup01" "&var_outputfolder/report_rman_backup01_&var_namefile..txt"
+@rockdb/sql/headertxt.sql "report_rman_backup01" "&var_outputfolder/report_rman_backup01_&var_namefile..txt"
 
 COLUMN grantee   FORMAT A20
 COLUMN owner     FORMAT A10
@@ -66,4 +66,4 @@ from
 where start_time>=sysdate-10
 and input_type='DB INCR'
 /
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

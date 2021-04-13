@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbinfo01_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/dbinfo01_XE12.html
 - PRO -- Purpose:     Info of database
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -110,9 +110,11 @@ table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: 
 +-------------------------------------------------------+
 
 alter system set max_shared_servers='2' scope=spfile;
+alter system set transactions='3' scope=spfile;
 alter system set max_rollback_segments='11' scope=spfile;
-alter system set enqueue_resources='27' scope=spfile;
+alter system set dml_locks='30' scope=spfile;
 alter system set sort_segment_locks='43' scope=spfile;
+alter system set enqueue_resources='51' scope=spfile;
 alter system set enqueue_locks='88' scope=spfile;
 alter system set processes='105' scope=spfile;
 alter system set sessions='128' scope=spfile;
@@ -136,5 +138,5 @@ alter system set open_cursors=800 scope=spfile;
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

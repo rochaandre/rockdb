@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/list_rman_backupspfile01_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/list_rman_backupspfile01_XE12.html
 - PRO -- Purpose:     Rman backup Spfile and Controlfile
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -55,7 +55,11 @@ data.addColumn('string', 'Completed');
 data.addColumn('string', 'Status');
 data.addColumn('string', 'Handle');
 data.addRows([
-['14461','YES','13/04/2021 10:30:17','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-15']
+['14471','YES','13/04/2021 11:30:18','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-17']
+,['14470','YES','13/04/2021 11:30:17','Available','/stage/bkprman/XE_SPFIL_XE_DB_57vs6fa9_14503_1_1069759817.bkp']
+,['14466','YES','13/04/2021 11:00:15','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-16']
+,['14465','YES','13/04/2021 11:00:14','Available','/stage/bkprman/XE_SPFIL_XE_DB_52vs6dhu_14498_1_1069758014.bkp']
+,['14461','YES','13/04/2021 10:30:17','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-15']
 ,['14460','YES','13/04/2021 10:30:16','Available','/stage/bkprman/XE_SPFIL_XE_DB_4tvs6bpo_14493_1_1069756216.bkp']
 ,['14456','YES','13/04/2021 10:00:15','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-14']
 ,['14455','YES','13/04/2021 10:00:13','Available','/stage/bkprman/XE_SPFIL_XE_DB_4ovs6a1d_14488_1_1069754413.bkp']
@@ -145,10 +149,6 @@ data.addRows([
 ,['14244','YES','12/04/2021 12:30:15','Available','/stage/bkprman/XE_SPFIL_XE_DB_u5vs3uen_14277_1_1069677015.bkp']
 ,['14240','YES','12/04/2021 12:00:15','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210412-18']
 ,['14239','YES','12/04/2021 12:00:14','Available','/stage/bkprman/XE_SPFIL_XE_DB_u0vs3sme_14272_1_1069675214.bkp']
-,['14235','YES','12/04/2021 11:30:15','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210412-17']
-,['14234','YES','12/04/2021 11:30:13','Available','/stage/bkprman/XE_SPFIL_XE_DB_trvs3qu5_14267_1_1069673413.bkp']
-,['14230','YES','12/04/2021 11:00:15','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210412-16']
-,['14229','YES','12/04/2021 11:00:13','Available','/stage/bkprman/XE_SPFIL_XE_DB_tmvs3p5t_14262_1_1069671613.bkp']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -172,5 +172,5 @@ table.draw(data , {allowHtml: true, showRowNumber: true, width: '100%', height: 
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

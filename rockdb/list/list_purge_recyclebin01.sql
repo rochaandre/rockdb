@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_purge_recyclebin01_'
 DEFINE vtitlethispage='List of itens in dba_recyclebin'
 DEFINE viconthispage='trash.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -111,4 +111,4 @@ PRO
 PRO </PRE>
 PRO <p>&varhtmlspace</p>
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

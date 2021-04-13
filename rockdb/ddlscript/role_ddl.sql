@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='role_ddl_'
 DEFINE vtitlethispage='Roles DDL '
 DEFINE viconthispage='shield-check.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -60,4 +60,4 @@ from   dba_tab_privs tp
 /
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

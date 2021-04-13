@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_script_sysauxsize01_'
 DEFINE vtitlethispage='Script check sysaux'
 DEFINE viconthispage='card-list.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -56,4 +56,4 @@ PRO </PRE>
 PRO     <p>&varhtmlspace</p>
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

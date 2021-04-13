@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/impdp_script_create01_presamp11.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/rockdb/output/presamp11bdsrv03promedcorp/impdp_script_create01_presamp11.html
 - PRO -- Purpose:     script for impdp
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:50
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -48,9 +48,9 @@ div.google-chart {width:809px; height:500px;}
 
 impdp parfile=impdp_par01.par
 
-impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_02NOROWSC DUMPFILE=/exp_02NOROWSC$varYYYYMMDD%U.dmp LOG=:exp_02NOROWSC20210413log DIRECTORY= FULL=Y rows=n consistent=y
+impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_02NOROWSC DUMPFILE=DIREXPDP/exp_02NOROWSC$varYYYYMMDD%U.dmp LOG=DIREXPDP:exp_02NOROWSC20210413log DIRECTORY=DIREXPDP FULL=Y rows=n consistent=y
 
-impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_03NOROWSC DUMPFILE=/exp_03NOROWSC$varYYYYMMDD%U.dmp LOG=:exp_03ROWSC20210413log DIRECTORY= FULL=Y rows=y consistent=y
+impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_03NOROWSC DUMPFILE=DIREXPDP/exp_03NOROWSC$varYYYYMMDD%U.dmp LOG=DIREXPDP:exp_03ROWSC20210413log DIRECTORY=DIREXPDP FULL=Y rows=y consistent=y
 
 +------------------------------------------------------------------------------+
 | Export with rows and no default schemas/users.
@@ -172,8 +172,8 @@ AND p.time_remaining > 0
 USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
 JOB_NAME=exp_01NOROWSF
 DUMPFILE=/exp_01NOROWSF$varYYYYMMDD%U.dmp
-LOG=:/exp_01NOROWSF20210413log
-DIRECTORY=
+LOG=DIREXPDP:/exp_01NOROWSF20210413log
+DIRECTORY=DIREXPDP
 FULL=Y
 rows=n
 consistent=y
@@ -277,8 +277,8 @@ exclude=SCHEMA:"='OML$PROXY'"
 USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
 JOB_NAME=exp_04NOROWSF
 DUMPFILE=/exp_04NOROWSF$varYYYYMMDD%U.dmp
-LOG=:/exp_04NOROWSF20210413log
-DIRECTORY=
+LOG=DIREXPDP:/exp_04NOROWSF20210413log
+DIRECTORY=DIREXPDP
 FULL=Y
 rows=Y
 transform=disable_archive_logging:y
@@ -382,8 +382,8 @@ exclude=SCHEMA:"='OML$PROXY'"
 USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
 JOB_NAME=exp_05NOROWSF
 DUMPFILE=/exp_05NOROWSF$varYYYYMMDD%U.dmp
-LOG=:/exp_05NOROWSF20210413log
-DIRECTORY=
+LOG=DIREXPDP:/exp_05NOROWSF20210413log
+DIRECTORY=DIREXPDP
 transform=disable_archive_logging:y
 FULL=Y
 rows=Y
@@ -413,5 +413,5 @@ exclude=SCHEMA:"='SUPMONITOR'"
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:50 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_script_preexportdb01_'
 DEFINE vtitlethispage='Pre export'
 DEFINE viconthispage='card-list.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO   <body>
@@ -27,11 +27,11 @@ order by name
 
 PRO <hr style="height:5px;border-width:0;color:gray;background-color:gray">
 PRO <h1>  Object directory </h1>
-@report/sql/directory.ddl &varnewline
+@rockdb/sql/directory.ddl &varnewline
 
 PRO <hr style="height:5px;border-width:0;color:gray;background-color:gray">
 PRO <h1>  Role </h1>
-@report/sql/directory.ddl &varnewline
+@rockdb/sql/directory.ddl &varnewline
 
 PRO <hr style="height:5px;border-width:0;color:gray;background-color:gray">
 PRO <h1>  Public synonym </h1>
@@ -64,4 +64,4 @@ PRO <h1>  Grants roles </h1>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

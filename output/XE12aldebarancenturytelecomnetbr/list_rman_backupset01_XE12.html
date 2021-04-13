@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/list_rman_backupset01_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/list_rman_backupset01_XE12.html
 - PRO -- Purpose:     Rman backupset
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -61,14 +61,22 @@ data.addColumn('string', 'Elapsed');
 data.addColumn('string', 'Tag');
 data.addColumn('string', 'Block');
 data.addRows([
-['14461','Datafile Full','DISK','YES','YES','','13/04/2021 10:30:17','13/04/2021 10:30:17','0','TAG20210413T103017','16384']
+['14471','Datafile Full','DISK','YES','YES','','13/04/2021 11:30:18','13/04/2021 11:30:18','0','TAG20210413T113018','16384']
+,['14470','Datafile Full','DISK','','YES','','13/04/2021 11:30:17','13/04/2021 11:30:17','0','SPFILEBKP','16384']
+,['14469','Datafile Full','DISK','YES','','','13/04/2021 11:30:15','13/04/2021 11:30:16','1','CONTROLFILEBKP','16384']
+,['14468','Archived Logs','DISK','','','','13/04/2021 11:30:14','13/04/2021 11:30:14','0','ARCHIVELOG','512']
+,['14467','Archived Logs','DISK','','','','13/04/2021 11:30:10','13/04/2021 11:30:13','3','TAG20210413T113010','512']
+,['14466','Datafile Full','DISK','YES','YES','','13/04/2021 11:00:15','13/04/2021 11:00:15','0','TAG20210413T110015','16384']
+,['14465','Datafile Full','DISK','','YES','','13/04/2021 11:00:14','13/04/2021 11:00:14','0','SPFILEBKP','16384']
+,['14464','Datafile Full','DISK','YES','','','13/04/2021 11:00:12','13/04/2021 11:00:13','1','CONTROLFILEBKP','16384']
+,['14463','Archived Logs','DISK','','','','13/04/2021 11:00:10','13/04/2021 11:00:11','1','ARCHIVELOG','512']
+,['14462','Archived Logs','DISK','','','','13/04/2021 11:00:09','13/04/2021 11:00:10','1','TAG20210413T110009','512']
+,['14461','Datafile Full','DISK','YES','YES','','13/04/2021 10:30:17','13/04/2021 10:30:17','0','TAG20210413T103017','16384']
 ,['14460','Datafile Full','DISK','','YES','','13/04/2021 10:30:16','13/04/2021 10:30:16','0','SPFILEBKP','16384']
-,['14459','Datafile Full','DISK','YES','','','13/04/2021 10:30:14','13/04/2021 10:30:15','1','CONTROLFILEBKP','16384']
 ,['14458','Archived Logs','DISK','','','','13/04/2021 10:30:12','13/04/2021 10:30:12','0','ARCHIVELOG','512']
 ,['14457','Archived Logs','DISK','','','','13/04/2021 10:30:09','13/04/2021 10:30:11','2','TAG20210413T103009','512']
 ,['14456','Datafile Full','DISK','YES','YES','','13/04/2021 10:00:14','13/04/2021 10:00:15','1','TAG20210413T100014','16384']
 ,['14455','Datafile Full','DISK','','YES','','13/04/2021 10:00:13','13/04/2021 10:00:13','0','SPFILEBKP','16384']
-,['14454','Datafile Full','DISK','YES','','','13/04/2021 10:00:11','13/04/2021 10:00:12','1','CONTROLFILEBKP','16384']
 ,['14453','Archived Logs','DISK','','','','13/04/2021 10:00:10','13/04/2021 10:00:10','0','ARCHIVELOG','512']
 ,['14452','Archived Logs','DISK','','','','13/04/2021 10:00:09','13/04/2021 10:00:09','0','TAG20210413T100009','512']
 ,['14451','Datafile Full','DISK','YES','YES','','13/04/2021 09:30:14','13/04/2021 09:30:14','0','TAG20210413T093014','16384']
@@ -243,14 +251,6 @@ data.addRows([
 ,['14239','Datafile Full','DISK','','YES','','12/04/2021 12:00:14','12/04/2021 12:00:14','0','SPFILEBKP','16384']
 ,['14237','Archived Logs','DISK','','','','12/04/2021 12:00:10','12/04/2021 12:00:10','0','ARCHIVELOG','512']
 ,['14236','Archived Logs','DISK','','','','12/04/2021 12:00:08','12/04/2021 12:00:09','1','TAG20210412T120008','512']
-,['14235','Datafile Full','DISK','YES','YES','','12/04/2021 11:30:14','12/04/2021 11:30:15','1','TAG20210412T113014','16384']
-,['14234','Datafile Full','DISK','','YES','','12/04/2021 11:30:13','12/04/2021 11:30:13','0','SPFILEBKP','16384']
-,['14232','Archived Logs','DISK','','','','12/04/2021 11:30:10','12/04/2021 11:30:10','0','ARCHIVELOG','512']
-,['14231','Archived Logs','DISK','','','','12/04/2021 11:30:09','12/04/2021 11:30:09','0','TAG20210412T113009','512']
-,['14230','Datafile Full','DISK','YES','YES','','12/04/2021 11:00:14','12/04/2021 11:00:15','1','TAG20210412T110014','16384']
-,['14229','Datafile Full','DISK','','YES','','12/04/2021 11:00:13','12/04/2021 11:00:13','0','SPFILEBKP','16384']
-,['14227','Archived Logs','DISK','','','','12/04/2021 11:00:10','12/04/2021 11:00:10','0','ARCHIVELOG','512']
-,['14226','Archived Logs','DISK','','','','12/04/2021 11:00:09','12/04/2021 11:00:09','0','TAG20210412T110009','512']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -274,5 +274,5 @@ table.draw(data , {allowHtml: true, showRowNumber: true, width: '100%', height: 
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

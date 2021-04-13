@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_redolog01_'
 DEFINE vtitlethispage='List redo log group'
 DEFINE viconthispage='archive.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -91,4 +91,4 @@ PRO </PRE>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

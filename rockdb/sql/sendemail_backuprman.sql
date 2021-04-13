@@ -1,12 +1,12 @@
 
 
-@report/sql/definecfg.sql
-@report/list/list_rmanbkp01.sql
-@report/list/list_rman_backupspfile01.sql
-@report/list/list_rman_backupsize01.sql
-@report/list/list_rman_backupset01.sql
-@report/list/list_rman_backuppiece01.sql
-@report/list/list_rman_backupjob01.sql
+@rockdb/sql/definecfg.sql
+@rockdb/list/list_rmanbkp01.sql
+@rockdb/list/list_rman_backupspfile01.sql
+@rockdb/list/list_rman_backupsize01.sql
+@rockdb/list/list_rman_backupset01.sql
+@rockdb/list/list_rman_backuppiece01.sql
+@rockdb/list/list_rman_backupjob01.sql
 
 
 SET LONG 20000 LONGCHUNKSIZE 20000 PAGESIZE 0 LINESIZE 1000 FEEDBACK OFF VERIFY OFF TRIMSPOOL ON

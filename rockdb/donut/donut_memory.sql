@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='donut__archiveperday_'
 DEFINE vtitlethispage='Archives per day'
 DEFINE viconthispage='archive.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 @sql/headerloadjs.sql
 
@@ -74,7 +74,7 @@ PRO   <body>
 PRO     <div id="chart_div" style="width: 900px; height: 500px;"></div>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01
 
 
 

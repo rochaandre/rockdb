@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_directory01_'
 DEFINE vtitlethispage='List of Directories'
 DEFINE viconthispage='directory.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -55,4 +55,4 @@ PRO   </PRE>
 PRO   <BR>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

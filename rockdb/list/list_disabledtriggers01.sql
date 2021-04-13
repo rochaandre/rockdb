@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_disabledtriggers01_'
 DEFINE vtitlethispage='List of disabled triggers'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -70,4 +70,4 @@ GROUP BY  owner
 PRO
 PRO <PRE>
 PRO
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

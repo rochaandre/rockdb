@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='expdp_script_create01_'
 DEFINE vtitlethispage='script for expdp '
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 

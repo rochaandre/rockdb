@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='audit_ddl_'
 DEFINE vtitlethispage='Audit ACL'
 DEFINE viconthispage='shield-check.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <PRE>
@@ -243,4 +243,4 @@ end loop;
 end;
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

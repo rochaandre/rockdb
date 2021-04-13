@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_version01_'
 DEFINE vtitlethispage='List version'
 DEFINE viconthispage='card-checklist.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -46,4 +46,4 @@ PRO     <div id="table_divversion01" style="width: 900px; height: 350px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

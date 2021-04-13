@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_param_hidden01_'
 DEFINE vtitlethispage='List parameters - Hidden'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -56,4 +56,4 @@ PRO     <div id="table_divparam" style="width: 900px; height: 100%;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

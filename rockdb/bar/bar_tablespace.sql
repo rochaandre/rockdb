@@ -1,10 +1,10 @@
 DEFINE vhtmlpage='bar_tablespace_'
 DEFINE vtitlethispage='Tablespace'
 DEFINE viconthispage='table.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
-@report/sql/headerloadjs.sql
+@rockdb/sql/headerloadjs.sql
 
 PRO google.charts.load('current', {
 PRO   packages: ['corechart', 'bar']
@@ -111,4 +111,4 @@ PRO
 PRO </PRE>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

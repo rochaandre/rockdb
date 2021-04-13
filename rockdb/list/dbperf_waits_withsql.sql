@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbperf_waits_withsql_'
 DEFINE vtitlethispage='Waits with sql'
 DEFINE viconthispage='person-lines-fill.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -67,4 +67,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

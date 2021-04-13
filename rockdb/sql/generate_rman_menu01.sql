@@ -2,8 +2,8 @@ DEFINE vhtmlpage='index_rman_'
 DEFINE vtitlethispage='Backup rman report'
 DEFINE viconthispage='backup.svg'
 
-@report/sql/headerhtmlspool.sql
--- @report/sql/page_label "&vtitlethispage"
+@rockdb/sql/headerhtmlspool.sql
+-- @rockdb/sql/page_label "&vtitlethispage"
 
 
 PRO <body>
@@ -25,4 +25,4 @@ PRO <p>&varhtmlspace</p>
 
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='user_ddl_forone_'
 DEFINE vtitlethispage='User DDL'
 DEFINE viconthispage='file-person.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -66,4 +66,4 @@ and    u.profile <> 'DEFAULT'
 and    rownum = 1
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

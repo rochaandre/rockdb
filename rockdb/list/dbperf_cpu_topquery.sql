@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbperf_cpu_topquery_'
 DEFINE vtitlethispage='Cpu top query'
 DEFINE viconthispage='cpu.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -63,4 +63,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

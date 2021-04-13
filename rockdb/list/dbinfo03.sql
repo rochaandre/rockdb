@@ -1,6 +1,6 @@
 SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 32000 LONGC 2000 WRA ON TRIMS ON TRIM ON TI OFF TIMI OFF ARRAY 100 NUM 20 SQLBL ON BLO . RECSEP OFF;
 SPO &var_outputfolder/dbinfo03_&var_namefile
-@report/sql/headerdoc.sql &var_outputfolder/dbinfo03_&var_namefile "Info of database" "May differ for RAC" "" ""
+@rockdb/sql/headerdoc.sql &var_outputfolder/dbinfo03_&var_namefile "Info of database" "May differ for RAC" "" ""
 PRO <html>
 PRO   <head>
 PRO     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -57,4 +57,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

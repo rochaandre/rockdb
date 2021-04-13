@@ -5,7 +5,7 @@ DEFINE viconthispage='busy.gif'
 
 SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 32000 LONGC 2000 WRA ON TRIMS ON TRIM ON TI OFF TIMI OFF ARRAY 100 NUM 20 SQLBL ON BLO . RECSEP OFF;
 SPO &var_outputfolder/&vhtmlpage&var_namefile
-@report/sql/headerdoc.sql &var_outputfolder/&vhtmlpage&var_namefile "&vhtmlpage" "" ""
+@rockdb/sql/headerdoc.sql &var_outputfolder/&vhtmlpage&var_namefile "&vhtmlpage" "" ""
 
 PRO <html>
 PRO   <head>

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_rman_backupjob01_'
 DEFINE vtitlethispage='Rman Backup Job'
 DEFINE viconthispage='backup.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 
@@ -63,4 +63,4 @@ PRO     <div id="table_div" style="width: 1100px; height: 550px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

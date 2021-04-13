@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_tablespacedb01_'
 DEFINE vtitlethispage='List size tablespace '
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -264,4 +264,4 @@ PRO </PRE>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

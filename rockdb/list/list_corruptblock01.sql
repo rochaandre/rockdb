@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_corruptblock_'
 DEFINE vtitlethispage='Corrupted blocks'
 DEFINE viconthispage='block.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -93,4 +93,4 @@ PRO  <h4> reference http://appsdbafix.blogspot.com/2013/01/how-to-identify-all-c
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='directory_ddl_'
 DEFINE vtitlethispage='Directory DDL'
 DEFINE viconthispage='mailbox.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 
@@ -39,4 +39,4 @@ WHERE DIRECTORY_NAME  in ('SDO_DIR_WORK','SDO_DIR_ADMIN','OPATCH_INST_DIR','ORAC
 'OPATCH_LOG_DIR','JAVA$JOX$CUJS$DIRECTORY$','DATA_PUMP_DIR','SQL_TCB_DIR','SCHEDULER$_LOG_DIR' )
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

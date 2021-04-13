@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='user_ddl_password_'
 DEFINE vtitlethispage='Users DDL password'
 DEFINE viconthispage='file-person.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -22,4 +22,4 @@ where d.username not in ('SYS','SYSTEM','ANONYMOUS','CTXSYS','HR','MDSYS','ODM',
 and u.user# = d.user_id;
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

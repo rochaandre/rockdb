@@ -39,7 +39,7 @@
 DEFINE vhtmlpage='getaud_'
 DEFINE vtitlethispage='Get audit'
 DEFINE viconthispage='audit.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <PRE>

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbinfo_rman_report02_'
 DEFINE vtitlethispage='Report rman'
 DEFINE viconthispage='rman.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -66,4 +66,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

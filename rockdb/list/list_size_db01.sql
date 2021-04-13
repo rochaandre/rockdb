@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_size_db01_'
 DEFINE vtitlethispage='List size'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 
@@ -86,4 +86,4 @@ PRO     <div id="table_divsize01" style="width: 900px; height: 550px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

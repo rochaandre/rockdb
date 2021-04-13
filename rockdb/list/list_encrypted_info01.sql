@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_encrypted_info01_'
 DEFINE vtitlethispage='List of encrypt'
 DEFINE viconthispage='shield-check.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -81,4 +81,4 @@ PRO     <div id="table_div" style="width: 900px; height: 450px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

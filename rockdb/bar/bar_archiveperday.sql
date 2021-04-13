@@ -1,9 +1,9 @@
 DEFINE vhtmlpage='bar_archiveperday_'
 DEFINE vtitlethispage='Archives per day'
 DEFINE viconthispage='archive.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
-@report/sql/headerloadjs.sql
+@rockdb/sql/headerloadjs.sql
 
 
 PRO     google.charts.load('current', {
@@ -59,4 +59,4 @@ PRO   <body>
 PRO     <div id="chart_div" style="width: 900px; height: 500px;"></div>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

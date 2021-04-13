@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_rebuildindex01_'
 DEFINE vtitlethispage='List of candidates index to rebuild'
 DEFINE viconthispage='bookshelf.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -118,4 +118,4 @@ PRO </PRE>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

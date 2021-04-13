@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_checklist_'
 DEFINE vtitlethispage='Check list'
 DEFINE viconthispage='check.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -321,4 +321,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

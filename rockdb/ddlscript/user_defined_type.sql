@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='user_defined_type_'
 DEFINE vtitlethispage='User defined DDL'
 DEFINE viconthispage='file-person.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -176,4 +176,4 @@ and     tp.grantee not in('SYS','SYSTEM','ANONYMOUS','CTXSYS','HR','MDSYS','ODM'
 )
 ORDER BY id;
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

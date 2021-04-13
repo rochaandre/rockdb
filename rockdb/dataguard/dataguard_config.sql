@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dataguard_config_'
 DEFINE vtitlethispage='Usefull config files, commands to be used in dataguard '
 DEFINE viconthispage='building.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -86,4 +86,4 @@ PRO </PRE>
 PRO </body>
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

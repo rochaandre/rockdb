@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/list_redolog01_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/list_redolog01_XE12.html
 - PRO -- Purpose:     List redo log group
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -59,10 +59,10 @@ data.addColumn('string', 'Archived');
 data.addColumn('string', 'Type');
 data.addColumn('string', 'Sequence');
 data.addRows([
-['1','1','/u01/oradata/XE/redo01.log','200','ACTIVE','YES','ONLINE','6021']
-,['1','2','/u01/oradata/XE/redo02.log','200','ACTIVE','YES','ONLINE','6022']
-,['1','3','/u01/oradata/XE/redo03.log','200','CURRENT','NO','ONLINE','6023']
-,['1','4','/u01/oradata/XE/redo04.log','200','INACTIVE','YES','ONLINE','6020']
+['1','1','/u01/oradata/XE/redo01.log','200','ACTIVE','YES','ONLINE','6025']
+,['1','2','/u01/oradata/XE/redo02.log','200','ACTIVE','YES','ONLINE','6026']
+,['1','3','/u01/oradata/XE/redo03.log','200','CURRENT','NO','ONLINE','6027']
+,['1','4','/u01/oradata/XE/redo04.log','200','INACTIVE','YES','ONLINE','6024']
 ]);
 
 var table = new google.visualization.Table(document.getElementById('table_div'))
@@ -105,5 +105,5 @@ ALTER DATABASE ADD LOGFILE GROUP 3 ('/u02/oradata/ORACLE/redo03a.log') SIZE 200M
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

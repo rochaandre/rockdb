@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='trigger_ddl_'
 DEFINE vtitlethispage='Trigger DDL'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -22,4 +22,4 @@ AND owner NOT IN ('EXFSYS','WMSYS','SYSMAN')
 ORDER BY owner, name, line
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

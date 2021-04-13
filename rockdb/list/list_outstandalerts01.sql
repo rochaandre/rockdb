@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_outstandalerts01_'
 DEFINE vtitlethispage='List outstandalerts '
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -50,4 +50,4 @@ PRO     <div id="table_div" style="width: 900px; height: 300px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='impdp_script_create01_'
 DEFINE vtitlethispage='script for impdp '
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -397,4 +397,4 @@ order by 1
 PRO
 PRO </PRE>
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

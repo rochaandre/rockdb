@@ -2,7 +2,7 @@ SET LONG 20000 LONGCHUNKSIZE 20000 PAGESIZE 0 LINESIZE 1000 FEEDBACK OFF VERIFY 
 SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 32000 LONGC 2000 WRA ON TRIMS ON TRIM ON TI OFF TIMI OFF ARRAY 100 NUM 20 SQLBL ON BLO . RECSEP OFF;
 SPO &var_outputfolder/&vhtmlpage&var_namefile
 
-@report/sql/headerdoc.sql &var_outputfolder/&vhtmlpage&var_namefile "&vtitlethispage" "" "" ""
+@rockdb/sql/headerdoc.sql &var_outputfolder/&vhtmlpage&var_namefile "&vtitlethispage" "" "" ""
 
 
 PRO <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

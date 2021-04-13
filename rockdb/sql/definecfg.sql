@@ -79,18 +79,18 @@ host echo  &sskipdos
 host echo  &var_outputfolder
 
 host &sskipLINUX mkdir -p &var_outputfolder/charts
-host &sskipLINUX cp -r report/thirdparty/charts/*  &var_outputfolder/charts
+host &sskipLINUX cp -r rockdb/thirdparty/charts/*  &var_outputfolder/charts
 host &sskipLINUX mkdir -p &var_outputfolder/css
-host &sskipLINUX cp -r report/css/* &var_outputfolder/css
+host &sskipLINUX cp -r rockdb/css/* &var_outputfolder/css
 host &sskipLINUX mkdir -p &var_outputfolder/icon
-host &sskipLINUX cp -r report/icon/* &var_outputfolder/icon
+host &sskipLINUX cp -r rockdb/icon/* &var_outputfolder/icon
 
 host &sskipdos mkdir &var_outputfolder\charts
-host &sskipdos copy /Y report\thirdparty\charts\*  &var_outputfolder\charts
+host &sskipdos copy /Y rockdb\thirdparty\charts\*  &var_outputfolder\charts
 host &sskipdos mkdir &var_outputfolder\css
-host &sskipdos copy /Y  report\css\* &var_outputfolder\css
+host &sskipdos copy /Y  rockdb\css\* &var_outputfolder\css
 host &sskipdos mkdir &var_outputfolder\icon
-host &sskipdos copy /Y  report\icon\* &var_outputfolder\icon
+host &sskipdos copy /Y  rockdb\icon\* &var_outputfolder\icon
 
 
 DEF var_namefile = '';

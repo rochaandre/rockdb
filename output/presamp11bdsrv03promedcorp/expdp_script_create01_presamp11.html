@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/expdp_script_create01_presamp11.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/rockdb/output/presamp11bdsrv03promedcorp/expdp_script_create01_presamp11.html
 - PRO -- Purpose:     script for expdp
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:50
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -145,9 +145,9 @@ parallel_execution_message_size (data pump workers are fed by PX slaves) was the
 
 expdp parfile=expdp_par01.par
 
-expdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_02NOROWSC DUMPFILE=exp_02NOROWSC$varYYYYMMDD%U.dmp LOG=:exp_02NOROWSC20210413log DIRECTORY= FULL=Y rows=n consistent=y
+expdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_02NOROWSC DUMPFILE=exp_02NOROWSC$varYYYYMMDD%U.dmp LOG=DIREXPDP:exp_02NOROWSC20210413log DIRECTORY=DIREXPDP FULL=Y rows=n consistent=y
 
-expdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_03FULLROWS DUMPFILE=exp_03FULLROWS$varYYYYMMDD%U.dmp LOG=:exp_03FULLROWS20210413log DIRECTORY= FULL=Y rows=y consistent=y
+expdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_03FULLROWS DUMPFILE=exp_03FULLROWS$varYYYYMMDD%U.dmp LOG=DIREXPDP:exp_03FULLROWS20210413log DIRECTORY=DIREXPDP FULL=Y rows=y consistent=y
 
 +------------------------------------------------------------------------------+
 |    Export with rows and no default schemas/users.

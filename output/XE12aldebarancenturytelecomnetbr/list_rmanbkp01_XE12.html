@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/list_rmanbkp01_XE12.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/list_rmanbkp01_XE12.html
 - PRO -- Purpose:     List rman bkp
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:51
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,9 +56,7 @@ data.addColumn('string', 'Finish');
 data.addColumn('string', 'Spent');
 data.addColumn('string', 'Need attention');
 data.addRows([
-['SPFILE','COMPLETED','30/03/2021 23:00','30/03/2021 23:00','0','FALSE']
-,['ARCHIVELOG','COMPLETED','30/03/2021 23:30','30/03/2021 23:30','0','FALSE']
-,['ARCHIVELOG','COMPLETED','31/03/2021 00:00','31/03/2021 00:00','0','FALSE']
+['SPFILE','COMPLETED','31/03/2021 00:00','31/03/2021 00:00','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 00:30','31/03/2021 00:30','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 01:00','31/03/2021 01:00','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 01:31','31/03/2021 01:31','0','FALSE']
@@ -691,6 +689,8 @@ data.addRows([
 ,['ARCHIVELOG','COMPLETED','13/04/2021 09:30','13/04/2021 09:30','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','13/04/2021 10:00','13/04/2021 10:00','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','13/04/2021 10:30','13/04/2021 10:30','0','FALSE']
+,['ARCHIVELOG','COMPLETED','13/04/2021 11:00','13/04/2021 11:00','0','FALSE']
+,['ARCHIVELOG','COMPLETED','13/04/2021 11:30','13/04/2021 11:30','0','FALSE']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -717,5 +717,5 @@ if necessary to uncatalog database backups from type
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
 

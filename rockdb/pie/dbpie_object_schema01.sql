@@ -6,7 +6,7 @@ DEFINE viconthispage='object.gif'
 
 SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 32000 LONGC 2000 WRA ON TRIMS ON TRIM ON TI OFF TIMI OFF ARRAY 100 NUM 20 SQLBL ON BLO . RECSEP OFF;
 SPO &var_outputfolder/dbpie_object_schema01_&var_namefile
-@report/sql/headerdoc.sql &var_outputfolder/dbpie_object_schema01_&var_namefile "dbpie_object_schema01_" "" ""
+@rockdb/sql/headerdoc.sql &var_outputfolder/dbpie_object_schema01_&var_namefile "dbpie_object_schema01_" "" ""
 
 PRO <html>
 PRO   <head>

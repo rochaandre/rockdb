@@ -22,7 +22,7 @@ EXPDPD=DIREXPDP
 #| Define                                                         |
 #+-----------------------------------------------------------------+
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/sql/definecfg.sql
+@rockdb/sql/definecfg.sql
 EOF
 
 
@@ -32,8 +32,8 @@ EOF
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
 
-@report/list/dbinfo01.sql
-@report/list/dbinfo02.sql
+@rockdb/list/dbinfo01.sql
+@rockdb/list/dbinfo02.sql
 EOF
 
 #+-----------------------------------------------------------------+
@@ -41,11 +41,11 @@ EOF
 #+-----------------------------------------------------------------+
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/list/listarchivehour.sql
-@report/list/listinvalidobjects.sql
-@report/list/listoutstandalerts.sql
-@report/list/listrmanbkp.sql
-@report/bar/bararchiveperday.sql
+@rockdb/list/listarchivehour.sql
+@rockdb/list/listinvalidobjects.sql
+@rockdb/list/listoutstandalerts.sql
+@rockdb/list/listrmanbkp.sql
+@rockdb/bar/bararchiveperday.sql
 EOF
 
 
@@ -66,7 +66,7 @@ rman target $USERID/$PASSWO@$CONNST log=html/dbinfo_rman_report02.html cmdfile=r
 
 # Listar backup expdp
 
-sqlplus $USERID/$PASSWO@$CONNST @report/expdp/dbinfo_expdp_list01.sql $DIREXPDP
+sqlplus $USERID/$PASSWO@$CONNST @rockdb/expdp/dbinfo_expdp_list01.sql $DIREXPDP
 
 chmod +x report/script/dbinfo_expdp_list01.sh
 report/script/dbinfo_expdp_list01.sh
@@ -76,16 +76,16 @@ report/script/dbinfo_expdp_list01.sh
 #+-----------------------------------------------------------------+
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/gauge/dbgauges01.sql
-@report/gauge/dbgauges02.sql
-@report/gauge/dbgauges04.sql
-@report/gauge/dbgauges03.sql
-@report/gauge/dbgauges05.sql
-@report/gauge/dbgauges06.sql
-@report/gauge/dbgauges07.sql
-@report/gauge/dbgauges08.sql
-@report/gauge/dbgauges09.sql
-@report/gauge/dbgauges10.sql
+@rockdb/gauge/dbgauges01.sql
+@rockdb/gauge/dbgauges02.sql
+@rockdb/gauge/dbgauges04.sql
+@rockdb/gauge/dbgauges03.sql
+@rockdb/gauge/dbgauges05.sql
+@rockdb/gauge/dbgauges06.sql
+@rockdb/gauge/dbgauges07.sql
+@rockdb/gauge/dbgauges08.sql
+@rockdb/gauge/dbgauges09.sql
+@rockdb/gauge/dbgauges10.sql
 EOF
 
 #+-----------------------------------------------------------------+
@@ -93,20 +93,20 @@ EOF
 #+-----------------------------------------------------------------+
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/list/dbinfo_physical_control01.sql
-@report/list/dbinfo_physical_redo01.sql
+@rockdb/list/dbinfo_physical_control01.sql
+@rockdb/list/dbinfo_physical_redo01.sql
 EOF
 
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/list/dbinfo_physical_datafile01_12c.sql
-@report/list/dbinfo_physical_tempfile01_12c.sql
-@report/sql/generatecalltablespace_12c.sql
+@rockdb/list/dbinfo_physical_datafile01_12c.sql
+@rockdb/list/dbinfo_physical_tempfile01_12c.sql
+@rockdb/sql/generatecalltablespace_12c.sql
 EOF
 
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/list/dbinfo_physical_datafile01_11g.sql
-@report/list/dbinfo_physical_tempfile01_11g.sql
-@report/sql/generatecalltablespace_11g.sql
+@rockdb/list/dbinfo_physical_datafile01_11g.sql
+@rockdb/list/dbinfo_physical_tempfile01_11g.sql
+@rockdb/sql/generatecalltablespace_11g.sql
 EOF
 
 #+-----------------------------------------------------------------+
@@ -114,13 +114,13 @@ EOF
 #+-----------------------------------------------------------------+
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/pie/dbpie_index_invalid01.sql
-@report/pie/dbpie_large_pool01.sql
-@report/pie/dbpie_object_invalid01.sql
-@report/pie/dbpie_object_schema01.sql
-@report/pie/dbpie_object_types01.sql
-@report/pie/dbpie_shared_pool01.sql
-@report/pie/dbpie_sga_pool01.sql
+@rockdb/pie/dbpie_index_invalid01.sql
+@rockdb/pie/dbpie_large_pool01.sql
+@rockdb/pie/dbpie_object_invalid01.sql
+@rockdb/pie/dbpie_object_schema01.sql
+@rockdb/pie/dbpie_object_types01.sql
+@rockdb/pie/dbpie_shared_pool01.sql
+@rockdb/pie/dbpie_sga_pool01.sql
 EOF
 
 
@@ -129,8 +129,8 @@ EOF
 #+-----------------------------------------------------------------+
 #
 sqlplus $USERID/$PASSWO@$CONNST <<EOF
-@report/list/dbinfo_rman_report01.sql
-@report/list/dbinfo_rman_report02.sql
+@rockdb/list/dbinfo_rman_report01.sql
+@rockdb/list/dbinfo_rman_report02.sql
 EOF
 
 

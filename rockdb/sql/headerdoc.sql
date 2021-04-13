@@ -19,5 +19,5 @@ PRO --
 PRO -- Notes:       Developed and tested on 11.2.0.3
 PRO --
 PRO ---------------------------------------------------------------------------------------
-PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 PRO -->

@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dblink_ddl_'
 DEFINE vtitlethispage='Dblink DDL'
 DEFINE viconthispage='link.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <PRE>
@@ -14,4 +14,4 @@ FROM   dba_db_links
 /
 PRO </PRE>
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

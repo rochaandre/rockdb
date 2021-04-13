@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbinfo_physical_redo01_'
 DEFINE vtitlethispage='Redo files for this database'
 DEFINE viconthispage='redofile.gif'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -72,4 +72,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

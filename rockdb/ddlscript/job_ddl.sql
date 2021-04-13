@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='job_ddl_'
 DEFINE vtitlethispage='Jobs scripts'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 
@@ -108,4 +108,4 @@ PRO END;
 -- Se existe algum JOB no SYS e so copiar para outro esquema e pegar o codigo.
 -- exec dbms_scheduler.copy_job('SYS.CLEANUP_ONLINE_IND_BUILD','DBACLASS.CLEANUP_ONLINE_IND_BUILD');
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

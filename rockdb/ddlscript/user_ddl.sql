@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='user_ddl_'
 DEFINE vtitlethispage='User DDL'
 DEFINE viconthispage='file-person.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <PRE>
 PRO
@@ -23,4 +23,4 @@ from   dba_ts_quotas tq
 where  tq.username  NOT IN (SELECT OWNER FROM DBA_LOGSTDBY_SKIP WHERE STATEMENT_OPT ='INTERNAL SCHEMA'  )
 /
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

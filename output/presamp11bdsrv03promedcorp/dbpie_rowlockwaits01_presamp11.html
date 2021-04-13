@@ -1,12 +1,12 @@
-<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_rowlockwaits01_presamp11.html
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/rockdb/output/presamp11bdsrv03promedcorp/dbpie_rowlockwaits01_presamp11.html
 - PRO -- Purpose:     dbpie_rowlockwaits01_
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 10:50
+- PRO -- Version:     13/04/2021 11:58
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
-- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+- PRO -------------------------------------------------------------------------------------- PRO -- @rockdb/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
 -->
 <html>
 <head>
@@ -17,15 +17,15 @@ google.charts.setOnLoadCallback(drawChart)
 function drawChart() {
 var data = google.visualization.arrayToDataTable([
 ['Name', 'Value']
-,['SYS.WRH$_EVENT_HISTOGRAM_PK INDEX PARTITION',62]
-,['SYS.WRH$_SYSSTAT_PK INDEX PARTITION',60]
-,['SYS.WRH$_PARAMETER_PK INDEX PARTITION',47]
-,['SYS.WRH$_LATCH_PK INDEX PARTITION',42]
+,['SYS.WRH$_EVENT_HISTOGRAM_PK INDEX PARTITION',68]
+,['SYS.WRH$_SYSSTAT_PK INDEX PARTITION',64]
+,['SYS.WRH$_PARAMETER_PK INDEX PARTITION',50]
+,['SYS.WRH$_LATCH_PK INDEX PARTITION',44]
 ,['SYS.WRH$_ROWCACHE_SUMMARY_PK INDEX PARTITION',16]
 ,['SYS.WRH$_SQLSTAT_PK INDEX PARTITION',14]
 ,['SYS.WRH$_SYSTEM_EVENT_PK INDEX PARTITION',12]
+,['SYS.WRH$_SEG_STAT_PK INDEX PARTITION',10]
 ,['SYS.WRH$_SERVICE_STAT_PK INDEX PARTITION',10]
-,['SYS.WRH$_SEG_STAT_PK INDEX PARTITION',8]
 ,['SYS.WRI$_ADV_MSG_GRPS_IDX_01 INDEX',6]
 ,['SYS.WRH$_WAITSTAT_PK INDEX PARTITION',4]
 ,['SYS.WRI$_ADV_MESSAGE_GROUPS_PK INDEX',4]

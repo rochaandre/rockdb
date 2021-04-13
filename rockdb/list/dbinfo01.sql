@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='dbinfo01_'
 DEFINE vtitlethispage='Info of database'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -197,4 +197,4 @@ PRO </PRE>
 PRO   </body>
 PRO </html>
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

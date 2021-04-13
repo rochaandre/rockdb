@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_rmanbkp01_'
 DEFINE vtitlethispage='List rman bkp'
 DEFINE viconthispage='backup.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -88,4 +88,4 @@ where device_type = 'SBT_TAPE'
 /
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

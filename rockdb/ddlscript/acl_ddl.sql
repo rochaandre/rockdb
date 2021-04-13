@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='acl_ddl_'
 DEFINE vtitlethispage='List ACL'
 DEFINE viconthispage='shield-check.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -150,4 +150,4 @@ noaudit DELETE ANY TABLE by appowner;
 
 -- Script for check all the enabled auditing on Database
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

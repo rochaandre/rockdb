@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_archivemb01_'
 DEFINE vtitlethispage='list archives per hour MB'
 DEFINE viconthispage='archive.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 PRO <html>
 PRO   <head>
@@ -52,4 +52,4 @@ PRO     <p>&varhtmlspace</p>
 
 PRO   </body>
 PRO </html>
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

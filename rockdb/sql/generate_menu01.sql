@@ -2,8 +2,8 @@ DEFINE vhtmlpage='index_'
 DEFINE vtitlethispage='Main options'
 DEFINE viconthispage='server.svg'
 
-@report/sql/headerhtmlspool.sql
--- @report/sql/page_label "&vtitlethispage"
+@rockdb/sql/headerhtmlspool.sql
+-- @rockdb/sql/page_label "&vtitlethispage"
 
 PRO <style type="text/css">
 PRO tr:hover         {color:white; background:#0066CC;color:white; background-color: white}
@@ -191,4 +191,4 @@ PRO <h3>02 - <a title="KSar linux Graphics Performance Outputs"  href="ksaroutpu
 */
 
 
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01

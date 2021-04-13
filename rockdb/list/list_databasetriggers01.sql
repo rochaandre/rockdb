@@ -1,7 +1,7 @@
 DEFINE vhtmlpage='list_databasetriggers01_'
 DEFINE vtitlethispage='List of database triggers'
 DEFINE viconthispage='server.svg'
-@report/sql/headerhtmlspool.sql
+@rockdb/sql/headerhtmlspool.sql
 
 
 PRO <html>
@@ -72,4 +72,4 @@ PRO </PRE>
 PRO     <p>&varhtmlspace</p>
 
 PRO
-@report/sql/footerhtml01
+@rockdb/sql/footerhtml01
