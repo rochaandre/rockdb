@@ -3,7 +3,7 @@ SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 
 SPO tablespace&2.html
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO google.charts.load('current', {
 PRO   packages: ['corechart', 'bar']

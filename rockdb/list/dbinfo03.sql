@@ -3,7 +3,7 @@ SPO &var_outputfolder/dbinfo03_&var_namefile
 @rockdb/sql/headerdoc.sql &var_outputfolder/dbinfo03_&var_namefile "Info of database" "May differ for RAC" "" ""
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO      google.charts.load('current', {'packages':['table']});
 PRO      google.charts.setOnLoadCallback(drawTable);

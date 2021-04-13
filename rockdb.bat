@@ -20,8 +20,15 @@ REM Configure the variables below
 REM
 SET  NLS_DATE_FORMAT=dd/mm/yyyy hh24:mi:ss
 SET  NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+
+REM TEST oracle 19
 SET  ORACLE_HOME=/Users/andre/instantclient_19_8
 SET  PATH=C:\instantclient_19_6;%PATH%
+
+REM Official:
+SET ORACLE_HOME=C:\app\client\Administrador\product\19.0.0\client_1
+SET  PATH=C:\app\client\Administrador\product\19.0.0\client_1\bin;%PATH%
+
 
 
 REM SET  TNS_ADMIN=C:\instantclient_19_6\tns_admin
@@ -34,10 +41,6 @@ SET  VDIRROCKDBCONFIG=%cd%
 REM SET  EXPDPD=DIREXPDP
 
 mkdir %VDIRROCKDB%
-
-
-SET ORACLE_HOME=C:\app\client\Administrador\product\19.0.0\client_1
-SET  PATH=C:\app\client\Administrador\product\19.0.0\client_1\bin;%PATH%
 
 
 REM Doc ID 2082355.1

@@ -8,7 +8,7 @@ SPO &var_outputfolder/dbgauges08_&var_namefile
 
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO       google.charts.load('current', {'packages':['gauge']});
 PRO       google.charts.setOnLoadCallback(drawChart);
