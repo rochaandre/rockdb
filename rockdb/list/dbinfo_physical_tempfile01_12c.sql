@@ -8,7 +8,7 @@ SET TERM OFF HEA OFF LIN 32767 NEWP NONE PAGES 0 FEED OFF ECHO OFF VER OFF LONG 
 SPO  html/dbinfo_physical_tempfile01.html
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO      google.charts.load('current', {'packages':['table']});
 PRO      google.charts.setOnLoadCallback(drawTable);

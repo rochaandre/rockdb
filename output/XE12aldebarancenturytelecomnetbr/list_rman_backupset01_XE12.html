@@ -2,7 +2,7 @@
 - PRO -- Purpose:     Rman backupset
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 11:58
+- PRO -- Version:     13/04/2021 12:18
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/backup.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(Rman backupset)</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['table']})
 google.charts.setOnLoadCallback(drawTable)
@@ -61,14 +61,18 @@ data.addColumn('string', 'Elapsed');
 data.addColumn('string', 'Tag');
 data.addColumn('string', 'Block');
 data.addRows([
-['14471','Datafile Full','DISK','YES','YES','','13/04/2021 11:30:18','13/04/2021 11:30:18','0','TAG20210413T113018','16384']
+['14476','Datafile Full','DISK','YES','YES','','13/04/2021 12:00:22','13/04/2021 12:00:23','1','TAG20210413T120022','16384']
+,['14475','Datafile Full','DISK','','YES','','13/04/2021 12:00:21','13/04/2021 12:00:21','0','SPFILEBKP','16384']
+,['14474','Datafile Full','DISK','YES','','','13/04/2021 12:00:19','13/04/2021 12:00:20','1','CONTROLFILEBKP','16384']
+,['14473','Archived Logs','DISK','','','','13/04/2021 12:00:18','13/04/2021 12:00:18','0','ARCHIVELOG','512']
+,['14472','Archived Logs','DISK','','','','13/04/2021 12:00:10','13/04/2021 12:00:16','6','TAG20210413T120010','512']
+,['14471','Datafile Full','DISK','YES','YES','','13/04/2021 11:30:18','13/04/2021 11:30:18','0','TAG20210413T113018','16384']
 ,['14470','Datafile Full','DISK','','YES','','13/04/2021 11:30:17','13/04/2021 11:30:17','0','SPFILEBKP','16384']
 ,['14469','Datafile Full','DISK','YES','','','13/04/2021 11:30:15','13/04/2021 11:30:16','1','CONTROLFILEBKP','16384']
 ,['14468','Archived Logs','DISK','','','','13/04/2021 11:30:14','13/04/2021 11:30:14','0','ARCHIVELOG','512']
 ,['14467','Archived Logs','DISK','','','','13/04/2021 11:30:10','13/04/2021 11:30:13','3','TAG20210413T113010','512']
 ,['14466','Datafile Full','DISK','YES','YES','','13/04/2021 11:00:15','13/04/2021 11:00:15','0','TAG20210413T110015','16384']
 ,['14465','Datafile Full','DISK','','YES','','13/04/2021 11:00:14','13/04/2021 11:00:14','0','SPFILEBKP','16384']
-,['14464','Datafile Full','DISK','YES','','','13/04/2021 11:00:12','13/04/2021 11:00:13','1','CONTROLFILEBKP','16384']
 ,['14463','Archived Logs','DISK','','','','13/04/2021 11:00:10','13/04/2021 11:00:11','1','ARCHIVELOG','512']
 ,['14462','Archived Logs','DISK','','','','13/04/2021 11:00:09','13/04/2021 11:00:10','1','TAG20210413T110009','512']
 ,['14461','Datafile Full','DISK','YES','YES','','13/04/2021 10:30:17','13/04/2021 10:30:17','0','TAG20210413T103017','16384']
@@ -247,10 +251,6 @@ data.addRows([
 ,['14244','Datafile Full','DISK','','YES','','12/04/2021 12:30:15','12/04/2021 12:30:15','0','SPFILEBKP','16384']
 ,['14242','Archived Logs','DISK','','','','12/04/2021 12:30:11','12/04/2021 12:30:11','0','ARCHIVELOG','512']
 ,['14241','Archived Logs','DISK','','','','12/04/2021 12:30:09','12/04/2021 12:30:10','1','TAG20210412T123009','512']
-,['14240','Datafile Full','DISK','YES','YES','','12/04/2021 12:00:15','12/04/2021 12:00:15','0','TAG20210412T120015','16384']
-,['14239','Datafile Full','DISK','','YES','','12/04/2021 12:00:14','12/04/2021 12:00:14','0','SPFILEBKP','16384']
-,['14237','Archived Logs','DISK','','','','12/04/2021 12:00:10','12/04/2021 12:00:10','0','ARCHIVELOG','512']
-,['14236','Archived Logs','DISK','','','','12/04/2021 12:00:08','12/04/2021 12:00:09','1','TAG20210412T120008','512']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -274,5 +274,5 @@ table.draw(data , {allowHtml: true, showRowNumber: true, width: '100%', height: 
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 12:18 </font>
 

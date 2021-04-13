@@ -6,7 +6,7 @@ SPO &var_outputfolder/dbpie_sga_pool01_&var_namefile
 
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO       google.charts.load("current", {packages:["corechart"]});
 PRO       google.charts.setOnLoadCallback(drawChart);

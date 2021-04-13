@@ -2,7 +2,7 @@
 - PRO -- Purpose:     List rman bkp
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 11:58
+- PRO -- Version:     13/04/2021 12:18
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/backup.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(List rman bkp)</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['table']})
 google.charts.setOnLoadCallback(drawTable)
@@ -56,8 +56,7 @@ data.addColumn('string', 'Finish');
 data.addColumn('string', 'Spent');
 data.addColumn('string', 'Need attention');
 data.addRows([
-['SPFILE','COMPLETED','31/03/2021 00:00','31/03/2021 00:00','0','FALSE']
-,['ARCHIVELOG','COMPLETED','31/03/2021 00:30','31/03/2021 00:30','0','FALSE']
+['SPFILE','COMPLETED','31/03/2021 00:30','31/03/2021 00:30','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 01:00','31/03/2021 01:00','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 01:31','31/03/2021 01:31','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','31/03/2021 02:00','31/03/2021 02:00','0','FALSE']
@@ -691,6 +690,7 @@ data.addRows([
 ,['ARCHIVELOG','COMPLETED','13/04/2021 10:30','13/04/2021 10:30','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','13/04/2021 11:00','13/04/2021 11:00','0','FALSE']
 ,['ARCHIVELOG','COMPLETED','13/04/2021 11:30','13/04/2021 11:30','0','FALSE']
+,['ARCHIVELOG','COMPLETED','13/04/2021 12:00','13/04/2021 12:00','0','FALSE']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -717,5 +717,5 @@ if necessary to uncatalog database backups from type
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 12:18 </font>
 

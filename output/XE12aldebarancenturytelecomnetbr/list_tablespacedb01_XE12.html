@@ -2,7 +2,7 @@
 - PRO -- Purpose:     List size tablespace
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 11:58
+- PRO -- Version:     13/04/2021 12:18
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/server.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(List size tablespace )</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['table']})
 google.charts.setOnLoadCallback(drawTable)
@@ -54,13 +54,13 @@ data.addColumn('string', 'Allocated');
 data.addColumn('string', 'Used');
 data.addColumn('string', 'Pct');
 data.addRows([
-['XE SANKHYA','9858','7882','79.95']
+['XE SANKHYA','9858','7946','80.6']
 ,['XE SANKIND','1200','865','72.12']
 ,['XE SANKLOB','10','0','0']
 ,['XE SYSAUX','2610','2476','94.86']
 ,['XE SYSTEM','960','841','87.58']
 ,['XE TOAD','10','1','8.75']
-,['XE UNDOTBS1','3000','41','1.38']
+,['XE UNDOTBS1','3000','42','1.41']
 ,['XE USERS','338','0','.13']
 ]);
 
@@ -79,13 +79,13 @@ google.charts.setOnLoadCallback(drawStacked)
 function drawStacked() {
 var data = google.visualization.arrayToDataTable([
 ['Tablespaces', 'Utilizado', 'Livre']
-,['XE SANKHYA',9858,7882]
+,['XE SANKHYA',9858,7946]
 ,['XE SANKIND',1200,865]
 ,['XE SANKLOB',10,0]
 ,['XE SYSAUX',2610,2476]
 ,['XE SYSTEM',960,841]
 ,['XE TOAD',10,1]
-,['XE UNDOTBS1',3000,41]
+,['XE UNDOTBS1',3000,42]
 ,['XE USERS',338,0]
 ])
 var options = {
@@ -126,15 +126,15 @@ SANKHYA                                                                         
 ################
 # Tablespace total
 ################
-SANKHYA                                                                                                    9858                 7883                 1975                20.04
+SANKHYA                                                                                                    9858                 7947                 1911                19.39
 SANKIND                                                                                                    1200                  866                  334                 27.8
 SANKLOB                                                                                                      10                    1                    9                   90
 SYSAUX                                                                                                     2610                 2477                  133                  5.1
 SYSTEM                                                                                                      960                  842                  118                12.31
 TOAD                                                                                                         10                    2                    8                81.25
-UNDOTBS1                                                                                                   3000                   42                 2958                98.59
+UNDOTBS1                                                                                                   3000                   43                 2957                98.56
 USERS                                                                                                       338                    2                  336                99.57
-Total                                                                                                     17986                12115                 5871                32.64
+Total                                                                                                     17986                12180                 5806                32.28
 ################
 # Reduce tablespace
 ################
@@ -147,4 +147,4 @@ ORA-00942: table or view does not exist
 ################
 # Create tablespace with ASSM
 ################
-SP2-0552: Bind variable "58" not declared.
+SP2-0552: Bind variable "18" not declared.

@@ -2,7 +2,7 @@
 - PRO -- Purpose:     Check list
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 11:58
+- PRO -- Version:     13/04/2021 12:18
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/check.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(Check list)</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['table']})
 google.charts.setOnLoadCallback(drawTable)
@@ -64,9 +64,9 @@ data.addRows([
 ,['PRO VALUE LOWER THAN 0.5','197','TRUE','IT IS HIGHLY RECOMMENDED TO REORG']
 ,['PRO VALUE BETWEEN 0.5 AND 0.75','12','TRUE','REORG IS RECOMMENDED']
 ,['PRO VALUE ABOVE 0.75','424','FALSE','DOES NOT REQUIRE REORG']
-,['cursor_cache_hits           727.36%','soft parse    -627.97%','hard parse       0.61%','']
+,['cursor_cache_hits           726.70%','soft parse    -627.32%','hard parse       0.61%','']
 ,['session_cached_cursors in use','        50','    100%','']
-,['open_cursors in use','       800','    12%','']
+,['open_cursors in use','       800','    11%','']
 ,['Force logging','NO','FALSE','']
 ,['DB ID','2945398897','2945398897','']
 ,['Log mode','ARCHIVELOG','FALSE','']
@@ -105,10 +105,7 @@ alter system set open_cursors in use='800' scope=spfile;
 -- Max resource used
 
 alter system set max_shared_servers='2' scope=spfile;
-alter system set transactions='3' scope=spfile;
-alter system set cmtcallbk='5' scope=spfile;
 alter system set max_rollback_segments='11' scope=spfile;
-alter system set dml_locks='33' scope=spfile;
 alter system set sort_segment_locks='43' scope=spfile;
 alter system set enqueue_resources='54' scope=spfile;
 alter system set enqueue_locks='88' scope=spfile;
@@ -121,5 +118,5 @@ alter system set sessions='128' scope=spfile;
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 12:18 </font>
 

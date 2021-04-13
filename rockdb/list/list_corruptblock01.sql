@@ -6,7 +6,7 @@ DEFINE viconthispage='block.svg'
 
 PRO <html>
 PRO   <head>
-PRO     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+PRO     <script type="text/javascript" src="&var_outputfolder/charts/loader.js"></script>
 PRO     <script type="text/javascript">
 PRO      google.charts.load('current', {'packages':['table']});
 PRO      google.charts.setOnLoadCallback(drawTable);

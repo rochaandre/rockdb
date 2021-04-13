@@ -2,7 +2,7 @@
 - PRO -- Purpose:     Rman backuppiece
 - PRO -- Warning:
 - PRO -- Author:      Andre Rocha
-- PRO -- Version:     13/04/2021 11:58
+- PRO -- Version:     13/04/2021 12:18
 - PRO -- Usage:
 - PRO -- Example:
 - PRO -- Notes:       Developed and tested on 11.2.0.3
@@ -42,7 +42,7 @@ div.google-chart {width:809px; height:500px;}
 <h1> <a href="index_XE12.html" target="_blank"><img src="icon/backup.svg" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(Rman backuppiece)</em>  </h1>
 <html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="Z:\rockdb\output\XE12aldebarancenturytelecomnetbr/charts/loader.js"></script>
 <script type="text/javascript">
 google.charts.load('current', {'packages':['table']})
 google.charts.setOnLoadCallback(drawTable)
@@ -56,14 +56,18 @@ data.addColumn('string', 'Start');
 data.addColumn('string', 'End');
 data.addColumn('string', 'Elapsed');
 data.addRows([
-['14471','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-17','13/04/2021 11:30:18','13/04/2021 11:30:19','1']
+['14476','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-18','13/04/2021 12:00:23','13/04/2021 12:00:23','0']
+,['14475','Available','/stage/bkprman/XE_SPFIL_XE_DB_5cvs6h2l_14508_1_1069761621.bkp','13/04/2021 12:00:21','13/04/2021 12:00:21','0']
+,['14474','Available','/stage/bkprman/XE_CFILE_XE_DB_5bvs6h2j_14507_1_1069761619.bkp','13/04/2021 12:00:20','13/04/2021 12:00:20','0']
+,['14473','Available','/stage/bkprman/XE_ARCHI_XE_DB_5avs6h2i_14506_1_1069761618.bkp','13/04/2021 12:00:18','13/04/2021 12:00:18','0']
+,['14472','Available','/stage/bkprman/XE_ARCHI_XE_DB_59vs6h2a_14505_1.bkp','13/04/2021 12:00:11','13/04/2021 12:00:16','5']
+,['14471','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-17','13/04/2021 11:30:18','13/04/2021 11:30:19','1']
 ,['14470','Available','/stage/bkprman/XE_SPFIL_XE_DB_57vs6fa9_14503_1_1069759817.bkp','13/04/2021 11:30:17','13/04/2021 11:30:17','0']
 ,['14469','Available','/stage/bkprman/XE_CFILE_XE_DB_56vs6fa7_14502_1_1069759815.bkp','13/04/2021 11:30:16','13/04/2021 11:30:16','0']
 ,['14468','Available','/stage/bkprman/XE_ARCHI_XE_DB_55vs6fa6_14501_1_1069759814.bkp','13/04/2021 11:30:14','13/04/2021 11:30:14','0']
 ,['14467','Available','/stage/bkprman/XE_ARCHI_XE_DB_54vs6fa2_14500_1.bkp','13/04/2021 11:30:10','13/04/2021 11:30:13','3']
 ,['14466','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-16','13/04/2021 11:00:15','13/04/2021 11:00:16','1']
 ,['14465','Available','/stage/bkprman/XE_SPFIL_XE_DB_52vs6dhu_14498_1_1069758014.bkp','13/04/2021 11:00:14','13/04/2021 11:00:14','0']
-,['14464','Available','/stage/bkprman/XE_CFILE_XE_DB_51vs6dhs_14497_1_1069758012.bkp','13/04/2021 11:00:13','13/04/2021 11:00:13','0']
 ,['14463','Available','/stage/bkprman/XE_ARCHI_XE_DB_50vs6dhq_14496_1_1069758010.bkp','13/04/2021 11:00:11','13/04/2021 11:00:11','0']
 ,['14462','Available','/stage/bkprman/XE_ARCHI_XE_DB_4vvs6dhp_14495_1.bkp','13/04/2021 11:00:09','13/04/2021 11:00:10','1']
 ,['14461','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210413-15','13/04/2021 10:30:17','13/04/2021 10:30:18','1']
@@ -1020,7 +1024,6 @@ data.addRows([
 ,['12683','Available','/stage/bkprman/XE_SPFIL_XE_DB_dcvrih7s_12716_1_1069106428.bkp','05/04/2021 22:00:28','05/04/2021 22:00:28','0']
 ,['12679','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210405-2a','05/04/2021 21:06:50','05/04/2021 21:06:51','1']
 ,['12678','Available','/stage/bkprman/XE_SPFIL_XE_DB_d7vrie39_12711_1_1069103209.bkp','05/04/2021 21:06:49','05/04/2021 21:06:49','0']
-,['12673','Available','/stage/bkprman/XE_CONTROLFILE_AUTOBACKUP_c-2945398897-20210405-29','05/04/2021 20:30:15','05/04/2021 20:30:15','0']
 ]);
 
 var table  = new google.visualization.Table(document.getElementById('table_div'))
@@ -1044,5 +1047,5 @@ table.draw(data , {allowHtml: true, showRowNumber: true, width: '100%', height: 
 
 
 </PRE>
-<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 11:58 </font>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 12:18 </font>
 
