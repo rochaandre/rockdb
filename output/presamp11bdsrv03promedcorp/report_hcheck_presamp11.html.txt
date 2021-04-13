@@ -1,0 +1,69 @@
+#+---------------------------------------------------------------------------------------+
+#|                                                                                       |
+#| Purpose report_hcheck
+#|                                                                                       |
+#| Author Andre Rocha                                                                    |
+#|                                                                                       |
+#| File /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/report_hcheck_presamp11.html.txt                                                                    |
+#|                                                                                       |
+#+---------------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|            HCHECK REPORT                                                     |
++------------------------------------------------------------------------------+
+
+presamp                                          10/04/2021-20:31:52                                       ACTIVE
+presamp                                          10/04/2021-20:31:52                                       ACTIVE
+
+
+	dbms_system.ksdwrt(1,tmp);
+	*
+ERROR at line 76:
+ORA-06550: line 76, column 2:
+PLS-00201: identifier 'DBMS_SYSTEM.KSDWRT' must be declared
+ORA-06550: line 76, column 2:
+PL/SQL: Statement ignored
+ORA-06550: line 103, column 2:
+PLS-00201: identifier 'DBMS_SYSTEM.KSDWRT' must be declared
+ORA-06550: line 103, column 2:
+PL/SQL: Statement ignored
+ORA-06550: line 122, column 2:
+PLS-00201: identifier 'DBMS_SYSTEM.KSDWRT' must be declared
+ORA-06550: line 122, column 2:
+PL/SQL: Statement ignored
+ORA-06550: line 330, column 12:
+PL/SQL: ORA-00942: table or view does not exist
+ORA-06550: line 329, column 5:
+PL/SQL: SQL Statement ignored
+ORA-06550: line 393, column 12:
+PL/SQL: ORA-00942: table or view does not exist
+ORA-06550: line 391, column 5:
+PL/SQL: SQL Statement ignored
+ORA-06550: line 407, column 12:
+PL/SQL: ORA-00942: table or view does not exist
+ORA-06550: line 405, column 5:
+PL/SQL: SQL Statement ignored
+ORA-06550: line 421, column 15:
+PLS-00201: identifier 'OBJ$.SUBNAME' must be declared
+ORA-06550: line 421, column 15:
+PL/SQL: Item ignored
+ORA-06550: line 422, column 15:
+PLS-00201: identifier 'OBJ$.OWNER#' must be declared
+ORA-06550: line 422, column 15:
+PL/SQL: Item ignored
+ORA-06550: line 423, column 15:
+PLS-00201: identifier 'USER$.NAME' must be declared
+ORA-06550: line 423, column 15:
+PL/SQL: Item ignored
+ORA-06550: line 425, column 12:
+PLS-00201: identifier 'OBJ$.TYPE#' must be declared
+ORA-06550: line 425, column 12:
+PL/SQL: Item ignored
+
+
+ORA-01031: insufficient privileges
+
+Complete output is in trace file:
+ORA-01031: insufficient privileges
+
+

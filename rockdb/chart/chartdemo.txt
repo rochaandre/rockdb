@@ -1,0 +1,42 @@
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Motivation Level');
+
+      data.addRows([
+        [{v: [8, 0, 0], f: '20210521'}, 5],
+        [{v: [9, 0, 0], f: '20210522'}, 2],
+        [{v: [10, 0, 0], f:'20210523'}, 3],
+        [{v: [11, 0, 0], f: '20210524'}, 4],
+        [{v: [12, 0, 0], f: '20210525'}, 5],
+        [{v: [13, 0, 0], f: '20210526'}, 16],
+        [{v: [14, 0, 0], f: '20210527'}, 7],
+        [{v: [15, 0, 0], f: '20210528'}, 8],
+        [{v: [16, 0, 0], f: '20210529'}, 9],
+        [{v: [17, 0, 0], f: '20210530'}, 10],
+      ]);
+
+      var options = {
+        title: 'Generation of archives',
+        hAxis: {
+          title: 'Archives last 24 hours',
+          format: 'yyyymmdd',
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [17, 30, 0]
+          }
+        },
+        vAxis: {
+          title: 'Quantity'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }

@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_bufferbusywaits02_presamp11.html
+- PRO -- Purpose:     dbpie_bufferbusywaits02_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['BDSAMP.HSSCONF TABLE',0]
+,['BDSAMP.HSSCONGE TABLE',0]
+,['BDSAMP.ESTPRODU TABLE',0]
+,['BDAPP.QRTZ_SCHEDULER_STATE TABLE',0]
+,['BDSAMP.FINBANC TABLE',0]
+,['BDSAMP.FINCPRE TABLE',0]
+,['BDSAMP.HSSDEPAR TABLE',0]
+,['BDSAMP.TMP_TOTAL_VENDIDOPAGA TABLE',0]
+,['BDSAMP.FINLGBAN TABLE',0]
+,['BDSAMP.SEGTENT TABLE',0]
+,['BDSAMP.HSSAGEND TABLE',0]
+,['BDSAMP.HSSATEND TABLE',0]
+,['BDSAMP.HSSCCLIN TABLE',0]
+,['BDSAMP.HSSCEPAG TABLE',0]
+,['BDSAMP.HSSLOGS TABLE',0]
+,['BDSAMP.HSSCPARC TABLE',0]
+,['BDSAMP.TMP_CTB_CE_COMPOSICAO_Q15 TABLE',0]
+,['GGUSER.AQ$_OGG$Q_TAB_EXTGTE_S TABLE',0]
+,['GGUSER.AQ$_OGG$Q_TAB_EXTGTE_L TABLE',0]
+,['GGUSER.AQ$_OGG$Q_TAB_EXTGTE_P TABLE',0]
+])
+
+var options = {
+title: 'buffer busy waits - app schemas tables',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

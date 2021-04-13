@@ -1,0 +1,46 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_segment_bigobjects01_presamp11.html
+- PRO -- Purpose:     dbpie_segment_bigobjects01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Type', 'Objects']
+,['BDSAMP.HSSLOGS BDSAMPHISTDADOS TABLE',58972]
+,['BDSAMP.FK_HSSLOGS02 BDSAMPHISTINDXL INDEX',13579]
+,['BDSAMP.PK_HSSLOGS BDSAMPHISTINDXL INDEX',11409]
+,['BDSAMP.FK_HSSLOGS01 BDSAMPHISTINDXL INDEX',11196]
+,['BDSAMP.HSSLOGS2 BDSAMPHISTINDXL INDEX',10815]
+,['BDSAMP.HSSRGSIB BDSAMPDADOS TABLE',3467]
+,['RETORNA.HSSRGSIB BDSAMPDADOS TABLE',2560]
+,['BDSAMP.HSSPCON BDSAMPDADOS TABLE',2304]
+,['BDSAMP.HSSITRMT BDSAMPDADOS TABLE',2061]
+,['BDSAMP.ESTTBPRO BDSAMPDADOS TABLE',1792]
+])
+
+var options = {
+title: 'Big Objects/Segments',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

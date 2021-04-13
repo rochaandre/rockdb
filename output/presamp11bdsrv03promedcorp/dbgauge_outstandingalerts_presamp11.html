@@ -1,0 +1,40 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbgauge_usedspacepresamp11.html
+- PRO -- Purpose:     outstandingalert
+- PRO -- Warning:     outstandingalert
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:        outstandingalert
+- PRO -- Example:      lot
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['gauge']})
+google.charts.setOnLoadCallback(drawChart)
+
+function drawChart() {
+
+var data = google.visualization.arrayToDataTable([
+['Label', 'Value'],
+['OustandAlerts',0]
+]);
+
+var options = {
+width: 400, height: 200,
+ max:20, redFrom: 17, redTo: 20, yellowFrom: 15, yellowTo: 17,
+minorTicks: 5
+}
+
+var chart = new google.visualization.Gauge(document.getElementById('chart_div'))
+
+chart.draw(data, options)
+}
+</script>
+</head>
+<body>
+<div id="chart_div" style="width: 200px; height: 200px;"></div>
+</body>
+</html>

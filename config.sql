@@ -1,0 +1,10 @@
+DEFINE vclientemail=''
+DEFINE vclientname=''
+DEFINE vdirrockdb='/Users/andre/Dropbox/scriptsGRAPHICO/report/output'
+DEFINE vdirrockdbconfig='/Users/andre/Dropbox/scriptsGRAPHICO/report'
+DEFINE vclientemailemergency=''
+DEFINE varUSERDBA = 'dbajobs'
+DEFINE varPASSDBA = 'dbajobs'
+DEFINE varCONNSTR = '192.168.1.180:1521/presamp'
+DEFINE varDIREXPD = ''
+DEFINE varSLASH=/

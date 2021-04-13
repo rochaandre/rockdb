@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_rowlockwaits01_XE12.html
+- PRO -- Purpose:     dbpie_rowlockwaits01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SYS.MON_MODS_ALL$ TABLE',1]
+,['SYS.I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST INDEX',1]
+,['SYS.OBJ$ TABLE',0]
+,['SYS.I_OBJ2 INDEX',0]
+,['SYS.FILE$ TABLE',0]
+,['SYS.I_CCOL1 INDEX',0]
+,['SYS.I_OBJ# INDEX',0]
+,['SYS.I_UNDO1 INDEX',0]
+,['SYS.I_COBJ# INDEX',0]
+,['SYS.I_USER# INDEX',0]
+,['SYS.I_CDEF1 INDEX',0]
+,['SYS.I_FILE2 INDEX',0]
+,['SYS.I_TS# INDEX',0]
+,['SYS.I_ICOL1 INDEX',0]
+,['SYS.CON$ TABLE',0]
+,['SYS.TS$ TABLE',0]
+,['SYS.CDEF$ TABLE',0]
+,['SYS.I_UNDO2 INDEX',0]
+,['SYS.I_CDEF4 INDEX',0]
+,['SYS.I_COL2 INDEX',0]
+])
+
+var options = {
+title: 'Row lock waits - internal schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

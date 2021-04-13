@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_rowlockwaits01_presamp11.html
+- PRO -- Purpose:     dbpie_rowlockwaits01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SYS.WRH$_EVENT_HISTOGRAM_PK INDEX PARTITION',62]
+,['SYS.WRH$_SYSSTAT_PK INDEX PARTITION',60]
+,['SYS.WRH$_PARAMETER_PK INDEX PARTITION',47]
+,['SYS.WRH$_LATCH_PK INDEX PARTITION',42]
+,['SYS.WRH$_ROWCACHE_SUMMARY_PK INDEX PARTITION',16]
+,['SYS.WRH$_SQLSTAT_PK INDEX PARTITION',14]
+,['SYS.WRH$_SYSTEM_EVENT_PK INDEX PARTITION',12]
+,['SYS.WRH$_SERVICE_STAT_PK INDEX PARTITION',10]
+,['SYS.WRH$_SEG_STAT_PK INDEX PARTITION',8]
+,['SYS.WRI$_ADV_MSG_GRPS_IDX_01 INDEX',6]
+,['SYS.WRH$_WAITSTAT_PK INDEX PARTITION',4]
+,['SYS.WRI$_ADV_MESSAGE_GROUPS_PK INDEX',4]
+,['SYS.WRH$_MVPARAMETER_PK INDEX PARTITION',4]
+,['SYS.WRH$_SGASTAT_U INDEX PARTITION',4]
+,['SYS.WRH$_LATCH_MISSES_SUMMARY_PK INDEX PARTITION',4]
+,['SYS.WRH$_ACTIVE_SESSION_HISTORY_PK INDEX PARTITION',2]
+,['SYS.WRH$_SERVICE_WAIT_CLASS_PK INDEX PARTITION',2]
+,['SYS.WRH$_OSSTAT_PK INDEX PARTITION',2]
+,['SYS.LOB$ TABLE',0]
+,['SYS.UNDO$ TABLE',0]
+])
+
+var options = {
+title: 'Row lock waits - internal schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

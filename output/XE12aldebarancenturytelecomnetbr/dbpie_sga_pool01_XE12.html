@@ -1,0 +1,44 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_shared_pool01_XE12.html
+- PRO -- Purpose:     dbpie_shared_pool01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['SGA Max size 2800' ,                                                                                                                                                                                                                                  '2800']
+,['Fixed SGA Size 8 MB',                                                                                                                                                                                                                                8]
+,['Redo Buffers 8 MB',                                                                                                                                                                                                                                  8]
+,['Buffer Cache Size 1008 MB',                                                                                                                                                                                                                          1008]
+,['In-Memory Area Size 0 MB',                                                                                                                                                                                                                           0]
+,['Shared Pool Size 1664 MB',                                                                                                                                                                                                                           1664]
+,['Large Pool Size 32 MB',                                                                                                                                                                                                                              32]
+,['Java Pool Size 48 MB',                                                                                                                                                                                                                               48]
+,['Streams Pool Size 32 MB',                                                                                                                                                                                                                            32]
+])
+
+var options = {
+title: 'Total SGA 2800 MB ',
+title: 'Total SGA 2800 MB ',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('donutchart'))
+chart.draw(data, options)
+}
+</script>
+</head>
+<body>
+<div id="donutchart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

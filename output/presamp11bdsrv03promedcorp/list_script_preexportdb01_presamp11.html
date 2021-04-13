@@ -1,0 +1,128 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/list_script_preexportdb01_presamp11.html
+- PRO -- Purpose:     Pre export
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Header:  $ -->
+<!-- rock_copyright (c) 2021, All rights reserved. -->
+<!-- Author: techmaxconsultoria@gmail.com -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="icon/card-list.svg" type="image/x-icon" />
+<title>Pre export</title>
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:5px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:red; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+</head>
+
+<h1> <a href="index_presamp11.html" target="_blank"><img src="icon/card-list.svg" alt="index_presamp11.html" height="33" width="52" /></a> presamp11.html <em>(Pre export)</em>  </h1>
+<body>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Parameters non default </h1>
+<br>alter system set archive_lag_target=0 scope=SPFILE sid='*';
+<br>alter system set audit_file_dest="/u01/app/oracle/admin/presamp/adump" scope=SPFILE sid='*';
+<br>alter system set audit_trail="NONE" scope=SPFILE sid='*';
+<br>alter system set compatible="11.2.0.4.0" scope=SPFILE sid='*';
+<br>alter system set control_files="+DATA/presamp/controlfile/control01.ctl" scope=SPFILE sid='*';
+<br>alter system set control_management_pack_access="DIAGNOSTIC+TUNING" scope=SPFILE sid='*';
+<br>alter system set cpu_count=4 scope=SPFILE sid='*';
+<br>alter system set db_block_size=8192 scope=SPFILE sid='*';
+<br>alter system set db_create_file_dest="+DATA" scope=BOTH sid='*';
+<br>alter system set db_create_online_log_dest_1="+DATA" scope=BOTH sid='*';
+<br>alter system set db_file_name_convert="/u01/oradata/samp, +DATA/PRESAMP/DATAFILE" scope=BOTH sid='*';
+<br>alter system set db_name="samp" scope=SPFILE sid='*';
+<br>alter system set db_recovery_file_dest="/stage/fra" scope=SPFILE sid='*';
+<br>alter system set db_recovery_file_dest_size=400G scope=SPFILE sid='*';
+<br>alter system set db_unique_name="presamp" scope=SPFILE sid='*';
+<br>alter system set dg_broker_start="TRUE" scope=SPFILE sid='*';
+<br>alter system set diagnostic_dest="/u01/app/oracle" scope=SPFILE sid='*';
+<br>alter system set dispatchers="(PROTOCOL=TCP) (SERVICE=+DATAXDB)" scope=SPFILE sid='*';
+<br>alter system set enable_goldengate_replication="TRUE" scope=SPFILE sid='*';
+<br>alter system set fal_server="samp" scope=SPFILE sid='*';
+<br>alter system set local_listener="(ADDRESS = (PROTOCOL=TCP)(HOST=192.168.1.28)(PORT=1525)), (ADDRESS = (PROTOCOL=TCP)(HOST=192.168.1.28)(PORT=1521))" scope=SPFILE sid='*';
+<br>alter system set log_archive_config="dg_config=(presamp,samp)" scope=SPFILE sid='*';
+<br>alter system set log_archive_dest_1="location=USE_DB_RECOVERY_FILE_DEST, valid_for=(ALL_LOGFILES, ALL_ROLES)" scope=BOTH sid='*';
+<br>alter system set log_archive_dest_state_2="RESET" scope=BOTH sid='*';
+<br>alter system set log_archive_format="archive%t_%s_%r.arc" scope=SPFILE sid='*';
+<br>alter system set log_archive_max_processes=4 scope=SPFILE sid='*';
+<br>alter system set log_archive_min_succeed_dest=1 scope=BOTH sid='*';
+<br>alter system set log_archive_trace=0 scope=SPFILE sid='*';
+<br>alter system set log_file_name_convert="/u01/oradata/samp, +DATA/PRESAMP/ONLINELOG" scope=SPFILE sid='*';
+<br>alter system set nls_date_format="DD/MM/YYYY HH24:MI" scope=BOTH sid='*';
+<br>alter system set nls_language="AMERICAN" scope=BOTH sid='*';
+<br>alter system set nls_territory="AMERICA" scope=BOTH sid='*';
+<br>alter system set open_cursors=2500 scope=SPFILE sid='*';
+<br>alter system set parallel_max_servers=0 scope=SPFILE sid='*';
+<br>alter system set pga_aggregate_target=1200M scope=SPFILE sid='*';
+<br>alter system set processes=950 scope=SPFILE sid='*';
+<br>alter system set recyclebin="OFF" scope=BOTH sid='*';
+<br>alter system set remote_login_passwordfile="EXCLUSIVE" scope=SPFILE sid='*';
+<br>alter system set sec_case_sensitive_logon="FALSE" scope=SPFILE sid='*';
+<br>alter system set service_names="+DATA,bdsamp" scope=SPFILE sid='*';
+<br>alter system set session_cached_cursors=150 scope=BOTH sid='*';
+<br>alter system set sessions=1472 scope=SPFILE sid='*';
+<br>alter system set sga_target=8G scope=SPFILE sid='*';
+<br>alter system set standby_file_management="AUTO" scope=SPFILE sid='*';
+<br>alter system set streams_pool_size=256M scope=SPFILE sid='*';
+<br>alter system set transactions=1619 scope=SPFILE sid='*';
+<br>alter system set undo_retention=6600 scope=SPFILE sid='*';
+<br>alter system set undo_tablespace="UNDOTBS1" scope=SPFILE sid='*';
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Object directory </h1>
+SP2-0310: unable to open file "report/sql/directory.ddl"
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Role </h1>
+SP2-0310: unable to open file "report/sql/directory.ddl"
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Public synonym </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Database trigger </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Database Jobs </h1>
+<p>&nbsp;</p>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  ACL list </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Java Class </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Tablespaces </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Users </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Grants objects </h1>
+<hr style="height:5px;border-width:0;color:gray;background-color:gray">
+<h1>  Grants roles </h1>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+</PRE>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:50 </font>
+

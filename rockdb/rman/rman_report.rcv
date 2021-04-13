@@ -1,0 +1,4 @@
+report need backup; 
+report schema;           
+list backup of database; 
+list backup summary; 

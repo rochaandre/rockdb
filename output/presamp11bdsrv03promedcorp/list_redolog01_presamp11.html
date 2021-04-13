@@ -1,0 +1,119 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/list_redolog01_presamp11.html
+- PRO -- Purpose:     List redo log group
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Header:  $ -->
+<!-- rock_copyright (c) 2021, All rights reserved. -->
+<!-- Author: techmaxconsultoria@gmail.com -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="icon/archive.svg" type="image/x-icon" />
+<title>List redo log group</title>
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:5px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:red; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+</head>
+
+<h1> <a href="index_presamp11.html" target="_blank"><img src="icon/archive.svg" alt="index_presamp11.html" height="33" width="52" /></a> presamp11.html <em>(List redo log group)</em>  </h1>
+<html>
+<head>
+SP2-0734: unknown command beginning "report/thi..." - rest of line ignored.
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['table']})
+google.charts.setOnLoadCallback(drawTable)
+
+function drawTable() {
+var data = new google.visualization.DataTable()
+data.addColumn('string', 'Thread');
+data.addColumn('string', 'Group');
+data.addColumn('string', 'Member');
+data.addColumn('string', 'Size');
+data.addColumn('string', 'Status');
+data.addColumn('string', 'Archived');
+data.addColumn('string', 'Type');
+data.addColumn('string', 'Sequence');
+data.addRows([
+['1','1','+DATA/presamp/onlinelog/redo01.dbf','180','INACTIVE','YES','ONLINE','1']
+,['1','2','+DATA/presamp/onlinelog/group_2.5033.1053266865','180','INACTIVE','YES','ONLINE','2']
+,['1','3','+DATA/presamp/onlinelog/group_3.5017.1053266867','180','INACTIVE','YES','ONLINE','3']
+,['1','4','+DATA/presamp/onlinelog/group_4.5021.1053266739','180','CURRENT','NO','ONLINE','4']
+,['1','5','+DATA/presamp/onlinelog/group_5.5030.1053266743','180','UNUSED','YES','ONLINE','0']
+,['1','6','+DATA/presamp/onlinelog/group_6.5056.1053266747','180','UNUSED','YES','ONLINE','0']
+,['1','7','+DATA/presamp/onlinelog/group_7.5038.1053266785','180','UNUSED','YES','ONLINE','0']
+,['1','8','+DATA/presamp/onlinelog/group_8.5040.1053266787','180','UNUSED','YES','ONLINE','0']
+,['1','9','+DATA/presamp/onlinelog/group_9.5051.1053266791','180','UNUSED','YES','ONLINE','0']
+]);
+
+var table = new google.visualization.Table(document.getElementById('table_div'))
+
+var formatColor = new google.visualization.ColorFormat()
+formatColor.format(data, 1)
+table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'})
+}
+
+</script>
+</head>
+<body>
+<p>&nbsp;</p>
+<h1> List redo log group </h1>
+<div id="table_div" style="width: 1000px; height: 300px;"></div>
+<p>&nbsp;</p>
+<PRE>
+ALTER DATABASE ADD LOGFILE GROUP 4 ('/u02/oradata/ORACLE/redo04a.log') SIZE 200M
+ALTER DATABASE ADD LOGFILE GROUP 5 ('/u02/oradata/ORACLE/redo05a.log') SIZE 200M
+ALTER DATABASE ADD LOGFILE GROUP 6 ('/u02/oradata/ORACLE/redo06a.log') SIZE 200M
+alter system switch logfile
+alter system switch logfile
+alter system switch logfile
+alter system checkpoint
+
+ALTER DATABASE DROP LOGFILE GROUP 1
+ALTER DATABASE DROP LOGFILE GROUP 2
+ALTER DATABASE DROP LOGFILE GROUP 3
+ALTER DATABASE ADD LOGFILE GROUP 1 ('/u02/oradata/ORACLE/redo01a.log') SIZE 200M
+ALTER DATABASE ADD LOGFILE GROUP 2 ('/u02/oradata/ORACLE/redo02a.log') SIZE 200M
+ALTER DATABASE ADD LOGFILE GROUP 3 ('/u02/oradata/ORACLE/redo03a.log') SIZE 200M
+     1 INACTIVE      180
+     2 INACTIVE      180
+     3 INACTIVE      180
+     4 CURRENT       180
+     5 UNUSED        180
+     6 UNUSED        180
+     7 UNUSED        180
+     8 UNUSED        180
+     9 UNUSED        180
+</PRE>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+</PRE>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:50 </font>
+

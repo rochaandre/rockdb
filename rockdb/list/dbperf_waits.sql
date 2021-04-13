@@ -1,0 +1,69 @@
+DEFINE vhtmlpage='dbperf_waits_'
+DEFINE vtitlethispage='Waits'
+DEFINE viconthispage='person-lines-fill.svg'
+@report/sql/headerhtmlspool.sql
+
+PRO <html>
+PRO   <head>
+PRO     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+PRO     <script type="text/javascript">
+PRO      google.charts.load('current', {'packages':['table']});
+PRO      google.charts.setOnLoadCallback(drawTable);
+PRO
+PRO      function drawTable() {
+PRO        var data = new google.visualization.DataTable();
+PRO        data.addColumn('string', 'Sid');;
+PRO        data.addColumn('string', 'Username');;
+PRO        data.addColumn('string', 'Module');;
+PRO        data.addColumn('string', 'Event');;
+PRO        data.addColumn('string', 'p1');;
+PRO        data.addColumn('string', 'p2');;
+PRO        data.addColumn('string', 'p3');;
+PRO        data.addColumn('string', 'sql_hash_value');;
+PRO        data.addColumn('string', 'last_call_et');;
+PRO        data.addRows([
+alter session set NLS_NUMERIC_CHARACTERS = '.,'
+/
+SELECT decode(rownum,1,'[',',[') ||
+       '''' ||sid||'''' ||
+       ','||'''' ||username||''''||
+       ','||'''' ||module||''''||
+       ','||'''' ||event||''''||
+       ','||'''' ||p1||''''||
+       ','||'''' ||p2||''''||
+       ','||'''' ||p3||''''||
+       ','||'''' ||sql_hash_value||''''||
+       ','||'''' ||last_call_et||''''||
+       ']' output
+from (
+select a.sid,b.username,substr(b.module,1,10) Module,a.event,a.p1,a.p2,a.p3,b.sql_hash_value,b.last_call_et/60 last_call_et
+from v$session_wait a, v$session b
+where a.event not in ('SQL*Net message from client','wakeup time manager','pipe get','PL/SQL lock timer',
+'rdbms ipc message','smon timer','pmon timer','null event','jobq slave wait','queue messages','SQL*Net message to client')
+and a.sid=b.sid order by b.sql_hash_value
+)
+
+/
+PRO        ]);;
+PRO
+PRO        var table = new google.visualization.Table(document.getElementById('table_div'));
+PRO
+PRO var formatColor = new google.visualization.ColorFormat();
+PRO    formatColor.addRange('FAILED', 'FAILED ', 'white', 'red');
+PRO    formatColor.addRange(1000, 1001, 'white', 'green');
+PRO    formatColor.format(data, 1);
+PRO        table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
+PRO      }
+PRO
+PRO     </script>
+PRO   </head>
+PRO   <body>
+PRO     <p>&varhtmlspace</p>
+PRO     <h1> &vtitlethispage </h1>
+
+PRO     <div id="table_div" style="width: 1000px; height: 50px;"></div>
+PRO     <p>&varhtmlspace</p>
+
+PRO   </body>
+PRO </html>
+@report/sql/footerhtml01

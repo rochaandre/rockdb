@@ -1,0 +1,40 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbgauges_pgapresamp11.html
+- PRO -- Purpose:     Invalid objects
+- PRO -- Warning:     objects
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['gauge']})
+google.charts.setOnLoadCallback(drawChart)
+
+function drawChart() {
+
+var data = google.visualization.arrayToDataTable([
+['Label', 'Value'],
+['Invalid Obj',24]
+]);
+
+var options = {
+width: 400, height: 200,
+ max:92482, redFrom: 23120.5, redTo: 92482, yellowFrom: 924.82, yellowTo: 23120.5,
+minorTicks: 5
+}
+
+var chart = new google.visualization.Gauge(document.getElementById('chart_div'))
+
+chart.draw(data, options)
+}
+</script>
+</head>
+<body>
+<div id="chart_div" style="width: 200px; height: 200px;"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_bufferbusywaits03_XE12.html
+- PRO -- Purpose:     dbpie_bufferbusywaits03_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SANKHYA.PK_TGFMBC INDEX',70]
+,['SANKHYA.PK_TFPDPT INDEX',12]
+,['SANKHYA.PK_TGFDIN INDEX',3]
+,['SANKHYA.PK_TGFITE_INC INDEX',3]
+,['SANKHYA.PK_TGFITE INDEX',3]
+,['SANKHYA.TGFFIN_I_FAT_OS INDEX',2]
+,['SANKHYA.TGFFIN_I INDEX',2]
+,['SANKHYA.PK_TMDAXM INDEX',1]
+,['SANKHYA.PK_TSIRLG INDEX',1]
+,['SANKHYA.TSIJPR_PK INDEX',1]
+,['SANKHYA.TGFITE_I02 INDEX',1]
+,['SANKHYA.PK_TGFFIN INDEX',1]
+,['SANKHYA.PK_AD_TBSRVINTERNET INDEX',1]
+,['SANKHYA.PK_TGWSXN INDEX',0]
+,['SANKHYA.PK_TGFCUS INDEX',0]
+,['SANKHYA.TGFCUS_IDT INDEX',0]
+,['SANKHYA.TGFCUS_I03 INDEX',0]
+,['SANKHYA.TGFCUS_I02 INDEX',0]
+,['SANKHYA.TGFCUS_I01 INDEX',0]
+,['SANKHYA.PK_TGFCUSITE INDEX',0]
+])
+
+var options = {
+title: 'buffer busy waits - app schemas index',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

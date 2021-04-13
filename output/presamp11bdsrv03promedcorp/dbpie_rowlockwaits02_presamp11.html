@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_rowlockwaits02_presamp11.html
+- PRO -- Purpose:     dbpie_rowlockwaits02_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['BDSAMP.HSSCONF TABLE',0]
+,['BDSAMP.SYS_C0010393 INDEX',0]
+,['BDSAMP.HSSCONGE TABLE',0]
+,['BDSAMP.SYS_IL0000071924C00033$$ INDEX',0]
+,['BDSAMP.FK_HSSRETOR1 INDEX',0]
+,['BDSAMP.ESTPRODU TABLE',0]
+,['BDSAMP.HSSPAGAA INDEX',0]
+,['BDSAMP.HSSPAGAB INDEX',0]
+,['BDSAMP.FK_HSSTPLA3 INDEX',0]
+,['BDSAMP.AK_HSSPAGA5 INDEX',0]
+,['BDSAMP.AK_HSSPAGA1 INDEX',0]
+,['BDAPP.QRTZ_SCHEDULER_STATE TABLE',0]
+,['BDAPP.QRTZ_SCHEDULER_STATE_PK INDEX',0]
+,['BDSAMP.AK_HSSPAGA6 INDEX',0]
+,['BDSAMP.HSSPAGAD INDEX',0]
+,['BDSAMP.FINBANC TABLE',0]
+,['BDSAMP.FK_HSSUSUA1 INDEX',0]
+,['BDSAMP.AK_HSSPAGA7 INDEX',0]
+,['BDSAMP.AK_HSSUSUA2 INDEX',0]
+,['BDSAMP.FK_HSSPAGA6 INDEX',0]
+])
+
+var options = {
+title: 'Row lock waits - app schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

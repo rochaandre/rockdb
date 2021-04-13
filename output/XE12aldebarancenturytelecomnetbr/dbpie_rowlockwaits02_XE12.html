@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_rowlockwaits02_XE12.html
+- PRO -- Purpose:     dbpie_rowlockwaits02_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SANKHYA.TSIEJO TABLE',24540]
+,['SANKHYA.TGFNUM TABLE',157]
+,['SANKHYA.TSIOBCLOG TABLE',79]
+,['SANKHYA.TCSPSC TABLE',32]
+,['SANKHYA.TMDFMG TABLE',27]
+,['SANKHYA.PK_TFPNOTIFIC_SEQ INDEX',13]
+,['SANKHYA.TFSFILE TABLE',6]
+,['SANKHYA.TGFCAB TABLE',1]
+,['SANKHYA.PK_TSIRLG INDEX',1]
+,['SANKHYA.TSICTA TABLE',1]
+,['SANKHYA.TMDPRS TABLE',1]
+,['GSMADMIN_INTERNAL.DDLID$ TABLE',0]
+,['TOAD.TC_MASK TABLE',0]
+,['TOAD.TC_USERMAPPING TABLE',0]
+,['TOAD.TC_CONFIG TABLE',0]
+,['TOAD.TC_TIMESTAMP TABLE',0]
+,['SANKHYA.ACT_GE_PROPERTY TABLE',0]
+,['SANKHYA.ACT_HI_ACTINST TABLE',0]
+,['SANKHYA.ACT_HI_ATTACHMENT TABLE',0]
+,['SANKHYA.ACT_HI_IDENTITYLINK TABLE',0]
+])
+
+var options = {
+title: 'Row lock waits - app schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

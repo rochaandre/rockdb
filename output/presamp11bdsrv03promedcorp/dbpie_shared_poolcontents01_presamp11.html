@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_shared_poolcontents01_presamp11.html
+- PRO -- Purpose:     dbpie_shared_poolcontents01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SYS.X$DBMS_RCVMAN PACKAGE BODY',2291352]
+,['SYS.DBMS_RCVMAN PACKAGE BODY',1761897]
+,['SYS.DBMS_ROWID PACKAGE BODY',1614317]
+,['SYS.DBMS_STATS_INTERNAL PACKAGE BODY',93007]
+,['SYS.DBMS_LOB PACKAGE BODY',50176]
+,['SYS.DBMS_ASSERT PACKAGE BODY',45643]
+,['SYS.DBMS_LOGSTDBY PACKAGE',20218]
+,['SYS.X$DBMS_APPLICATION_INFO PACKAGE BODY',8996]
+,['SYS.STANDARD PACKAGE BODY',8716]
+,['SYS.X$DBMS_BACKUP_RESTORE PACKAGE BODY',8138]
+,['SYS.DBMS_STATS_INTERNAL PACKAGE',8094]
+,['SYS.DBMS_SPACE_ADMIN PACKAGE BODY',7072]
+,['SYS.DBMS_APPLICATION_INFO PACKAGE BODY',6477]
+,['SYS.DBMS_BACKUP_RESTORE PACKAGE BODY',6169]
+,['SYS.DBMS_SQLDIAG PACKAGE BODY',4542]
+,['SYS.DBMS_SQLDIAG_INTERNAL PACKAGE',4542]
+,['SYS.PRVT_ADVISOR PACKAGE BODY',3428]
+,['SYS.UTL_XML PACKAGE BODY',2812]
+,['SYS.DBMS_METADATA_INT PACKAGE BODY',2652]
+,['SYS.DBMS_SQL PACKAGE BODY',1608]
+])
+
+var options = {
+title: 'Shared Pool - internal schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/impdp_script_create01_presamp11.html
+- PRO -- Purpose:     script for impdp
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Header:  $ -->
+<!-- rock_copyright (c) 2021, All rights reserved. -->
+<!-- Author: techmaxconsultoria@gmail.com -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="icon/server.svg" type="image/x-icon" />
+<title>script for impdp </title>
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:5px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:red; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+</head>
+
+<h1> <a href="index_presamp11.html" target="_blank"><img src="icon/server.svg" alt="index_presamp11.html" height="33" width="52" /></a> presamp11.html <em>(script for impdp )</em>  </h1>
+<PRE>
+
++------------------------------------------------------------------------------+
+|     Export without rows and no default schemas/users.                        |
++------------------------------------------------------------------------------+
+
+impdp parfile=impdp_par01.par
+
+impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_02NOROWSC DUMPFILE=/exp_02NOROWSC$varYYYYMMDD%U.dmp LOG=:exp_02NOROWSC20210413log DIRECTORY= FULL=Y rows=n consistent=y
+
+impdp USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp JOB_NAME=exp_03NOROWSC DUMPFILE=/exp_03NOROWSC$varYYYYMMDD%U.dmp LOG=:exp_03ROWSC20210413log DIRECTORY= FULL=Y rows=y consistent=y
+
++------------------------------------------------------------------------------+
+| Export with rows and no default schemas/users.
++------------------------------------------------------------------------------+
+
+impdp parfile=impdp_par04.par
+
++------------------------------------------------------------------------------+
+| Export with rows and all schemas/users.
++------------------------------------------------------------------------------+
+
+impdp parfile=impdp_par05.par
+
++------------------------------------------------------------------------------+
+|     Evaluate the use of NETWORK_LINK parameter                               |
++------------------------------------------------------------------------------+
+
+This will not produce file and I/O in filesystem and will be more faster
+
++------------------------------------------------------------------------------+
+|     Increase UNDO tablespace size  -                                         |
+|     recreate it - after finish the import to reduce the size                 |
++------------------------------------------------------------------------------+
+
+alter tablespace UNDOTBS1 add datafile size 10G autoextend on
+alter tablespace UNDOTBS1 add datafile size 10G autoextend on
+alter tablespace UNDOTBS1 add datafile size 10G autoextend on
+
++------------------------------------------------------------------------------+
+|     Increase TEMP                                                            |
++------------------------------------------------------------------------------+
+
+alter tablespace TEMP add datafile size 10G autoextend on
+alter tablespace TEMP add datafile size 10G autoextend on
+alter tablespace TEMP add datafile size 10G autoextend on
+
++------------------------------------------------------------------------------+
+|     Check parallel                                                           |
++------------------------------------------------------------------------------+
+
+alter system set parallel_servers_target=48
+alter system set parallel_max_servers=128
+
++------------------------------------------------------------------------------+
+|     Disable logging - add this import parameter                              |
++------------------------------------------------------------------------------+
+
+If you database dont have force loggin you can use :  transform=disable_archive_logging:y:index
+transform=disable_archive_logging:y
+Disable logging - You can also use the hidden parameter _disable_logging = true (if this is not production)
+
++------------------------------------------------------------------------------+
+|     Increase PGA  to a big value                                             |
++------------------------------------------------------------------------------+
+
+alter system set pga_aggregate_target=50G scope=both
+
++------------------------------------------------------------------------------+
+|     General commands to be executed before impdp                             |
++------------------------------------------------------------------------------+
+
+alter database noarchivelog
+alter tablespace temp add tempfile
+alter tablespace temp add tempfile
+alter tablespace UNDO add datafile
+
+-- Parameters based in max values used
+
+alter system set processes=63 scope=spfile;
+alter system set sessions=89 scope=spfile;
+
+-- Parameters based in  values set
+
+alter system set processes=950 scope=spfile;
+alter system set sessions=1472 scope=spfile;
+alter system set sga_target=8G scope=spfile;
+alter system set undo_retention=6600 scope=spfile;
+alter system set audit_trail=NONE scope=spfile;
+Active datapump job sessions status :
+
+set lines 150 pages 100
+numwidth 7
+col program for a38
+col username for a10
+col spid for a7
+select to_char(sysdate,’YYYY-MM-DD HH24:MI:SS’) "DATE", s.program, s.sid,
+s.status, s.username,d.job_name, p.spid, s.serial#, p.pid,s.eventfrom v$session s,
+v$process p, dba_datapump_sessions d
+where p.addr=s.paddr and s.saddr=d.saddr
+
+Run the following query to monitor the progress of datapump jobs : PRO
+select
+round(sofar/totalwork*100,2) percent_completed,
+v$session_longops.*
+from
+v$session_longops
+where
+sofar <> totalwork
+order by
+target,
+sid
+
+Check current job details and query :
+
+select x.job_name,b.state,b.job_mode,b.degree, x.owner_name,z.sql_text, p.message, p.totalwork,
+p.sofar, round((p.sofar/p.totalwork)*100,2) done, p.time_remaining
+from dba_datapump_jobs b left join dba_datapump_sessions x on (x.job_name = b.job_name) left join
+v$session y on (y.saddr = x.saddr) left join v$sql z on (y.sql_id = z.sql_id) left join
+v$session_longops p ON (p.sql_id = y.sql_id)
+WHERE y.module='Data Pump Worker'
+AND p.time_remaining > 0
+<PRE>
+
+
++--------------------------------------------+
+| Parameter file example: impdp_par01.par    |
++--------------------------------------------+
+
+USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
+JOB_NAME=exp_01NOROWSF
+DUMPFILE=/exp_01NOROWSF$varYYYYMMDD%U.dmp
+LOG=:/exp_01NOROWSF20210413log
+DIRECTORY=
+FULL=Y
+rows=n
+consistent=y
+CLUSTER=N
+transform=disable_archive_logging:y
+EXCLUDE=STATISTICS
+EXCLUDE=SCHEMA:"IN ('SYS','SYSMAN')"
+exclude=SCHEMA:"='XS$NULL'"
+exclude=SCHEMA:"='ORACLE_OCM'"
+exclude=SCHEMA:"='APEX_PUBLIC_USER'"
+exclude=SCHEMA:"='DIP'"
+exclude=SCHEMA:"='SYSMAN'"
+exclude=SCHEMA:"='DBSNMP'"
+exclude=SCHEMA:"='SI_INFORMTN_SCHEMA'"
+exclude=SCHEMA:"='APEX_030200'"
+exclude=SCHEMA:"='APEX_040000'"
+exclude=SCHEMA:"='ORDPLUGINS'"
+exclude=SCHEMA:"='APPQOSSYS'"
+exclude=SCHEMA:"='XDB'"
+exclude=SCHEMA:"='WMSYS'"
+exclude=SCHEMA:"='EXFSYS'"
+exclude=SCHEMA:"='ANONYMOUS'"
+exclude=SCHEMA:"='CTXSYS'"
+exclude=SCHEMA:"='ORDSYS'"
+exclude=SCHEMA:"='ORDDATA'"
+exclude=SCHEMA:"='MDSYS'"
+exclude=SCHEMA:"='FLOWS_FILES'"
+exclude=SCHEMA:"='MGMT_VIEW'"
+exclude=SCHEMA:"='OUTLN'"
+exclude=SCHEMA:"='SH'"
+exclude=SCHEMA:"='OE'"
+exclude=SCHEMA:"='PM'"
+exclude=SCHEMA:"='BI'"
+exclude=SCHEMA:"='OLAPSYS'"
+exclude=SCHEMA:"='IX'"
+exclude=SCHEMA:"='SCOTT'"
+exclude=SCHEMA:"='HR'"
+exclude=SCHEMA:"='PM'"
+exclude=SCHEMA:"='OWBSYS'"
+exclude=SCHEMA:"='ORAINT'"
+exclude=SCHEMA:"='LBACSYS'"
+exclude=SCHEMA:"='APPQOSSYS'"
+exclude=SCHEMA:"='GSMCATUSER'"
+exclude=SCHEMA:"='MDDATA'"
+exclude=SCHEMA:"='DBSFWUSER'"
+exclude=SCHEMA:"='SYSBACKUP'"
+exclude=SCHEMA:"='REMOTE_SCHEDULER_AGENT'"
+exclude=SCHEMA:"='GGSYS'"
+exclude=SCHEMA:"='ANONYMOUS'"
+exclude=SCHEMA:"='GSMUSER'"
+exclude=SCHEMA:"='SYSRAC'"
+exclude=SCHEMA:"='CTXSYS'"
+exclude=SCHEMA:"='ORDS_PUBLIC_USER'"
+exclude=SCHEMA:"='OJVMSYS'"
+exclude=SCHEMA:"='DVF'"
+exclude=SCHEMA:"='SI_INFORMTN_SCHEMA'"
+exclude=SCHEMA:"='DVSYS'"
+exclude=SCHEMA:"='AUDSYS'"
+exclude=SCHEMA:"='C##DBAAS_BACKUP'"
+exclude=SCHEMA:"='GSMADMIN_INTERNAL'"
+exclude=SCHEMA:"='ORDPLUGINS'"
+exclude=SCHEMA:"='DIP'"
+exclude=SCHEMA:"='LBACSYS'"
+exclude=SCHEMA:"='MDSYS'"
+exclude=SCHEMA:"='OLAPSYS'"
+exclude=SCHEMA:"='ORDDATA'"
+exclude=SCHEMA:"='SYSKM'"
+exclude=SCHEMA:"='OUTLN'"
+exclude=SCHEMA:"='SYS$UMF'"
+exclude=SCHEMA:"='ORACLE_OCM'"
+exclude=SCHEMA:"='XDB'"
+exclude=SCHEMA:"='WMSYS'"
+exclude=SCHEMA:"='ORDSYS'"
+exclude=SCHEMA:"='SYSDG'"
+exclude=SCHEMA:"='PYQSYS'"
+exclude=SCHEMA:"='C##CLOUD$SERVICE'"
+exclude=SCHEMA:"='C##ADP$SERVICE'"
+exclude=SCHEMA:"='ORDS_METADATA'"
+exclude=SCHEMA:"='C##OMLIDM'"
+exclude=SCHEMA:"='OML$MODELS'"
+exclude=SCHEMA:"='ORDS_PLSQL_GATEWAY'"
+exclude=SCHEMA:"='APEX_200200'"
+exclude=SCHEMA:"='GRAPH$METADATA'"
+exclude=SCHEMA:"='C##CLOUD_OPS'"
+exclude=SCHEMA:"='SSB'"
+exclude=SCHEMA:"='C##API'"
+exclude=SCHEMA:"='OMLMOD$PROXY'"
+exclude=SCHEMA:"='C##DV_ACCT_ADMIN'"
+exclude=SCHEMA:"='APEX_INSTANCE_ADMIN_USER'"
+exclude=SCHEMA:"='RMAN$CATALOG'"
+exclude=SCHEMA:"='C##DV_OWNER'"
+exclude=SCHEMA:"='GRAPH$PROXY_USER'"
+exclude=SCHEMA:"='OML$PROXY'"
+
+
++--------------------------------------------+
+| Parameter file example: impdp_par04.par    |
++--------------------------------------------+
+
+
+USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
+JOB_NAME=exp_04NOROWSF
+DUMPFILE=/exp_04NOROWSF$varYYYYMMDD%U.dmp
+LOG=:/exp_04NOROWSF20210413log
+DIRECTORY=
+FULL=Y
+rows=Y
+transform=disable_archive_logging:y
+consistent=y
+PARALLEL=16
+CLUSTER=N
+EXCLUDE=STATISTICS
+EXCLUDE=SCHEMA:"IN ('SYS','SYSMAN')"
+exclude=SCHEMA:"='XS$NULL'"
+exclude=SCHEMA:"='ORACLE_OCM'"
+exclude=SCHEMA:"='APEX_PUBLIC_USER'"
+exclude=SCHEMA:"='DIP'"
+exclude=SCHEMA:"='SYSMAN'"
+exclude=SCHEMA:"='DBSNMP'"
+exclude=SCHEMA:"='SI_INFORMTN_SCHEMA'"
+exclude=SCHEMA:"='APEX_030200'"
+exclude=SCHEMA:"='APEX_040000'"
+exclude=SCHEMA:"='ORDPLUGINS'"
+exclude=SCHEMA:"='APPQOSSYS'"
+exclude=SCHEMA:"='XDB'"
+exclude=SCHEMA:"='WMSYS'"
+exclude=SCHEMA:"='EXFSYS'"
+exclude=SCHEMA:"='ANONYMOUS'"
+exclude=SCHEMA:"='CTXSYS'"
+exclude=SCHEMA:"='ORDSYS'"
+exclude=SCHEMA:"='ORDDATA'"
+exclude=SCHEMA:"='MDSYS'"
+exclude=SCHEMA:"='FLOWS_FILES'"
+exclude=SCHEMA:"='MGMT_VIEW'"
+exclude=SCHEMA:"='OUTLN'"
+exclude=SCHEMA:"='SH'"
+exclude=SCHEMA:"='OE'"
+exclude=SCHEMA:"='PM'"
+exclude=SCHEMA:"='BI'"
+exclude=SCHEMA:"='OLAPSYS'"
+exclude=SCHEMA:"='IX'"
+exclude=SCHEMA:"='SCOTT'"
+exclude=SCHEMA:"='HR'"
+exclude=SCHEMA:"='PM'"
+exclude=SCHEMA:"='OWBSYS'"
+exclude=SCHEMA:"='ORAINT'"
+exclude=SCHEMA:"='LBACSYS'"
+exclude=SCHEMA:"='APPQOSSYS'"
+exclude=SCHEMA:"='GSMCATUSER'"
+exclude=SCHEMA:"='MDDATA'"
+exclude=SCHEMA:"='DBSFWUSER'"
+exclude=SCHEMA:"='SYSBACKUP'"
+exclude=SCHEMA:"='REMOTE_SCHEDULER_AGENT'"
+exclude=SCHEMA:"='GGSYS'"
+exclude=SCHEMA:"='ANONYMOUS'"
+exclude=SCHEMA:"='GSMUSER'"
+exclude=SCHEMA:"='SYSRAC'"
+exclude=SCHEMA:"='CTXSYS'"
+exclude=SCHEMA:"='ORDS_PUBLIC_USER'"
+exclude=SCHEMA:"='OJVMSYS'"
+exclude=SCHEMA:"='DVF'"
+exclude=SCHEMA:"='SI_INFORMTN_SCHEMA'"
+exclude=SCHEMA:"='DVSYS'"
+exclude=SCHEMA:"='AUDSYS'"
+exclude=SCHEMA:"='C##DBAAS_BACKUP'"
+exclude=SCHEMA:"='GSMADMIN_INTERNAL'"
+exclude=SCHEMA:"='ORDPLUGINS'"
+exclude=SCHEMA:"='DIP'"
+exclude=SCHEMA:"='LBACSYS'"
+exclude=SCHEMA:"='MDSYS'"
+exclude=SCHEMA:"='OLAPSYS'"
+exclude=SCHEMA:"='ORDDATA'"
+exclude=SCHEMA:"='SYSKM'"
+exclude=SCHEMA:"='OUTLN'"
+exclude=SCHEMA:"='SYS$UMF'"
+exclude=SCHEMA:"='ORACLE_OCM'"
+exclude=SCHEMA:"='XDB'"
+exclude=SCHEMA:"='WMSYS'"
+exclude=SCHEMA:"='ORDSYS'"
+exclude=SCHEMA:"='SYSDG'"
+exclude=SCHEMA:"='PYQSYS'"
+exclude=SCHEMA:"='C##CLOUD$SERVICE'"
+exclude=SCHEMA:"='C##ADP$SERVICE'"
+exclude=SCHEMA:"='ORDS_METADATA'"
+exclude=SCHEMA:"='C##OMLIDM'"
+exclude=SCHEMA:"='OML$MODELS'"
+exclude=SCHEMA:"='ORDS_PLSQL_GATEWAY'"
+exclude=SCHEMA:"='APEX_200200'"
+exclude=SCHEMA:"='GRAPH$METADATA'"
+exclude=SCHEMA:"='C##CLOUD_OPS'"
+exclude=SCHEMA:"='SSB'"
+exclude=SCHEMA:"='C##API'"
+exclude=SCHEMA:"='OMLMOD$PROXY'"
+exclude=SCHEMA:"='C##DV_ACCT_ADMIN'"
+exclude=SCHEMA:"='APEX_INSTANCE_ADMIN_USER'"
+exclude=SCHEMA:"='RMAN$CATALOG'"
+exclude=SCHEMA:"='C##DV_OWNER'"
+exclude=SCHEMA:"='GRAPH$PROXY_USER'"
+exclude=SCHEMA:"='OML$PROXY'"
+
+
++--------------------------------------------+
+| Parameter file example: impdp_par05.par    |
++--------------------------------------------+
+
+USERID=dbajobs/dbajobs@192.168.1.180:1521/presamp
+JOB_NAME=exp_05NOROWSF
+DUMPFILE=/exp_05NOROWSF$varYYYYMMDD%U.dmp
+LOG=:/exp_05NOROWSF20210413log
+DIRECTORY=
+transform=disable_archive_logging:y
+FULL=Y
+rows=Y
+consistent=y
+PARALLEL=16
+CLUSTER=N
+EXCLUDE=STATISTICS
+
+
++--------------------------------------------+
+| Parameter file example: only app schemas   |
++--------------------------------------------+
+
+exclude=SCHEMA:"='BASECEP'"
+exclude=SCHEMA:"='BDAPP'"
+exclude=SCHEMA:"='BDAUDIT'"
+exclude=SCHEMA:"='BDINT'"
+exclude=SCHEMA:"='BDPDF'"
+exclude=SCHEMA:"='BDSAMP'"
+exclude=SCHEMA:"='BDSECURITY'"
+exclude=SCHEMA:"='GTEST'"
+exclude=SCHEMA:"='OGGUSER'"
+exclude=SCHEMA:"='RETORNA'"
+exclude=SCHEMA:"='SUPMONITOR'"
+
+</PRE>
+
+
+</PRE>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:50 </font>
+

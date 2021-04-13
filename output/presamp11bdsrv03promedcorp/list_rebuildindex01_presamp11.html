@@ -1,0 +1,842 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/list_rebuildindex01_presamp11.html
+- PRO -- Purpose:     List of candidates index to rebuild
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Header:  $ -->
+<!-- rock_copyright (c) 2021, All rights reserved. -->
+<!-- Author: techmaxconsultoria@gmail.com -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="icon/bookshelf.svg" type="image/x-icon" />
+<title>List of candidates index to rebuild</title>
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:5px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:red; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+</head>
+
+<h1> <a href="index_presamp11.html" target="_blank"><img src="icon/bookshelf.svg" alt="index_presamp11.html" height="33" width="52" /></a> presamp11.html <em>(List of candidates index to rebuild)</em>  </h1>
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {'packages':['table']})
+google.charts.setOnLoadCallback(drawTable)
+
+function drawTable() {
+var data = new google.visualization.DataTable()
+data.addColumn('string', 'Owner');
+data.addColumn('string', 'Index name');
+data.addColumn('string', 'factor');
+data.addRows([
+['BDSECURITY','SYS_C0079062','0']
+,['BDAPP','SYS_C0079865','0']
+,['BDAPP','SYS_C0079103','0']
+,['BDAPP','CONTROLEBENE_PK','0']
+,['BDSAMP','PK_CTBPLFOR','0']
+,['BDSAMP','PK_CTBPLPRE','0']
+,['BDSAMP','PK_FINDCHE','0']
+,['BDSAMP','PK_FINDOBA','0']
+,['BDSAMP','PK_FINFECH','0']
+,['BDSAMP','PK_HSSATEPG','0']
+,['BDSAMP','PK_HSSMANU','0']
+,['BDSAMP','PK_HSSMCOMP','0']
+,['BDSAMP','PK_HSSMJPAG','0']
+,['BDSAMP','PK_HSSPAGBA','0']
+,['BDSAMP','PK_HSSPCGUI','0']
+,['BDSAMP','PK_HSSPRAGE','0']
+,['BDSAMP','PK_HSSREDCO','0']
+,['BDSAMP','PK_HSSIMPRG','0']
+,['BDSAMP','PK_HSSGPCAR','0']
+,['BDSAMP','PK_HSSATGUI','0']
+,['BDSAMP','PK_HSSGANEX','0']
+,['BDSAMP','PK_HSSRDRPS','0']
+,['BDSAMP','PK_HSSFLOTE','0']
+,['BDSAMP','SYS_C0010418','0']
+,['BDSAMP','SYS_C0010691','0']
+,['BDSAMP','PK_HSSLRBUW','0']
+,['BDSAMP','PK_HSSCRITA','.01']
+,['BDSAMP','SYS_C0010494','.01']
+,['BDSAMP','PK_ATETBCID','.01']
+,['BDSAMP','PK_HSSTLATC','.01']
+,['BDAPP','SYS_C0079948','.01']
+,['BDSAMP','UK_ESTPRTAB1','.01']
+,['BDSAMP','PK_FINPLDOC','.01']
+,['BDSAMP','PK_FINPLNOT','.01']
+,['BDSAMP','PK_HSSCCLIN','.01']
+,['BDSAMP','PK_HSSCIDC','.01']
+,['BDSAMP','PK_HSSLOGCA','.01']
+,['BDSAMP','PK_HSSPACON','.01']
+,['BDSAMP','PK_HSSPCOBE','.01']
+,['BDSAMP','PK_HSSPEXC','.01']
+,['BDSAMP','PK_HSSPLIM','.01']
+,['BDSAMP','PK_HSSPRCID','.01']
+,['BDSAMP','PK_HSSRECME','.01']
+,['BDSAMP','PK_HSSREGMS','.01']
+,['BDSAMP','PK_HSSRGANS','.01']
+,['BDSAMP','PK_SEGLOG_','.01']
+,['BDSAMP','PK_HSSMMPCT','.01']
+,['BDSAMP','PK_HSSITTAX','.01']
+,['BDSAMP','PK_HSSPROTW','.01']
+,['BDSAMP','PK_HSSUSUVE','.01']
+,['BDSAMP','PK_HSSLOGWE','.01']
+,['BDSAMP','PK_HSSREAJU','.01']
+,['BDSAMP','PK_HSSTITVE','.02']
+,['BDAPP','SYS_C0079124','.02']
+,['BDSAMP','PK_HSSANEXO','.02']
+,['BDSAMP','PK_HSSLORPS','.02']
+,['BDSAMP','PK_HSSPARCM','.02']
+,['BDSAMP','PK_CTBLOTEC','.02']
+,['BDSAMP','PK_HSSRETOR','.02']
+,['BDSAMP','PK_HSSOPTIT','.02']
+,['BDSAMP','PK_HSSVALIG','.02']
+,['BDSAMP','PK_FINIMPOP','.02']
+,['BDSAMP','PK_HSSCCON','.02']
+,['BDSAMP','PK_HSSMPUGR','.02']
+,['BDSAMP','PK_HSSCOWEB','.02']
+,['BDSAMP','PK_HSSVPRO','.02']
+,['BDSAMP','PK_HSSUTLIM','.02']
+,['BDSAMP','PK_HSSCRITI','.02']
+,['BDSAMP','SYS_C0010829','.02']
+,['BDSAMP','PK_HSSDGUI','.02']
+,['BDSAMP','PK_HSSDSAUU','.02']
+,['BDSAMP','PK_HSSTOKEN','.02']
+,['BDSAMP','PK_HSSEMPCO','.02']
+,['BDSAMP','PK_SEGHPERF','.02']
+,['BDSAMP','PK_HSSGEXC','.02']
+,['BDAPP','SYS_C0079984','.02']
+,['BDSAMP','PK_HSSJPAGA','.02']
+,['BDAPP','SYS_C0079241','.02']
+,['BDSAMP','PK_HSSPARAV','.02']
+,['BDSAMP','PK_HSSOBGUI','.02']
+,['BDAPP','SYS_C0079349','.02']
+,['BDAPP','SYS_C0079082','.02']
+,['BDSAMP','PK_HSSRCART','.02']
+,['BDSAMP','PK_HSSREGVE','.02']
+,['BDSAMP','PK_FINOPGTO','.02']
+,['BDSAMP','PK_HSSDUSPG','.03']
+,['BDSAMP','PK_HSSNFRPS','.03']
+,['BDSAMP','PK_HSSTXUSU','.03']
+,['BDSAMP','PK_HSSPLTIT','.03']
+,['BDSAMP','U_HSSPGUI','.03']
+,['BDSAMP','PK_HSSMCAIX','.03']
+,['BDSAMP','PK_HSSLPGUI','.03']
+,['BDSAMP','PK_HSSIMALA','.03']
+,['BDSAMP','PK_HSSENDER','.03']
+,['BDSAMP','PK_HSSEMAPR','.03']
+,['BDSAMP','PK_HSSCRUS','.03']
+,['BDSAMP','PK_HSSCNOTA','.03']
+,['BDAPP','HISTORICOBENE_PK','.03']
+,['BDAPP','SYS_C0079332','.03']
+,['BDSAMP','PK_HSSPCPRE','.03']
+,['BDAPP','SYS_C0079683','.04']
+,['BDSAMP','PK_HSSBLOQU','.04']
+,['BDSAMP','PK_HSSDESCI','.04']
+,['BDSAMP','PK_HSSGCON','.04']
+,['BDSAMP','PK_HSSPRCOB','.04']
+,['BDSAMP','PK_HSSREMCC','.04']
+,['BDSAMP','PK_HSSREMES','.04']
+,['BDSAMP','PK_HSSUSUPG','.04']
+,['BDSAMP','PK_HSSITFLU','.04']
+,['BDSAMP','PK_HSSATUCA','.04']
+,['BDSAMP','PK_HSSDADPG','.04']
+,['BDSAMP','PK_HSSGCARE','.04']
+,['BDSAMP','PK_HSSMPTUO','.04']
+,['BDSAMP','SYS_C0010605','.04']
+,['BDAPP','SYS_C0079973','.05']
+,['BDAPP','SYS_C0079995','.05']
+,['BDSAMP','PK_HSSADPR','.05']
+,['BDSAMP','PK_HSSADTPG','.05']
+,['BDSAMP','PK_HSSCPRES','.05']
+,['BDSAMP','PK_HSSGLOSA','.05']
+,['BDSAMP','PK_HSSGPAGA','.05']
+,['BDSAMP','PK_HSSHPLAN','.05']
+,['BDSAMP','PK_HSSLGUIA','.05']
+,['BDSAMP','PK_HSSPEXAM','.05']
+,['BDSAMP','PK_HSSPMED','.05']
+,['BDSAMP','PK_HSSMTISS','.05']
+,['BDSAMP','PK_HSSMVPCM','.05']
+,['BDSAMP','PK_HSSVCPRE','.05']
+,['BDSAMP','SYS_C0080256','.05']
+,['BDSAMP','PK_HSSLEXCL','.05']
+,['BDAPP','SOLIC_PRIORIDADE_PK','.06']
+,['BDSAMP','PK_HSSCARTE','.06']
+,['BDSAMP','PK_HSSPCTCM','.06']
+,['BDSAMP','PK_HSSTLUSU','.06']
+,['BDSAMP','PK_SEGUSUA','.06']
+,['BDSAMP','PK_HSSLATEN','.06']
+,['BDSAMP','PK_FINPLERR','.06']
+,['BDSAMP','PK_HSSPARAM','.06']
+,['BDSAMP','PK_HSSRPCON','.06']
+,['BDSAMP','SYS_C0010434','.06']
+,['BDSAMP','SYS_C0010580','.06']
+,['BDSAMP','PK_FINCIPP','.06']
+,['BDSECURITY','SYS_C0079046','.07']
+,['BDAPP','SYS_C0079610','.07']
+,['BDSAMP','PK_FINDOCCC','.07']
+,['BDSAMP','PK_FINPPRE','.07']
+,['BDSAMP','PK_HSSGUIA','.07']
+,['BDSAMP','PK_HSSPREDE','.07']
+,['BDSAMP','PK_HSSPROPR','.07']
+,['BDSAMP','PK_HSSUEXCL','.07']
+,['BDSAMP','PK_SEGFORM','.07']
+,['BDSAMP','PK_HSSADPAG','.08']
+,['BDSAMP','PK_HSSATCAD','.08']
+,['BDSAMP','PK_HSSATEND','.08']
+,['BDSAMP','PK_HSSMINFA','.08']
+,['BDSAMP','PK_HSSVREA','.08']
+,['BDSAMP','PK_HSSNFERR','.08']
+,['BDSAMP','PK_HSSDOMIN','.08']
+,['BDSAMP','SYS_C0010393','.08']
+,['BDSAMP','PK_ESTLPROD','.09']
+,['BDSAMP','PK_FINCHEQ','.09']
+,['BDSAMP','PK_HSSCIDPR','.09']
+,['BDSAMP','PK_HSSCONT','.09']
+,['BDSAMP','PK_HSSCPAGA','.09']
+,['BDSAMP','PK_HSSLUSUA','.09']
+,['BDSAMP','XPKHSSMDVEN','.09']
+,['BDSAMP','PK_HSSAUGUI','.09']
+,['BDSAMP','PK_HSSNFLOT','.09']
+,['BDSAMP','PK_HSSLNEGR','.09']
+,['BDAPP','SYS_C0058522','.1']
+,['BDSAMP','PK_HSSPRTEL','.1']
+,['BDSAMP','PK_HSSTCON','.1']
+,['BDSAMP','PK_HSSFLIMM','.1']
+,['BDSAMP','PK_CTBMOVIM','.11']
+,['BDSAMP','PK_HSSCI','.11']
+,['BDSAMP','PK_HSSCOMPE','.11']
+,['BDSAMP','PK_HSSTLCON','.11']
+,['BDSAMP','PK_HSSRESIB','.11']
+,['BDSAMP','PK_HSSCCONT','.11']
+,['BDSAMP','SYS_C0010417','.11']
+,['BDSAMP','SYS_C0010853','.11']
+,['BDSAMP','PK_HSSHREMC','.11']
+,['BDAPP','SYS_C0079523','.12']
+,['BDSAMP','PK_HSSAGEND','.12']
+,['BDSAMP','PK_HSSLPAGA','.12']
+,['BDSAMP','PK_SEGDIRE','.12']
+,['BDSAMP','PK_HSSARRMT','.12']
+,['BDSAMP','SYS_C0010426','.12']
+,['BDSAMP','PK_HSSESPRE','.13']
+,['BDSAMP','PK_HSSLLOTE','.13']
+,['BDSAMP','PK_HSSOBPRE','.13']
+,['BDSAMP','PK_HSSOBUSU','.13']
+,['BDSAMP','PK_HSSITPRW','.13']
+,['BDSAMP','PK_HSSPPVEN','.13']
+,['BDSAMP','PK_HSSDCONT','.14']
+,['BDSAMP','PK_HSSLOTE','.14']
+,['BDSAMP','PK_HSSOPPRE','.14']
+,['BDSAMP','PK_FINFORCL','.14']
+,['BDSAMP','PK_CTBPLCON','.15']
+,['BDSAMP','PK_HSSALERT','.15']
+,['BDSAMP','PK_HSSEPRES','.15']
+,['BDSAMP','PK_HSSPACOT','.15']
+,['BDSAMP','PK_HSSPESPE','.15']
+,['BDSAMP','PK_HSSPESS','.15']
+,['BDSAMP','PK_HSSEMPR','.16']
+,['BDSAMP','PK_HSSPREEX','.16']
+,['BDSAMP','PK_HSSCAWEB','.16']
+,['BDSAMP','SYS_C0010684','.16']
+,['BDSAMP','SYS_C0010712','.16']
+,['RETORNA','PK_HSSRESIB','.17']
+,['BDSAMP','PK_HSSBAIRR','.17']
+,['BDSAMP','PK_HSSPPACO','.17']
+,['BDSAMP','PK_HSSVFADT','.17']
+,['BDSAMP','PK_HSSTTPRE','.17']
+,['BDSAMP','SYS_C0010847','.17']
+,['BDSAMP','PK_HSSPORT','.18']
+,['BDSAMP','PK_HSSSETOR','.18']
+,['BDSAMP','PK_SOLUSCRI','.18']
+,['BDSAMP','PK_HSSMMCON','.19']
+,['BDSAMP','PK_FINUSCON','.2']
+,['BDSAMP','PK_HSSTAXA','.2']
+,['BDSAMP','PK_CTBALTER','.21']
+,['BDSAMP','PK_HSSNUSUA','.21']
+,['BDSAMP','PK_HSSANCONT','.21']
+,['BDSAMP','PK_HSSFEADT','.22']
+,['BDSAMP','PK_HSSPPPAD','.22']
+,['BDSAMP','SYS_C0010510','.22']
+,['BDSAMP','SYS_C0010819','.22']
+,['BDSAMP','PK_HSSPCON','.23']
+,['BDSAMP','PK_HSSRPAVE','.23']
+,['BDSAMP','PK_HSSCLPAG','.23']
+,['BDSAMP','PK_HSSMPOBS','.24']
+,['BDSAMP','PK_HSSGTISS','.25']
+,['BDSAMP','PK_CTBLAUXI','.25']
+,['BDSAMP','PK_SEGREST','.26']
+,['BDSAMP','PK_HSSPHLIN','.26']
+,['BDSAMP','PK_HSSIMAGEM','.27']
+,['BDSAMP','PK_HSSLOGS','.28']
+,['BDSAMP','PK_HSSPGLOS','.28']
+,['BDSAMP','PK_CTBLANCA','.28']
+,['BDSAMP','SYS_C0010485','.28']
+,['BDSECURITY','SYS_C0079068','.29']
+,['BDSAMP','PK_ESTLABOR','.29']
+,['BDSAMP','PK_HSSVCOPA','.29']
+,['BDSAMP','PK_HSSARQUI','.29']
+,['BDSAMP','PK_HSSILOPG','.29']
+,['BDSECURITY','SYS_C0079049','.3']
+,['BDSAMP','XPKHSSCID_','.3']
+,['BDSAMP','PK_HSSNOTAF','.3']
+,['BDSAMP','PK_HSSCHONO','.3']
+,['BDSAMP','PK_HSSGPCOB','.31']
+,['BDSAMP','PK_HSSLGTB','.31']
+,['BDSAMP','PK_FINUSTRA','.32']
+,['BDSAMP','SYS_C0010627','.32']
+,['BDSAMP','PK_HSSJURO','.33']
+,['BDSAMP','PK_ESTTABMM','.34']
+,['BDSAMP','PK_HSSCREMC','.34']
+,['BDSAMP','PK_HSSPGRAD','.34']
+,['BDSAMP','PK_HSSGCAIX','.35']
+,['BDSAMP','PK_HSSDTISS','.35']
+,['BDSAMP','PK_HSSMMGUI','.36']
+,['BDAPP','SYS_C0079105','.38']
+,['BDSAMP','PK_FINCPRE','.38']
+,['BDSAMP','PK_HSSTXMEN','.38']
+,['BDSAMP','PK_CTBPLANO','.4']
+,['BDSAMP','PK_FINADPRE','.4']
+,['BDSAMP','PK_HSSSQL','.4']
+,['BDSAMP','PK_HSSBKLO','.4']
+,['BDAPP','QRTZ_SIMPROP_TRIG_PK','.41']
+,['BDAPP','IDX_QRTZ_T_N_STATE','.41']
+,['BDSAMP','PK_HSSRREME','.41']
+,['BDSAMP','PK_HSSRECEI','.42']
+,['BDSAMP','PK_HSSREDEN','.42']
+,['BDSAMP','PK_CTBSALDO','.43']
+,['BDSAMP','PK_HSSVTITU','.43']
+,['BDSAMP','PK_HSSPGCTB','.44']
+,['BDSAMP','PK_FINUSCCO','.45']
+,['BDSAMP','PK_HSSETISS','.48']
+,['BDAPP','SYS_C0079211','.5']
+,['BDSAMP','PK_CTBPLEVE','.5']
+,['BDSAMP','PK_HSSVISIT','.5']
+,['BDSAMP','PK_HSSAATEND','.5']
+,['BDSAMP','PK_HSSOBPAC','.5']
+,['BDSAMP','PK_FINNPREL','.5']
+,['BDSAMP','PK_HSSCARMT','.52']
+,['BDSAMP','PK_HSSCIDPL','.53']
+,['BDSAMP','PK_HSSFILME','.53']
+,['BDSAMP','PK_HSSPHIER','.53']
+,['BDSAMP','PK_HSSRRETO','.53']
+,['BDSAMP','PK_FINCLFIN','.53']
+,['BDSAMP','PK_HSSPSQL','.53']
+,['BDSAMP','PK_HSSVUCO','.53']
+,['BDSAMP','PK_HSSCTISS','.54']
+,['BDSAMP','PK_HSSSALCO','.55']
+,['BDSAMP','PK_HSSITISS','.55']
+,['BDSAMP','PK_HSSONCO','.55']
+,['BDSAMP','XPKCADASTRO_DE_TABELAS','.57']
+,['BDSAMP','PK_HSSTBADT','.57']
+,['BDSAMP','PK_HSSTTAXA','.57']
+,['BDSAMP','PK_ESTPRODU','.58']
+,['BDSAMP','PK_HSSMCON','.58']
+,['BDSAMP','PK_HSSPLOGS','.58']
+,['BDSAMP','PK_HSSLINEA','.59']
+,['BDSAMP','PK_HSSVDMED','.59']
+,['BDSAMP','SYS_C0010443','.6']
+,['BDSAMP','PK_CONTSCRI','.61']
+,['BDSAMP','PK_HSSEMTIS','.61']
+,['BDAPP','SYS_C0079672','.62']
+,['BDSAMP','PK_SEGAUDIT','.62']
+,['BDSAMP','PK_HSSATTIT','.62']
+,['BDSAMP','PK_CTBPLPLA','.64']
+,['RETORNA','PK_HSSRGSIB','.65']
+,['BDSAMP','PK_HSSTLPRE','.65']
+,['BDAPP','SYS_C0079203','.66']
+,['BDSAMP','PK_HSSABI','.66']
+,['BDSAMP','PK_HSSCDIRE','.66']
+,['BDSAMP','PK_HSSRGSIB','.69']
+,['BDSAMP','PK_HSSAUTPR','.71']
+,['BDSAMP','PK_HSSIPAGA','.74']
+,['BDSAMP','PK_HSSAAPRE','.75']
+,['BDSAMP','PK_CTBPLREF','.75']
+,['BDSAMP','PK_ESTTBPRO','.75']
+]);
+
+var table = new google.visualization.Table(document.getElementById('table_div'))
+
+var formatColor = new google.visualization.ColorFormat()
+formatColor.addRange('FAILED', 'FAILED ', 'white', 'red')
+formatColor.addRange(1000, 1001, 'white', 'green')
+formatColor.format(data, 1)
+table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'})
+}
+
+</script>
+</head>
+<body>
+<p>&nbsp;</p>
+<h1> List of candidates index to rebuild </h1>
+<div id="table_div" style="width: 900px; height: 500px;"></div>
+<h2>  Criteria </h2>
+<PRE>
+VALUE ABOVE 0.75           - DOES NOT REQUIRE REORG
+VALUE BETWEEN 0.5 AND 0.75 - REORG IS RECOMMENDED
+VALUE LOWER THAN 0.5       - IT IS HIGHLY RECOMMENDED TO REORG
+
+
+To gather table stats with 100% sampling:
+
+exec dbms_stats.gather_table_stats('owner','Table_Name',estimate_percent => 100, cascade=>true, method_opt=>'for all columns size AUTO')
+
+Oracle 10g and 11g : "FOR ALL COLUMNS SIZE AUTO" - This setting means that DBMS_STATS decides which columns to add histogram to where it believes that they may help to produce a better plan.
+
+
+Gathering statistics for all objects in a schema:
+
+exec dbms_stats.gather_schema_stats(ownname => 'schema_name ',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO' )
+
+Ref: Oracle support Doc ID : 1587179.1
+
+exec dbms_stats.gather_schema_stats(ownname => 'BDAPP',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+exec dbms_stats.gather_schema_stats(ownname => 'GTEST',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+exec dbms_stats.gather_schema_stats(ownname => 'BDSECURITY',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+exec dbms_stats.gather_schema_stats(ownname => 'RETORNA',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+exec dbms_stats.gather_schema_stats(ownname => 'BDAUDIT',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+exec dbms_stats.gather_schema_stats(ownname => 'BDSAMP',cascade => TRUE,method_opt => 'FOR ALL COLUMNS SIZE AUTO');
+---- INDEXES REBUILD
+
+
+alter index BDAPP.CONTROLEBENE_PK rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.HISTORICOBENE_PK rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.IDX_QRTZ_T_N_STATE rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.QRTZ_SIMPROP_TRIG_PK rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SOLIC_PRIORIDADE_PK rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0058522 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079082 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079103 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079105 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079124 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079203 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079211 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079241 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079332 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079349 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079523 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079610 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079672 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079683 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079865 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079948 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079973 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079984 rebuild tablespace BDAPPDADOS online;
+alter index BDAPP.SYS_C0079995 rebuild tablespace BDAPPDADOS online;
+alter index BDSAMP.PK_ATETBCID rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_CONTSCRI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBALTER rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBLANCA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBLAUXI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBLOTEC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBMOVIM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLANO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLEVE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLFOR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLPLA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBPLREF rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_CTBSALDO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_ESTLABOR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_ESTLPROD rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_ESTPRODU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_ESTTABMM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_ESTTBPRO rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_FINADPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINCHEQ rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINCIPP rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_FINCLFIN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINCPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINDCHE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINDOBA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINDOCCC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINFECH rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINFORCL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINIMPOP rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINNPREL rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_FINOPGTO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINPLDOC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINPLERR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINPLNOT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINPPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINUSCCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINUSCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_FINUSTRA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSAAPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSAATEND rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSABI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSADPAG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSADPR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSADTPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSAGEND rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSALERT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSANCONT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSANEXO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSARQUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSARRMT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATCAD rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATEND rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATEPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATTIT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSATUCA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSAUGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSAUTPR rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSBAIRR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSBKLO rebuild tablespace BDSAMPHISTINDXL online;
+alter index BDSAMP.PK_HSSBLOQU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCARMT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCARTE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCAWEB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCCLIN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCCONT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCDIRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCHONO rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSCI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCIDC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCIDPL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCIDPR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCLPAG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCNOTA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCOMPE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCONT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCOWEB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCPAGA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCPRES rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCREMC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCRITA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCRITI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCRUS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSCTISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDADPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDCONT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDESCI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDOMIN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDSAUU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDTISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSDUSPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSEMAPR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSEMPCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSEMPR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSEMTIS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSENDER rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSEPRES rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSESPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSETISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSFEADT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSFILME rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSFLIMM rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSFLOTE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGANEX rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGCAIX rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGCARE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGEXC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGLOSA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGPAGA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGPCAR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGPCOB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGTISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSGUIA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSHPLAN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSHREMC rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSILOPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSIMAGEM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSIMALA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSIMPRG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSIPAGA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSITFLU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSITISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSITPRW rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSITTAX rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSJPAGA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSJURO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLATEN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLEXCL rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSLGTB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLGUIA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLINEA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLLOTE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLNEGR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLOGCA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLOGS rebuild tablespace BDSAMPHISTINDXL online;
+alter index BDSAMP.PK_HSSLOGWE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLORPS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLOTE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLPAGA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLPGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSLRBUW rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSLUSUA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMANU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMCAIX rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMCOMP rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMINFA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMJPAG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMMCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMMGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMMPCT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMPOBS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMPTUO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMPUGR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMTISS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSMVPCM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSNFERR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSNFLOT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSNFRPS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSNOTAF rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSNUSUA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOBGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOBPAC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOBPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOBUSU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSONCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOPPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSOPTIT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPACON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPACOT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPAGBA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPARAM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPARAV rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPARCM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPCGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPCOBE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPCPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPCTCM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPESPE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPESS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPEXAM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPEXC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPGCTB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPGLOS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPGRAD rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPHIER rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPHLIN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPLIM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPLOGS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPLTIT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPMED rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPORT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPPACO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPPPAD rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPPVEN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPRAGE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPRCID rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPRCOB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPREDE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPREEX rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPROPR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPROTW rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPRTEL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSPSQL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRCART rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRDRPS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREAJU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRECEI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRECME rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREDCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREDEN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREGMS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREGVE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREMCC rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSREMES rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRESIB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRETOR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRGANS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRGSIB rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRPAVE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRPCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRREME rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSRRETO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSSALCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSSETOR rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSSQL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTAXA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTBADT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTITVE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTLATC rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSTLCON rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTLPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTLUSU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTOKEN rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_HSSTTAXA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTTPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTXMEN rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSTXUSU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSUEXCL rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSUSUPG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSUSUVE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSUTLIM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVALIG rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVCOPA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVCPRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVDMED rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVFADT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVISIT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVPRO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVREA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVTITU rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_HSSVUCO rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGAUDIT rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGDIRE rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGFORM rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGHPERF rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.PK_SEGLOG_ rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGREST rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SEGUSUA rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.PK_SOLUSCRI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010393 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010417 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010418 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010426 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010434 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010443 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010485 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010494 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010510 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010580 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010605 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010627 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010684 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010691 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010712 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010819 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010829 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010847 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0010853 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.SYS_C0080256 rebuild tablespace BDSAMPDADOS online;
+alter index BDSAMP.UK_ESTPRTAB1 rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.U_HSSPGUI rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.XPKCADASTRO_DE_TABELAS rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.XPKHSSCID_ rebuild tablespace BDSAMPINDXL online;
+alter index BDSAMP.XPKHSSMDVEN rebuild tablespace BDSAMPINDXL online;
+alter index BDSECURITY.SYS_C0079046 rebuild tablespace BDSECURITYINDXL online;
+alter index BDSECURITY.SYS_C0079049 rebuild tablespace BDSECURITYINDXL online;
+alter index BDSECURITY.SYS_C0079062 rebuild tablespace BDSECURITYINDXL online;
+alter index BDSECURITY.SYS_C0079068 rebuild tablespace BDSECURITYINDXL online;
+alter index DBSNMP.BSLN_STATISTICS_PK1 rebuild tablespace SYSAUX online;
+alter index RETORNA.PK_HSSRESIB rebuild tablespace BDSAMPINDXL online;
+alter index RETORNA.PK_HSSRGSIB rebuild tablespace BDSAMPINDXL online;
+alter index SYS.SYS_C001881 rebuild tablespace SYSAUX online;
+alter index SYS.SYS_C001884 rebuild tablespace SYSAUX online;
+alter index SYS.SYS_C001887 rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_ACTIVE_SESSION_HISTORY_PK rebuild tablespace  online;
+alter index SYS.WRH$_BG_EVENT_SUMMARY_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_BUFFERED_QUEUES_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_BUFFERED_SUBSCRIBERS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_BUFFER_POOL_STATS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_COMP_IOSTAT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_DB_CACHE_ADVICE_PK rebuild tablespace  online;
+alter index SYS.WRH$_DISPATCHER_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_ENQUEUE_STAT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_EVENT_HISTOGRAM_PK rebuild tablespace  online;
+alter index SYS.WRH$_FILESTATXS_PK rebuild tablespace  online;
+alter index SYS.WRH$_INSTANCE_RECOVERY_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_IOSTAT_DETAIL_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_IOSTAT_FILETYPE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_IOSTAT_FUNCTION_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_JAVA_POOL_ADVICE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_LATCH_MISSES_SUMMARY_PK rebuild tablespace  online;
+alter index SYS.WRH$_LATCH_NAME_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_LATCH_PK rebuild tablespace  online;
+alter index SYS.WRH$_LIBRARYCACHE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_LOG_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_MEM_DYNAMIC_COMP_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_MUTEX_SLEEP_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_MVPARAMETER_PK rebuild tablespace  online;
+alter index SYS.WRH$_OPTIMIZER_ENV_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_OSSTAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_PARAMETER_PK rebuild tablespace  online;
+alter index SYS.WRH$_PERSISTENT_QMN_CACHE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_PERSISTENT_QUEUES_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_PERSISTENT_SUBSCRIBERS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_PGASTAT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_PGA_TARGET_ADVICE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_PROCESS_MEM_SUMMARY_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_RESOURCE_LIMIT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_ROWCACHE_SUMMARY_PK rebuild tablespace  online;
+alter index SYS.WRH$_RSRC_CONSUMER_GROUP_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_RSRC_PLAN_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_RULE_SET_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SEG_STAT_OBJ_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SEG_STAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_SERVICE_STAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_SERVICE_WAIT_CLASS_PK rebuild tablespace  online;
+alter index SYS.WRH$_SESS_TIME_STATS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SGA_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SGA_TARGET_ADVICE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SHARED_POOL_ADVICE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SHARED_SERVER_SUMMARY_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SQLSTAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_SQLTEXT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SQL_BIND_METADATA_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SQL_SUMMARY_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SQL_WORKAREA_HIST_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_STREAMS_POOL_ADVICE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_SYSSTAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_SYSTEM_EVENT_PK rebuild tablespace  online;
+alter index SYS.WRH$_SYS_TIME_MODEL_PK rebuild tablespace  online;
+alter index SYS.WRH$_TABLESPACE_STAT_PK rebuild tablespace  online;
+alter index SYS.WRH$_TEMPSTATXS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_THREAD_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_UNDOSTAT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRH$_WAITSTAT_PK rebuild tablespace  online;
+alter index SYS.WRI$_ADV_ACTIONS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_DEF_PARAMETERS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_EXECS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_FINDINGS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_MESSAGE_GROUPS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_OBJECTS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_PARAMETERS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_REC_ACTIONS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_REC_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_ADV_TASKS_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_DBU_FEATURE_METADATA_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_DBU_FEATURE_USAGE_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_SEGADV_CNTRLTAB_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRI$_SQLTEXT_REFCOUNT_PK rebuild tablespace SYSAUX online;
+alter index SYS.WRM$_SNAPSHOT_PK rebuild tablespace SYSAUX online;
+alter index SYSTEM.LOGMNRC_CONCOL_GG_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNRC_CON_GG_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNRC_GTCS_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNRC_GTLO_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNRC_INDCOL_GG_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNRC_IND_GG_PK rebuild tablespace  online;
+alter index SYSTEM.LOGMNR_LOG$_PK rebuild tablespace SYSAUX online;
+alter index SYSTEM.LOGMNR_RESTART_CKPT$_PK rebuild tablespace SYSAUX online;
+</PRE>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+</PRE>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:50 </font>
+

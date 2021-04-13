@@ -1,0 +1,45 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   /Users/andre/Dropbox/scriptsGRAPHICO/report/output/presamp11bdsrv03promedcorp/dbpie_shared_pool01_presamp11.html
+- PRO -- Purpose:     dbpie_shared_pool01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:50
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Type', 'Objects']
+,['BDSAMP.HSSLOGS',57]
+,['BDSAMP.HSSRGSIB',3]
+,['BDSAMP.HSSPCON',2]
+,['RETORNA.HSSRGSIB',2]
+,['BDSAMP.HSSITRMT',2]
+,['BDSAMP.ESTTBPRO',1]
+,['BDSAMP.FINCPRE',1]
+,['BDSAMP.HSSCONT',1]
+,['BDAPP.SYS_LOB0000245972C00002$$',1]
+])
+
+var options = {
+title: 'Big tables',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

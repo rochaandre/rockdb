@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_shared_poolcontents01_XE12.html
+- PRO -- Purpose:     dbpie_shared_poolcontents01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SYS.PLITBLM PACKAGE',268801557]
+,['SYS.STANDARD PACKAGE BODY',138560516]
+,['SYS.DBMS_STATS_INTERNAL PACKAGE BODY',82896857]
+,['SYS.DBMS_APPLICATION_INFO PACKAGE BODY',78646233]
+,['SYS.DBMS_ASSERT PACKAGE BODY',78336920]
+,['SYS.DBMS_STATS_INTERNAL PACKAGE',37106899]
+,['SYS.DBMS_UTILITY PACKAGE BODY',10469809]
+,['SYS.DBMS_STANDARD PACKAGE',7728824]
+,['SYS.DBMS_STATS PACKAGE BODY',6261221]
+,['SYS.DBMS_SPD_INTERNAL PACKAGE',4021784]
+,['SYS.DBMS_STATS PACKAGE',1628834]
+,['SYS.DBMS_RCVMAN PACKAGE',851352]
+,['SYS.DBMS_RCVMAN PACKAGE BODY',758206]
+,['SYS.DICTIONARY_OBJ_NAME FUNCTION',503793]
+,['SYS.DICTIONARY_OBJ_OWNER FUNCTION',503793]
+,['SYS.UTL_FILE PACKAGE BODY',415344]
+,['SYS.IS_VPD_ENABLED FUNCTION',336492]
+,['SYS.DBMS_LOB PACKAGE BODY',247930]
+,['SYS.KUPU$UTILITIES_INT PACKAGE BODY',182106]
+,['SYS.KUPU$UTILITIES PACKAGE BODY',181860]
+])
+
+var options = {
+title: 'Shared Pool - internal schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

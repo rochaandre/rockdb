@@ -1,0 +1,56 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/dbpie_bufferbusywaits01_XE12.html
+- PRO -- Purpose:     dbpie_bufferbusywaits01_
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["corechart"]})
+google.charts.setOnLoadCallback(drawChart)
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Name', 'Value']
+,['SYS.USER$ TABLE',324]
+,['SYS.SEG$ TABLE',117]
+,['SYS.SCHEDULER$_JOB TABLE',22]
+,['SYS.IND$ TABLE',17]
+,['SYS.I_FILE#_BLOCK# INDEX',8]
+,['SYS.I_SCHEDULER_JOB4 INDEX',8]
+,['SYS.OBJ$ TABLE',7]
+,['SYS.COL_GROUP_USAGE$ TABLE',6]
+,['SYS.I_HH_OBJ#_INTCOL# INDEX',4]
+,['SYS.I_HH_OBJ#_COL# INDEX',3]
+,['SYS.I_OBJ2 INDEX',2]
+,['SYS.I_OBJ# INDEX',1]
+,['SYS.I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST INDEX',1]
+,['SYS.WRI$_HEATMAP_TOP_OBJECTS TABLE',1]
+,['SYS.TABPART$ TABLE',1]
+,['SYS.OPTSTAT_SNAPSHOT$ TABLE',1]
+,['SYS.OPTSTAT_HIST_CONTROL$ TABLE',1]
+,['SYS.I_WRI$_OPTSTAT_OPR_TASKS_TGST INDEX',1]
+,['SYS.WRI$_OPTSTAT_OPR TABLE',1]
+,['SYS.HIST_HEAD$ TABLE',1]
+])
+
+var options = {
+title: 'buffer busy waits - internal schemas',
+is3D: true,
+}
+
+var chart = new google.visualization.PieChart(document.getElementById('piechart'))
+chart.draw(data, options)
+}
+
+</script>
+</head>
+<body>
+<div id="piechart" style="width: 450px; height: 450px;"></div>
+</body>
+</html>

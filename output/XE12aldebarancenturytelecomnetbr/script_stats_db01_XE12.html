@@ -1,0 +1,91 @@
+<!- PRO --------------------------------------------------------------------------------------- PRO - PRO -- File name:   Z:\report\output\XE12aldebarancenturytelecomnetbr/script_stats_db01_XE12.html
+- PRO -- Purpose:     Script statistics
+- PRO -- Warning:
+- PRO -- Author:      Andre Rocha
+- PRO -- Version:     13/04/2021 10:51
+- PRO -- Usage:
+- PRO -- Example:
+- PRO -- Notes:       Developed and tested on 11.2.0.3
+- PRO -------------------------------------------------------------------------------------- PRO -- @report/sql/headerdoc.sql name.html "Created to output list of html report" "Pay attention to variables" "Usage" "example usage"
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Header:  $ -->
+<!-- rock_copyright (c) 2021, All rights reserved. -->
+<!-- Author: techmaxconsultoria@gmail.com -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="icon/icon.gif" type="image/x-icon" />
+<title>Script statistics</title>
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:5px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:red; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+</head>
+
+<h1> <a href="index_XE12.html" target="_blank"><img src="icon/icon.gif" alt="index_XE12.html" height="33" width="52" /></a> XE12.html <em>(Script statistics)</em>  </h1>
+<PRE>
++----------------------------------------------------------------------------------------------------------------------------+
+Script statistics
++----------------------------------------------------------------------------------------------------------------------------+
+</PRE>
+<PRE>
+
+set time on timing on
+execute DBMS_STATS.GATHER_DATABASE_STATS;
+execute DBMS_STATS.GATHER_DICTIONARY_STATS;
+execute DBMS_STATS.GATHER_FIXED_OBJECTS_STATS;
+
+
+<PRE>
++----------------------------------------------------------------------------------------------------------------------------+
+Individual SCHEMAS
++----------------------------------------------------------------------------------------------------------------------------+
+</PRE>
+
+EXEC DBMS_STATS.GATHER_SCHEMA_STATS('SANKHYA',CASCADE=>TRUE);
+EXEC DBMS_STATS.GATHER_SCHEMA_STATS('TOAD',CASCADE=>TRUE);
+
+
+-- CALIBRATE I/O
+set serveroutput on
+set echo on
+DECLARE
+v_max_iops         NUMBER;
+v_max_mbps         NUMBER;
+v_actual_latency   NUMBER;
+BEGIN
+DBMS_RESOURCE_MANAGER.calibrate_io(
+num_physical_disks => 132,
+max_latency => 10,
+max_iops => v_max_iops,
+max_mbps => v_max_mbps,
+actual_latency => v_actual_latency)
+DBMS_OUTPUT.put_line('Max IOPS=' || v_max_iops)
+DBMS_OUTPUT.put_line('Max MBps=' || v_max_mbps)
+DBMS_OUTPUT.put_line('Latency =' || v_actual_latency);
+END;
+/
+</PRE>
+
+
+
+</PRE>
+<font class="f">rock script (c) 2021. Version v1.0 (2021-03-01). Timestamp: 13/04/2021 10:51 </font>
+
