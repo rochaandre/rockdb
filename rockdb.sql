@@ -19,6 +19,7 @@
 @rockdb/list/list_size_db01.sql
 @rockdb/list/list_script_preexportdb01.sql
 @rockdb/list/list_rmanbkp01.sql
+@rockdb/list/list_patch01.sql
 @rockdb/list/list_rman_backupspfile01.sql
 @rockdb/list/list_rman_backupsize01.sql
 @rockdb/list/list_rman_backupset01.sql

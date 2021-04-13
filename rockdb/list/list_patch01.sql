@@ -1,4 +1,4 @@
-DEFINE vhtmlpage='list_patch_'
+DEFINE vhtmlpage='list_patch01_'
 DEFINE vtitlethispage='Check Patch already applied'
 DEFINE viconthispage='patch.svg'
 @rockdb/sql/headerhtmlspool.sql

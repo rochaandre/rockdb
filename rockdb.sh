@@ -10,25 +10,31 @@
 #PASSWO=passwd
 #CONNST=ipdatabase:1521/instancename
 #
-# create user rockscript identified by pass123;
+# create user userrockscript identified by pass123;
 # grant connect,resource, select any dictionary to ROCKSCRIPT;
 #
 ########
 # call example:
-# rockdb.bat rockscript pass123 192.168.1.10:1521/orcl DIREXDP
+# rockdb.bat userrockscript pass123 192.168.1.10:1521/orcl DIREXDP
 ######
+# Configure the variables below
+#
 export NLS_DATE_FORMAT='dd/mm/yyyy hh24:mi:ss'
 export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
-export ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/db_1
 export ORACLE_HOME=/Users/andre/instantclient_19_8
-export ORACLE_SID=XE
-export ORACLE_PDB_SID=
+export PATH=/Users/andre/instantclient_19_8:$PATH
+
+
+
+
+#export ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/db_1
+#export ORACLE_SID=
+#export ORACLE_PDB_SID=
+#export TNS_ADMIN=/Users/andre/instantclient_19_8/wallet_ORCL_soudba
+# remove old configuration
 export VDIRROCKDB=`pwd`/output
 export VDIRROCKDBCONFIG=`pwd`
-export EXPDPD=DIREXPDP
-#export TNS_ADMIN=/Users/andre/instantclient_19_8/wallet_ORCL_soudba
-export PATH=/Users/andre/instantclient_19_8:$PATH
-# remove old configuration
+
 rm -f config.sql
 mkdir -p $VDIRROCKDB
 
@@ -52,7 +58,7 @@ mkdir -p $VDIRROCKDB
 # ADDM
 
 #+-----------------------------------------------------------------+
-#| Parameters                                                      |
+#| Parameters  passing parameters is not necessary to set some previous variables         |
 #+-----------------------------------------------------------------+
 export USERID=$1
 export PASSWO=$2

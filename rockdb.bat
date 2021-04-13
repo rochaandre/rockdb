@@ -6,7 +6,7 @@ REM VCLIENTEEMERGENCY=''
 REM VCLIENTNAME=''
 REM EXPDPD - you SET  directory (to check SET  backups only)
 REM #
-REM create user rockscript identified by pass123;
+REM create user userrockscript identified by pass123;
 REM grant connect,resource, select any dictionary to ROCKSCRIPT;
 REM #
 REM #######
@@ -14,26 +14,24 @@ REM create and copy the content to:
 REM mkdir c:\rockdb
 REM copy * c:\rockdb
 REM call example:
-REM rockdb.sh rockscript pass123 192.168.1.10:1521/orcl DIREXDP
+REM rockdb.bat userrockscript pass123 192.168.1.10:1521/orcl DIREXDP
 REM #####
-
-REM USERID=userdba
-REM PASSWO=passwd
-REM CONNST=ipdatabase:1521/instancename
-
+REM Configure the variables below
+REM
 SET  NLS_DATE_FORMAT=dd/mm/yyyy hh24:mi:ss
 SET  NLS_LANG=AMERICAN_AMERICA.AL32UTF8
-SET  ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/db_1
 SET  ORACLE_HOME=/Users/andre/instantclient_19_8
-SET  ORACLE_SID=XE
-SET  ORACLE_PDB_SID=
+SET  PATH=C:\instantclient_19_6;%PATH%
+
+
+REM SET  TNS_ADMIN=C:\instantclient_19_6\tns_admin
+REM SET  ORACLE_HOME=/u01/app/oracle/product/12.2.0.1/db_1
+REM SET  ORACLE_SID=XE
+REM SET  ORACLE_PDB_SID=
 REM directory where is running script:
-SET  VDIRROCKDB=z:\rockdb
 SET  VDIRROCKDB=%cd%\output
 SET  VDIRROCKDBCONFIG=%cd%
-SET  EXPDPD=DIREXPDP
-SET  TNS_ADMIN=C:\instantclient_19_6\tns_admin
-SET  PATH=C:\instantclient_19_6;%PATH%
+REM SET  EXPDPD=DIREXPDP
 
 mkdir %VDIRROCKDB%
 
@@ -74,12 +72,6 @@ REM set USERID=dbareport
 REM set PASSWO=oracle1
 REM set CONNST=10.2.0.222:1521/XE
 REM set EXPDPD=DIREXPDP
-
-
-set USERID=dbareport
-set PASSWO=oracle1
-set CONNST=10.2.0.222:1521/XE
-set EXPDPD=DIREXPDP
 
 REM for test only in 12c
 REM USERID=admin

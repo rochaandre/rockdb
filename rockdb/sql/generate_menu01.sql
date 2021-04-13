@@ -109,7 +109,9 @@ PRO <h3>07 - <a title="Triggers Database "  href="list_databasetriggers01_&var_n
 PRO <h3>08 - <a title="Rebuild index candidate"  href="list_rebuildindex01_&var_namefile">Rebuild index candidate</a></h3>
 
 PRO <h3>09 - <a title="Object Directory"  href="list_directory01_&var_namefile">Object Directory</a></h3>
-PRO <h3>10 - <a title="Rman backup"  href="list_rmanbkp01_&var_namefile">Rman backup</a></h3>
+PRO <h3>10 - <a title="List Patch"  href="list_patch01_&var_namefile">List Patch</a></h3>
+PRO <h3>11 - <a title="Rman backup"  href="list_rmanbkp01_&var_namefile">Rman backup</a></h3>
+
 
 PRO </td>
 
