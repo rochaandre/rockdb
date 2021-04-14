@@ -26,7 +26,8 @@ Please test it in a database of demo, before run in production - use by your own
    -- this is beta - create a user like below to avoid any issue:
 
    create user ROCKSCRIPT identified by pass123;
-   grant connect,resource, select any dictionary to ROCKSCRIPT;
+   grant connect,resource, select any dictionary, SELECT_CATALOG_ROLE to ROCKSCRIPT;
+   grant execute on dbms_metadata to ROCKSCRIPT;
 
 3. Configure rockdb.sh or rockdb.bat sections ORACLE_HOME PATH:
 
