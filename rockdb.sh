@@ -65,11 +65,6 @@ export PASSWO=$2
 export CONNST=$3
 export EXPDPD=$4
 
-# 11g
-#USERID=dbajobs
-#PASSWO=jobsdba1
-#CONNST=192.168.1.28:1521/apex
-#EXPDPD=DIREXPDP
 
 # for test only in 12c
 #USERID=admin
