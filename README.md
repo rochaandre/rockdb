@@ -1,3 +1,6 @@
+# Beta version
+# Use by you own risk. Use with only select grant.
+
 # rockdb
 based on dictionary views of oracle - create nice reports with usefull information
 
