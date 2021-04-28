@@ -10,10 +10,18 @@ PRO +---------------------------------------------------------------------------
 PRO |     Best pratices to avoid issues and get better performance                 |
 PRO +------------------------------------------------------------------------------+
 PRO
+PRO dba_recycle bin objects
+PRO
+select count(*) total
+from dba_recyclebin
+/
+PRO
 PRO purge dba_recycle bin
 PRO
 select object_name, original_name, type, can_undrop as "UND", can_purge as "PUR", droptime from dba_recyclebin
+where rownum <=10
 /
+
 PRO
 PRO remove stats from sysaux
 PRO
@@ -191,3 +199,9 @@ PRO rows=n
 PRO consistent=y
 PRO CLUSTER=N
 PRO EXCLUDE=STATISTICS
+
+
+PRO
+PRO </PRE>
+
+@rockdb/sql/footerhtml01

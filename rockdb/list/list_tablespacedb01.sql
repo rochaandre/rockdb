@@ -259,7 +259,7 @@ GROUP BY ts.tablespace_name,
        ts.status,
        ts.block_size
 ORDER BY ts.tablespace_name
-
+/
 
 PRO </PRE>
 
