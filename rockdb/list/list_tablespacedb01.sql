@@ -171,11 +171,12 @@ PRO ################
 PRO # Reduce tablespace
 PRO ################
 
+
 with
 hwm as (
  -- get highest block id from each datafiles ( from x$ktfbue as we don't need all joins from dba_extents )
  select /*+ materialize */ ktfbuesegtsn ts#,ktfbuefno relative_fno,max(ktfbuebno+ktfbueblks-1) hwm_blocks
- from sys.x$ktfbue group by ktfbuefno,ktfbuesegtsn
+ from sys.v_x$ktfbue group by ktfbuefno,ktfbuesegtsn
 ),
 hwmts as (
  -- join ts# with tablespace_name
