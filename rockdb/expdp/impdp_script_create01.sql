@@ -50,10 +50,17 @@ select
 from hwmdf
 where
  bytes-hwm_bytes>1024*1024 -- resize only if at least 1MB can be reclaimed
-union all
+union
+select '--------------- WITH RECLAIM SPACE ------------------ ' from dual
+union
 select
  'create tablespace '||tablespace_name||' datafile '||''''||'+DATAC1'||''''||' size '|| to_char(ceil(hwm_bytes/1024/1024)+tamadd,999999)||'M autoextend on next '|| tamadd  ||'M;' createtbs
 from hwmdf
+union
+select '--------------- SAME SPACE USED ------------------ ' from dual
+union
+select 'create tablespace '||tablespace_name||' datafile '||''''||'+DATAC1'||''''||' size '||
+ to_char(ceil(bytes/1024/1024)+tamadd,999999)||'M autoextend on next '|| tamadd  ||'M;' createtbs from hwmdf
 /
 
 
