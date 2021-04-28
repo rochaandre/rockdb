@@ -6,5 +6,5 @@ DEFINE vclientemailemergency=''
 DEFINE varUSERDBA = 'dbajobs'
 DEFINE varPASSDBA = 'jobsdba1'
 DEFINE varCONNSTR = '192.168.1.28:1521/apex'
-DEFINE varDIREXPD = 'DIREXPDP'
+DEFINE varDIREXPD = ''
 DEFINE varSLASH=/

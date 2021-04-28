@@ -40,6 +40,7 @@
 @rockdb/ddlscript/directory_ddl.sql
 @rockdb/ddlscript/dblink_ddl.sql
 @rockdb/ddlscript/getaud.sql
+@rockdb/ddlscript/index_text_ddl.sql
 @rockdb/ddlscript/job_ddl.sql
 @rockdb/ddlscript/job_ddl_19c.sql
 -- @rockdb/ddlscript/role_ddl.sql  -- can spend a lot of time

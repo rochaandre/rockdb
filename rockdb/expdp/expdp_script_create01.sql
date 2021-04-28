@@ -115,7 +115,7 @@ PRO parallel_execution_message_size (data pump workers are fed by PX slaves) was
 PRO
 PRO
 PRO +------------------------------------------------------------------------------+
-PRO |   Export without rows and no default schemas/users.
+PRO |   Export with rows and ALL schemas/users.
 PRO +------------------------------------------------------------------------------+
 PRO
 PRO expdp parfile=expdp_par01.par
@@ -124,14 +124,70 @@ PRO expdp USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR JOB_NAME=exp_02NOROWSC&var_
 PRO
 PRO expdp USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR JOB_NAME=exp_03FULLROWS&var_instancename DUMPFILE=exp_03FULLROWS$varYYYYMMDD%U.dmp LOG=&varDIREXPD:exp_03FULLROWS&varYYYYMMDD.log DIRECTORY=&varDIREXPD FULL=Y rows=y consistent=y
 PRO
-PRO +------------------------------------------------------------------------------+
-PRO |    Export with rows and no default schemas/users.
-PRO +------------------------------------------------------------------------------+
 PRO
-PRO expdp parfile=expdp_par04.par
 PRO
 PRO +------------------------------------------------------------------------------+
-PRO |    Export with rows and all schemas/users.
+PRO |   Parameter expdp_par01.par file
 PRO +------------------------------------------------------------------------------+
 PRO
-PRO expdp parfile=expdp_par05.par
+PRO
+PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
+PRO JOB_NAME=exp_01NOROWSF&var_instancename
+PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DIRECTORY=&varDIREXPD
+PRO FULL=Y
+PRO rows=y
+PRO consistent=y
+PRO CLUSTER=N
+PRO EXCLUDE=STATISTICS
+PRO PARALELL=8
+PRO
+PRO
+PRO +------------------------------------------------------------------------------+
+PRO |   Parameter expdp_par02.par file
+PRO +------------------------------------------------------------------------------+
+PRO |    Export with norows and no default schemas/users.
+PRO +------------------------------------------------------------------------------+
+PRO
+PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
+PRO JOB_NAME=exp_01NOROWSF&var_instancename
+PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DIRECTORY=&varDIREXPD
+PRO FULL=Y
+PRO rows=n
+PRO consistent=y
+PRO CLUSTER=N
+PRO EXCLUDE=STATISTICS
+PRO exclude=SCHEMA:" IN (&var_internalschemas1)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas2)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas3)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas4)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas5)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas6)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas7)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas8)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas9)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas10)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas11)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas12)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas13)"
+PRO exclude=SCHEMA:" IN (&var_internalschemas14)"
+PRO
+PRO +------------------------------------------------------------------------------+
+PRO |   Parameter expdp_par03.par file
+PRO +------------------------------------------------------------------------------+
+PRO |    Export with norows and all default schemas/users.
+PRO +------------------------------------------------------------------------------+
+PRO
+PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
+PRO JOB_NAME=exp_01NOROWSF&var_instancename
+PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DIRECTORY=&varDIREXPD
+PRO FULL=Y
+PRO rows=n
+PRO consistent=y
+PRO CLUSTER=N
+PRO EXCLUDE=STATISTICS

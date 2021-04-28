@@ -12,7 +12,10 @@ PRO +---------------------------------------------------------------------------
 PRO
 SELECT  DBMS_METADATA.get_ddl ('PROCOBJ', job_name, owner)
 FROM   dba_scheduler_jobs
-where owner NOT IN ('SYS','C##CLOUD$SERVICE','ORDS_METADATA','APEX_200200')
+where owner NOT IN  
+(&var_internalschemas1, &var_internalschemas2,&var_internalschemas3, &var_internalschemas4, &var_internalschemas5
+, &var_internalschemas6, &var_internalschemas7  )
+
 /
 
 select 'exec dbms_job.isubmit(job=>'||job||',what=>'''||what||''',next_date=>'''||next_date||''',interval=>'''||interval||''',no_parse=>TRUE);' from dba_jobs

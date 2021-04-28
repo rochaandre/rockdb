@@ -7,7 +7,14 @@ REM VCLIENTNAME=''
 REM EXPDPD - you SET  directory (to check SET  backups only)
 REM #
 REM create user userrockscript identified by pass123;
+REM PRO create view sys.v_x$ktfbue as select * from sys.x$ktfbue;
+REM grant select on sys.v_x$ktfbue  to ROCKSCRIPT;
+REM grant select on sys.user$ to ROCKSCRIPT;
+REM grant select on sys.stmt_audit_option_map to ROCKSCRIPT;
+REM grant select on sys.audit$ to ROCKSCRIPT;
 REM grant connect,resource, select any dictionary to ROCKSCRIPT;
+
+
 REM #
 REM #######
 REM create and copy the content to:

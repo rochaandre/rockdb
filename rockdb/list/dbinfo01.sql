@@ -183,14 +183,30 @@ from v$parameter
 where name in ( 'sga_max_size','sga_target','memory_max_target','memory_target',
 'pga_aggregate_target')
 and  value <>'0'
-union all
+union
 select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
 from v$parameter where name in (
   'sessions','session_cached_cursors','open_cursors','open_links','undo_retention'
   ,'smtp_out_server','shared_pool_size'
-  ,'resource_limit','optimizer_features_enable'
+  ,'resource_limit',
   ,'db_writer_processes')
-  and value is not null
+  and value is not NULL
+UNION
+select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
+from v$parameter where name LIKE
+  '%ptimizer_index_%'
+  UNION
+select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
+from v$parameter where name= 'optimizer_features_enable'
+union
+select 'alter system set '||name ||'='|| ''''|| to_char(value)  || ''''||''||  ' scope=spfile;'
+from v$parameter where name in ( 'nls_territory','nls_language','nls_sort','nls_language','nls_date_format','nls_currency')
+  and value is not NULL
+/
+PRO
+PRO Check all parameters
+PRO
+select name from v$parameter
 /
 PRO
 PRO </PRE>
