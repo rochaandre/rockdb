@@ -105,7 +105,7 @@ where 1=1
 order by &&varskip_11g_column  container,
 tablespace_name)
 /
-
+ 
 PRO ]);
 PRO var options = {
 select   ' title: '||'''' ||''||' Tablespaces - Espaco utilizado'||''''||','
