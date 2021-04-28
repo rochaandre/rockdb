@@ -105,7 +105,7 @@ where 1=1
 order by &&varskip_11g_column  container,
 tablespace_name)
 /
- 
+
 PRO ]);
 PRO var options = {
 select   ' title: '||'''' ||''||' Tablespaces - Espaco utilizado'||''''||','
@@ -176,7 +176,7 @@ with
 hwm as (
  -- get highest block id from each datafiles ( from x$ktfbue as we don't need all joins from dba_extents )
  select /*+ materialize */ ktfbuesegtsn ts#,ktfbuefno relative_fno,max(ktfbuebno+ktfbueblks-1) hwm_blocks
- from sys.v_x$ktfbue group by ktfbuefno,ktfbuesegtsn
+ from sys.v_x$ktfbue  group by ktfbuefno,ktfbuesegtsn
 ),
 hwmts as (
  -- join ts# with tablespace_name
