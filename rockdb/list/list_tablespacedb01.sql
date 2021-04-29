@@ -141,12 +141,22 @@ PRO <BR>
 PRO     <div id="chart_div" style="width: 900px; height: 900px;"></div>
 PRO     <p>&varhtmlspace</p>
 PRO <PRE>
+PRO ################
+PRO # Tablespaces
+PRO ################
+PRO
+
+set pages 30
+set head on
 SELECT tablespace_name, BLOCK_SIZE, status, contents, logging, encrypted, bigfile,COMPRESS_FOR
 FROM dba_tablespaces
 /
 PRO ################
 PRO # Tablespace total
 PRO ################
+PRO
+
+column TABLESPACE format a50 TABLESPACE
 
 SELECT nvl(df.tablespace_name,'Total') TABLESPACE,
     sum(df.total_space_mb) TOTAL_SPACE_MB,
@@ -167,6 +177,7 @@ WHERE df.tablespace_name = fs.tablespace_name(+)
 GROUP BY rollup(df.tablespace_name)
 ORDER BY df.tablespace_name
 /
+
 PRO ################
 PRO # Reduce tablespace
 PRO ################

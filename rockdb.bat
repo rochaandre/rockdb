@@ -6,13 +6,13 @@ REM VCLIENTEEMERGENCY=''
 REM VCLIENTNAME=''
 REM EXPDPD - you SET  directory (to check SET  backups only)
 REM #
-REM create user userrockscript identified by pass123;
+REM grant connect to reportjobs identified by reportdba1;
 REM create view sys.v_x$ktfbue as select * from sys.x$ktfbue;
-REM grant select on sys.v_x$ktfbue  to ROCKSCRIPT;
-REM grant select on sys.user$ to ROCKSCRIPT;
-REM grant select on sys.stmt_audit_option_map to ROCKSCRIPT;
-REM grant select on sys.audit$ to ROCKSCRIPT;
-REM grant connect,resource, select any dictionary to ROCKSCRIPT;
+REM grant select on sys.v_x$ktfbue  to reportjobs;
+REM grant select on sys.user$ to reportjobs;
+REM grant select on sys.stmt_audit_option_map to reportjobs;
+REM grant select on sys.audit$ to reportjobs;
+REM grant connect,resource, select any dictionary to reportjobs;
 
 
 REM #
@@ -21,7 +21,7 @@ REM create and copy the content to:
 REM mkdir c:\rockdb
 REM copy * c:\rockdb
 REM call example:
-REM rockdb.bat userrockscript pass123 192.168.1.10:1521/orcl DIREXDP
+REM rockdb.bat reportjobs reportdba1 192.168.1.10:1521/orcl DIREXDP
 REM #####
 REM Configure the variables below
 REM
