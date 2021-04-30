@@ -178,6 +178,11 @@ PRO
   ORDER BY 2
   )
 /
+PRO
+PRO +-------------------------------------------------------+
+PRO | Alter system
+PRO +-------------------------------------------------------+
+PRO
 select 'alter system set '||name ||'='||  trim(value)/1024/1024 ||'M'||  ' scope=spfile;' label
 from v$parameter
 where name in ( 'sga_max_size','sga_target','memory_max_target','memory_target',
@@ -185,10 +190,11 @@ where name in ( 'sga_max_size','sga_target','memory_max_target','memory_target',
 and  value <>'0'
 union
 select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
-from v$parameter where name in (
+from v$parameter
+where name in (
   'sessions','session_cached_cursors','open_cursors','open_links','undo_retention'
   ,'smtp_out_server','shared_pool_size'
-  ,'resource_limit',
+  ,'resource_limit'
   ,'db_writer_processes')
   and value is not NULL
 UNION

@@ -150,6 +150,7 @@ PRO
 
 set pages 30
 set head on
+
 SELECT tablespace_name, BLOCK_SIZE, status, contents, logging, encrypted, bigfile,COMPRESS_FOR
 FROM dba_tablespaces
 /
@@ -158,6 +159,8 @@ PRO # Tablespace total
 PRO ################
 PRO
 
+set pages 30
+set head on
 column tablespace format a50
 
 SELECT nvl(df.tablespace_name,'Total') TABLESPACE,
@@ -179,11 +182,11 @@ WHERE df.tablespace_name = fs.tablespace_name(+)
 GROUP BY rollup(df.tablespace_name)
 ORDER BY df.tablespace_name
 /
-
+PRO
 PRO ################
 PRO # Reduce tablespace
 PRO ################
-
+PRO
 
 with
 hwm as (
@@ -218,10 +221,11 @@ where
 bytes-hwm_bytes>1024*1024 -- resize only if at least 1MB can be reclaimed
 order by bytes-hwm_bytes desc
 /
+PRO
 PRO ################
 PRO # Create tablespace with ASSM
 PRO ################
-
+PRO
 SELECT    'CREATE '
        || DECODE (ts.bigfile, 'YES', 'BIGFILE ') --assuming smallfile is the default table space
        || 'TABLESPACE "'
@@ -259,13 +263,13 @@ SELECT    'CREATE '
        || ' '
        || ts.status
        || ' BLOCKSIZE '
-       || ts.block_size
+       || ts.block_size ||';'
            ddl
   FROM dba_tablespaces ts
        INNER JOIN dba_data_files df
            ON ts.tablespace_name = df.tablespace_name
  WHERE     ts.contents = 'PERMANENT'                --excludes UNDO and TEMP
-      -- AND ts.tablespace_name IN ('YOUR_TABLESPACE LIST')
+       AND ts.tablespace_name not IN ('SYSTEM','SYSAUX')
 GROUP BY ts.tablespace_name,
        ts.bigfile,
        ts.logging,
