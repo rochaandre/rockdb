@@ -141,8 +141,8 @@ PRO
 PRO
 PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
 PRO JOB_NAME=exp_01NOROWSF&var_instancename
-PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
-PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DUMPFILE=&var_instancename/&var_instancename$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename&varYYYYMMDD.log
 PRO DIRECTORY=&varDIREXPD
 PRO FULL=Y
 PRO rows=y
@@ -160,8 +160,8 @@ PRO +---------------------------------------------------------------------------
 PRO
 PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
 PRO JOB_NAME=exp_01NOROWSF&var_instancename
-PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
-PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DUMPFILE=&var_instancename/&var_instancename$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename&varYYYYMMDD.log
 PRO DIRECTORY=&varDIREXPD
 PRO FULL=Y
 PRO rows=n
@@ -191,8 +191,8 @@ PRO +---------------------------------------------------------------------------
 PRO
 PRO USERID=&varUSERDBA/&varPASSDBA@&varCONNSTR
 PRO JOB_NAME=exp_01NOROWSF&var_instancename
-PRO DUMPFILE=&var_instancename/&var_instancename_NOROWSF$varYYYYMMDD%U.dmp
-PRO LOG=&varDIREXPD:&var_instancename/&var_instancename_NOROWSF&varYYYYMMDD.log
+PRO DUMPFILE=&var_instancename/&var_instancename$varYYYYMMDD%U.dmp
+PRO LOG=&varDIREXPD:&var_instancename/&var_instancename&varYYYYMMDD.log
 PRO DIRECTORY=&varDIREXPD
 PRO FULL=Y
 PRO rows=n

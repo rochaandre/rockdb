@@ -1,7 +1,10 @@
+PRO Config
 @config.sql
 @rockdb/sql/definecfg.sql
+PRO ------Menu
 @rockdb/sql/generate_menu01.sql
 @rockdb/sql/generate_rman_menu01.sql
+PRO ---------List
 @rockdb/list/dbinfo01.sql
 @rockdb/list/list_tablespacedb01.sql
 @rockdb/list/list_redolog01.sql
@@ -18,6 +21,7 @@
 @rockdb/list/list_invalidobjects01.sql
 @rockdb/list/list_size_db01.sql
 @rockdb/list/list_script_preexportdb01.sql
+PRO -------------List
 @rockdb/list/list_rmanbkp01.sql
 @rockdb/list/list_patch01.sql
 @rockdb/list/list_rman_backupspfile01.sql
@@ -25,6 +29,7 @@
 @rockdb/list/list_rman_backupset01.sql
 @rockdb/list/list_rman_backuppiece01.sql
 @rockdb/list/list_rman_backupjob01.sql
+PRO ------------------List
 @rockdb/list/list_archivehour01.sql
 @rockdb/list/list_archivemb01.sql
 @rockdb/list/list_dba_registry01.sql
@@ -35,6 +40,9 @@
 @rockdb/list/list_rebuildindex01.sql
 @rockdb/list/list_databasetriggers01.sql
 @rockdb/list/list_directory01.sql
+@rockdb/list/list_script_sysauxsize01.sql
+@rockdb/list/list_purge_recyclebin01.sql
+PRO -----------------------ddl
 @rockdb/ddlscript/acl_ddl.sql
 @rockdb/ddlscript/audit_ddl.sql
 @rockdb/ddlscript/directory_ddl.sql
@@ -44,13 +52,16 @@
 @rockdb/ddlscript/job_ddl.sql
 @rockdb/ddlscript/job_ddl_19c.sql
 -- @rockdb/ddlscript/role_ddl.sql  -- can spend a lot of time
+PRO --------------------------ddl
 @rockdb/ddlscript/tablespace_ddl.sql
 @rockdb/ddlscript/trigger_ddl.sql
 @rockdb/ddlscript/user_ddl.sql
 @rockdb/ddlscript/user_ddl_create.sql
 @rockdb/ddlscript/user_defined_type.sql
+PRO ------------------------------bar
 @rockdb/bar/bar_archiveperday.sql
 @rockdb/bar/bar_tablespace.sql
+PRO ------------------------------------Gauge
 @rockdb/gauge/dbgauge_dashboard.sql
 @rockdb/gauge/dbgauge_opencursors.sql
 @rockdb/gauge/dbgauge_sessions.sql
@@ -61,6 +72,7 @@
 @rockdb/gauge/dbgauge_usedspace.sql -- can spend a lot of time
 @rockdb/gauge/dbgauge_outstandingalerts.sql
 @rockdb/gauge/dbgauge_invalidobj.sql
+PRO ----------------------------------------Pie
 @rockdb/pie/dbpie_dashboard.sql
 @rockdb/pie/dbpie_shared_pool01.sql
 @rockdb/pie/dbpie_sga_pool01.sql
@@ -91,19 +103,19 @@
 @rockdb/pie/dbpie_large_pool01.sql
 @rockdb/pie/dbpie_object_invalid01.sql
 @rockdb/pie/dbpie_object_invalid02.sql
-@rockdb/bar/bar_archiveperday.sql
-@rockdb/bar/bar_tablespace.sql
+PRO -------------------------------------------Scripts
 @rockdb/script/script_stats_db01.sql
+PRO ----------------------------------------------expdp
 @rockdb/expdp/expdp_script_create01.sql
 @rockdb/expdp/impdp_script_create01.sql
 @rockdb/expdp/dbinfo_expdp_list01.sql
 @rockdb/rman/rockdb_rman_backup01.sql
 @rockdb/thirdparty/hcheck/rockdb_hcheck.sql
-@rockdb/list/list_script_sysauxsize01.sql
-@rockdb/list/list_purge_recyclebin01.sql
+PRO -------------------------------------------------Dataguard
 @rockdb/dataguard/dataguard_config.sql
 --@rockdb/sql/create_sendemail.sql
 --@rockdb/sql/creatermansendemail01.sql
+PRO ----------------------------------------------------- zip!
 @rockdb/sql/zipoutputrockdb.sql
 --host chmod +x &var_outputfolder/*.sh
 --host &var_outputfolder/sendemail.sh

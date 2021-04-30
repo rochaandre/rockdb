@@ -111,6 +111,8 @@ PRO var options = {
 select   ' title: '||'''' ||''||' Tablespaces - Espaco utilizado'||''''||','
 from dual
 /
+
+
 --PRO     chartArea: {
 --PRO       width: '45%',
 --PRO      height:'100%'
@@ -118,7 +120,7 @@ from dual
 PRO     colors: ['red', 'green'],
 PRO     isStacked: true,
 PRO     hAxis: {
-PRO       title: 'Container - &1',
+PRO       title: 'Container ',
 PRO       minValue: 0,
 PRO     },
 PRO     vAxis: {
@@ -156,7 +158,7 @@ PRO # Tablespace total
 PRO ################
 PRO
 
-column TABLESPACE format a50 TABLESPACE
+column tablespace format a50
 
 SELECT nvl(df.tablespace_name,'Total') TABLESPACE,
     sum(df.total_space_mb) TOTAL_SPACE_MB,
