@@ -14,6 +14,9 @@ REM grant select on sys.stmt_audit_option_map to reportjobs;
 REM grant select on sys.audit$ to reportjobs;
 REM grant connect,resource, select any dictionary to reportjobs;
 
+grant select_catalog_role to REPORTJOBS  ;
+grant select any table to REPORTJOBS  ;
+
 
 REM #
 REM #######

@@ -171,6 +171,7 @@ and     tp.owner = d.owner
 and     tp.grantee  not in
   (&var_internalschemas1, &var_internalschemas2,&var_internalschemas3, &var_internalschemas4, &var_internalschemas5,
   &var_internalschemas6,&var_internalschemas7,&var_internalschemas7,&var_internalschemas8,&var_internalschemas9,&var_internalschemas10,&var_internalschemas11,&var_internalschemas12,&var_internalschemas13, &var_internalschemas14  )
+)
 ORDER BY id
 /
 

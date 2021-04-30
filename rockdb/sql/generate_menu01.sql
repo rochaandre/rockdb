@@ -85,6 +85,11 @@ PRO <h3>01 - <a title="Parameters Hidden"  href="list_param_hidden01_&var_namefi
 PRO <h3>02 - <a title="Parameters non default"  href="list_param_nondefault01_&var_namefile">Parameters non default</a></h3>
 PRO <h3>03 - <a title="Parameters Modified"  href="list_param_nondefault01_&var_namefile">Parameters Modified</a></h3>
 PRO <h3>04 - <a title="Memory Configuration"  href="list_memory01_&var_namefile">Memory Configuration</a></h3>
+PRO <h3>05 - <a title="Migration"  href="index_text_ddl_&var_namefile">Migration</a></h3>
+PRO <h3>05 - <a title="Oracle Text"  href="index_text_ddl_&var_namefile">Oracle Text</a></h3>
+
+
+
 PRO </td>
 PRO <td>
 PRO <hr style="height:5px;border-width:0;color:gray;background-color:gray">
@@ -110,7 +115,8 @@ PRO <h3>08 - <a title="Rebuild index candidate"  href="list_rebuildindex01_&var_
 
 PRO <h3>09 - <a title="Object Directory"  href="list_directory01_&var_namefile">Object Directory</a></h3>
 PRO <h3>10 - <a title="List Patch"  href="list_patch01_&var_namefile">List Patch</a></h3>
-PRO <h3>11 - <a title="Rman backup"  href="list_rmanbkp01_&var_namefile">Rman backup</a></h3>
+PRO <h3>11 - <a title="Oracle Text"  href="index_text_ddl_&var_namefile">Oracle Text</a></h3>
+PRO <h3>12 - <a title="Rman backup"  href="list_rmanbkp01_&var_namefile">Rman backup</a></h3>
 
 
 PRO </td>

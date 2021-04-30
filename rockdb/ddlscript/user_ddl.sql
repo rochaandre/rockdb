@@ -9,7 +9,8 @@ PRO +---------------------------------------------------------------------------
 PRO |            USER                                                              |
 PRO +------------------------------------------------------------------------------+
 PRO
-SELECT DBMS_METADATA.GET_DDL('USER',username) as script from DBA_USERS
+SELECT DBMS_METADATA.GET_DDL('USER',username) as script
+from DBA_USERS
 where username NOT IN
 (&var_internalschemas1, &var_internalschemas2,&var_internalschemas3, &var_internalschemas4, &var_internalschemas5
 , &var_internalschemas6,&var_internalschemas7,&var_internalschemas8,&var_internalschemas9,&var_internalschemas10,&var_internalschemas11,&var_internalschemas12,&var_internalschemas13, &var_internalschemas14  )

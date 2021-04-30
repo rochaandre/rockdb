@@ -1,6 +1,39 @@
 DEFINE vhtmlpage='dbinfo01_'
 DEFINE vtitlethispage='Info of database'
 DEFINE viconthispage='server.svg'
+
+
+
+DEF varSESSMAXUTILIZATION = '';
+COL max_utilization NEW_VALUE varSESSMAXUTILIZATION
+
+select max_utilization+100 max_utilization
+from v$resource_limit
+where resource_name in ( 'sessions');
+
+
+DEF varTRANMAXUTILIZATION = '';
+COL max_utilization NEW_VALUE varTRANMAXUTILIZATION
+
+select max_utilization
+from v$resource_limit
+where resource_name in ( 'transactions');
+
+
+DEF varPROCESSES =  "";
+COL max_utilization NEW_VALUE  varPROCESSES
+
+select round(&varSESSMAXUTILIZATION *1.1,-1) max_utilization
+from dual
+/
+
+DEF varTRANS =  "";
+COL max_utilization NEW_VALUE varTRANS
+
+select &varSESSIONS *1.1  max_utilization
+from dual
+/
+
 @rockdb/sql/headerhtmlspool.sql
 
 
@@ -183,13 +216,14 @@ PRO +-------------------------------------------------------+
 PRO | Alter system
 PRO +-------------------------------------------------------+
 PRO
+
 select 'alter system set '||name ||'='||  trim(value)/1024/1024 ||'M'||  ' scope=spfile;' label
 from v$parameter
 where name in ( 'sga_max_size','sga_target','memory_max_target','memory_target',
 'pga_aggregate_target')
 and  value <>'0'
 union
-select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
+select 'alter system set '||name ||'='||  to_char(value)  ||  ' scope=spfile sid='*';'
 from v$parameter
 where name in (
   'sessions','session_cached_cursors','open_cursors','open_links','undo_retention'
@@ -198,22 +232,95 @@ where name in (
   ,'db_writer_processes')
   and value is not NULL
 UNION
-select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
+select 'alter system set '||name ||'='||  to_char(value)   || ' scope=spfile sid='*';'
 from v$parameter where name LIKE
   '%ptimizer_index_%'
   UNION
-select 'alter system set '||name ||'='||  to_char(value)  ||''||  ' scope=spfile;'
+select 'alter system set '||name ||'='||  to_char(value)  ||  ' scope=spfile sid='*';'
 from v$parameter where name= 'optimizer_features_enable'
 union
-select 'alter system set '||name ||'='|| ''''|| to_char(value)  || ''''||''||  ' scope=spfile;'
+select 'alter system set '||name ||'='|| ''''|| to_char(value)  || ''''||''||  ' scope=spfile sid='*';'
+from v$parameter where name in ( 'nls_territory','nls_language','nls_sort','nls_language','nls_date_format','nls_currency')
+  and value is not NULL
+/
+
+PRO
+PRO # Parameters need be update in dest migration
+PRO
+select 'alter system set '||name ||'='||  trim(value)/1024/1024 ||'M'|| ' sid=' ||''''||'*'||''''||' scope=spfile ;' label
+from v$parameter
+where name in ( 'sga_max_size','sga_target','memory_max_target','memory_target',
+'pga_aggregate_target')
+and  value <>'0'
+union
+select 'alter system set '||name ||'='||  to_char(value)  ||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from v$parameter
+where name in (
+  'sessions','session_cached_cursors','open_cursors','open_links','undo_retention'
+  ,'smtp_out_server','shared_pool_size'
+  ,'resource_limit'
+  ,'db_writer_processes','sga_target','pga_aggregate_target','pga_aggregate_target_limit')
+  and value is not NULL
+UNION
+select 'alter system set '||name ||'='||  to_char(value)   || ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from v$parameter where name LIKE
+  '%ptimizer_index_%'
+  UNION
+select 'alter system set '||name ||'='||  to_char(value)  ||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from v$parameter where name= 'optimizer_features_enable'
+union
+select 'alter system set '||name ||'='|| ''''|| value  || ''''||''||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
 from v$parameter where name in ( 'nls_territory','nls_language','nls_sort','nls_language','nls_date_format','nls_currency')
   and value is not NULL
 /
 PRO
+PRO Processes, sessions and transactions
+PRO
+PRO
+PRO Official
+PRO
+PRO
+select 'alter system set processes=' ||  & varPROCESSES ||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from dual
+/
+select 'alter system set sessions='||  &varSESSMAXUTILIZATION ||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from dual
+/
+select 'alter system set transactions='||  &varTRANS ||  ' sid=' ||''''||'*'||''''||' scope=spfile ;'
+from dual
+/
+
+PRO
+PRO
+PRO How to make this work:
+PRO processes=x
+PRO sessions=x*1.1+5
+PRO transactions=sessions*1.1
+PRO
+PRO alter system set processes=500 scope=spfile sid='*';
+PRO alter system set sessions=555 scope=spfile sid='*';
+PRO alter system set transactions=611 scope=spfile sid='*';
+PRO
+PRO # EXADATA
+PRO alter system set processes=1024 scope=spfile sid='*';
+PRO alter system set sessions=1131 scope=spfile sid='*';
+PRO alter system set transactions=1244 scope=spfile sid='*';
+
+pro
+pro
+PRO alter system set processes=2000 scope=spfile sid='*';
+PRO alter system set sessions=2205 scope=spfile sid='*';
+PRO alter system set transactions=2426 scope=spfile sid='*';
+PRO
+
+PRO
 PRO Check all parameters
 PRO
-select name from v$parameter
+select name,value
+from v$parameter
 /
+
+
 PRO
 PRO </PRE>
 PRO   </body>
