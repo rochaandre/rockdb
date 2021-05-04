@@ -6,16 +6,6 @@ REM VCLIENTEEMERGENCY=''
 REM VCLIENTNAME=''
 REM EXPDPD - you SET  directory (to check SET  backups only)
 REM #
-REM grant connect to reportjobs identified by reportdba1;
-REM create view sys.v_x$ktfbue as select * from sys.x$ktfbue;
-REM grant select on sys.v_x$ktfbue  to reportjobs;
-REM grant select on sys.user$ to reportjobs;
-REM grant select on sys.stmt_audit_option_map to reportjobs;
-REM grant select on sys.audit$ to reportjobs;
-REM grant connect,resource, select any dictionary to reportjobs;
-
-grant select_catalog_role to REPORTJOBS  ;
-grant select any table to REPORTJOBS  ;
 
 
 REM #

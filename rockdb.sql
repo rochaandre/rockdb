@@ -40,7 +40,7 @@ PRO ------------------List
 @rockdb/list/list_rebuildindex01.sql
 @rockdb/list/list_databasetriggers01.sql
 @rockdb/list/list_directory01.sql
-@rockdb/list/list_script_sysauxsize01.sql
+-- @rockdb/list/list_script_sysauxsize01.sql -- need performance tunning option.
 @rockdb/list/list_purge_recyclebin01.sql
 PRO -----------------------ddl
 @rockdb/ddlscript/acl_ddl.sql

@@ -10,8 +10,7 @@
 #PASSWO=passwd
 #CONNST=ipdatabase:1521/instancename
 #
-# create user userrockscript identified by pass123;
-# grant connect,resource, select any dictionary to ROCKSCRIPT;
+# To create user to execute this script - check file createuser_rptdba.sql
 #
 ########
 # call example:

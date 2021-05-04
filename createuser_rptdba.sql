@@ -1,0 +1,18 @@
+grant connect to RPTDBA identified by RPTDBA2030;
+create view sys.v_x$ktfbue as select * from sys.x$ktfbue;
+grant select on sys.v_x$ktfbue  to RPTDBA;
+grant select on sys.user$ to RPTDBA;
+grant select on sys.stmt_audit_option_map to RPTDBA;
+grant select on sys.audit$ to RPTDBA;
+grant connect,resource, select any dictionary to RPTDBA;
+GRANT RESOURCE, CONNECT, CTXAPP TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_CLS TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_DDL TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_DOC TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_OUTPUT TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_QUERY TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_REPORT TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_THES TO RPTDBA;
+GRANT EXECUTE ON CTXSYS.CTX_ULEXER TO RPTDBA;
+grant select_catalog_role to RPTDBA;
+grant select any table to RPTDBA;
