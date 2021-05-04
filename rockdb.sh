@@ -14,17 +14,12 @@
 #
 ########
 # call example:
-# rockdb.bat userrockscript pass123 192.168.1.10:1521/orcl DIREXDP
+#              user         pwd      IP          port instance directory
+# rockdb.bat RPTDBA pass123 192.168.1.10:1521/orcl DIREXDP
 ######
 # Configure the variables below
 #
-# create user userrockscript identified by pass123;
-# create view sys.v_x$ktfbue as select * from sys.x$ktfbue;
-# grant select on sys.v_x$ktfbue  to ROCKSCRIPT;
-# grant select on sys.user$ to ROCKSCRIPT;
-# grant select on sys.stmt_audit_option_map to ROCKSCRIPT;
-# grant select on sys.audit$ to ROCKSCRIPT;
-# grant connect,resource, select any dictionary to ROCKSCRIPT;
+
 
 export NLS_DATE_FORMAT='dd/mm/yyyy hh24:mi:ss'
 export NLS_LANG=AMERICAN_AMERICA.AL32UTF8

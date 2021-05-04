@@ -6,15 +6,14 @@ REM VCLIENTEEMERGENCY=''
 REM VCLIENTNAME=''
 REM EXPDPD - you SET  directory (to check SET  backups only)
 REM #
-
-
+REM # To create user to execute this script - check file createuser_rptdba.sql
 REM #
 REM #######
 REM create and copy the content to:
 REM mkdir c:\rockdb
 REM copy * c:\rockdb
 REM call example:
-REM rockdb.bat reportjobs reportdba1 192.168.1.10:1521/orcl DIREXDP
+REM rockdb.bat RPTDBA reportdba1 192.168.1.10:1521/orcl DIREXDP
 REM #####
 REM Configure the variables below
 REM
